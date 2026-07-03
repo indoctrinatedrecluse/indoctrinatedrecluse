@@ -1,4 +1,4 @@
-name: GitHub-Profile-3D-Contrib
+name: GitHub-Profile-Dashboard-Assets
 
 on:
   schedule:
@@ -11,16 +11,39 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: generate-github-profile-3d-contrib
+    name: generate-dashboard-assets
     steps:
       - uses: actions/checkout@v3
+      
+      # 1. Generate 3D contribution graph
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+          
+      # 2. Set up Python and run our custom asset generator
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Generate Languages Matrix & Custom Dividers
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python generate_assets.py
+        
+      # 3. Generate Snake Contribution game SVG with custom colors
+      - name: Generate github-contribution-grid-snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            profile-3d-contrib/github-contribution-grid-snake.svg?color_snake=#ff79c6&color_dots=#16161e,#3d59a1,#7aa2f7,#bb9af3,#ff79c6
+            profile-3d-contrib/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#ff79c6&color_dots=#16161e,#3d59a1,#7aa2f7,#bb9af3,#ff79c6
+            
+      # 4. Commit and Push all generated assets
       - name: Commit & Push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add -A .
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update 3d contribution graph" && git push)
+          git add -A profile-3d-contrib
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update profile dashboard assets" && git push)

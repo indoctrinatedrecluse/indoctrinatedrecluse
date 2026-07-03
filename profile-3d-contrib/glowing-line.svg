@@ -1,0 +1,17 @@
+<svg width="800" height="8" viewBox="0 0 800 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cyberGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#ff79c6" />
+      <stop offset="100%" stop-color="#bb9af3" />
+    </linearGradient>
+    <filter id="lineGlow" x="-10%" y="-100%" width="120%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="10" y="2" width="780" height="4" rx="2" fill="url(#cyberGradient)" filter="url(#lineGlow)" />
+</svg>
