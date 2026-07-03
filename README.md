@@ -109,7 +109,7 @@
   <img src="https://img.shields.io/badge/HTML5-1a1b26?style=flat-square&logo=html5&logoColor=e34f26&labelColor=1a1b26" alt="HTML5" />
   <img src="https://img.shields.io/badge/CSS3-1a1b26?style=flat-square&logo=css3&logoColor=1572b6&labelColor=1a1b26" alt="CSS3" />
   <img src="https://img.shields.io/badge/SQL-1a1b26?style=flat-square&logo=mysql&logoColor=22d3ee&labelColor=1a1b26" alt="SQL" />
-</path>
+</p>
 
 <h3 align="center">Frameworks & Technologies</h3>
 <p align="center">
@@ -135,14 +135,14 @@
 <!-- CONNECT WITH ME -->
 <h2 align="center">🤝 Connect with Me</h2>
 <p align="center">
-  <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-1a1b26?style=flat-square&logo=linkedin&logoColor=0077b5&labelColor=1a1b26" alt="LinkedIn" />
+  <a href="https://www.linkedin.com/in/abhishek-mitra-2b4264220" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-1a1b26?style=flat-square&logo=linkedin&logoColor=00a0dc&labelColor=1a1b26" alt="LinkedIn" />
   </a>
-  <a href="mailto:YOUR-EMAIL@gmail.com" target="_blank">
+  <a href="mailto:abmitra1999@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Gmail-1a1b26?style=flat-square&logo=gmail&logoColor=d14836&labelColor=1a1b26" alt="Gmail" />
   </a>
-  <a href="https://twitter.com/YOUR-TWITTER" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter-1a1b26?style=flat-square&logo=twitter&logoColor=1da1f2&labelColor=1a1b26" alt="Twitter" />
+  <a href="https://portfolio-flutter-78bcf.web.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-1a1b26?style=flat-square&logo=flutter&logoColor=38bdf8&labelColor=1a1b26" alt="Portfolio" />
   </a>
 </p>
 
