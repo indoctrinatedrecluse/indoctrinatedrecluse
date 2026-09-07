@@ -23,13 +23,13 @@ QUERY = """
 query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
     contributionsCollection(from: $from, to: $to) {
-      totalContributions
       contributionCalendar {
+        totalContributions
         weeks {
           contributionDays {
             date
             contributionCount
-            level
+            contributionLevel
           }
         }
       }
@@ -76,10 +76,16 @@ def fetch_contributions(username, token):
             return {"ok": False, "error": error}
         user = (data.get("data") or {}).get("user") or {}
         cal = user.get("contributionsCollection") or {}
-        weeks = (cal.get("contributionCalendar") or {}).get("weeks", [])
+        calendar = cal.get("contributionCalendar") or {}
+        weeks = calendar.get("weeks", [])
         if not weeks:
             return {"ok": False, "error": "contributionsCollection returned no weeks"}
-        return {"ok": True, "weeks": weeks, "total": cal.get("totalContributions", 0), "year": year}
+        return {
+            "ok": True,
+            "weeks": weeks,
+            "total": calendar.get("totalContributions", 0),
+            "year": year,
+        }
     except Exception as e:
         error = str(e)[:200]
         print(f"GraphQL request failed: {error}")
@@ -90,7 +96,7 @@ def build_grid(result, pad_l, pad_top, step):
     cells = []
     for wi, week in enumerate(result["weeks"]):
         for di, day in enumerate(week.get("contributionDays") or []):
-            level = normalize_level(day.get("level", 0))
+            level = normalize_level(day.get("contributionLevel", day.get("level", 0)))
             fill = LEVEL_COLORS.get(level, "#16161e")
             cells.append(
                 f'<rect x="{pad_l + wi * step}" y="{pad_top + di * step}" width="10" height="10" rx="2" fill="{fill}" />'
