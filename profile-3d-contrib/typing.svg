@@ -1,0 +1,39 @@
+<svg width="680" height="64" viewBox="0 0 680 64" xmlns="http://www.w3.org/2000/svg">
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0.000000;0.012500;0.225000;0.250000;1.000000" dur="16.00s" begin="0.00s" repeatCount="indefinite" />
+    <text x="340" y="46" text-anchor="middle"
+          font-family="'Fira Code', 'Consolas', 'Courier New', monospace"
+          font-size="24" fill="#ff79c6">Software Engineer</text>
+    <rect x="475.5" y="18" width="11" height="26" fill="#ff79c6">
+      <animate attributeName="fill" values="#ff79c6;#1a1b26;#ff79c6" keyTimes="0;0.5;1" dur="1s" begin="0.00s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0.000000;0.012500;0.225000;0.250000;1.000000" dur="16.00s" begin="4.00s" repeatCount="indefinite" />
+    <text x="340" y="46" text-anchor="middle"
+          font-family="'Fira Code', 'Consolas', 'Courier New', monospace"
+          font-size="24" fill="#ff79c6">Full-Stack Developer</text>
+    <rect x="498.0" y="18" width="11" height="26" fill="#ff79c6">
+      <animate attributeName="fill" values="#ff79c6;#1a1b26;#ff79c6" keyTimes="0;0.5;1" dur="1s" begin="4.00s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0.000000;0.012500;0.225000;0.250000;1.000000" dur="16.00s" begin="8.00s" repeatCount="indefinite" />
+    <text x="340" y="46" text-anchor="middle"
+          font-family="'Fira Code', 'Consolas', 'Courier New', monospace"
+          font-size="24" fill="#ff79c6">Creative Problem Solver</text>
+    <rect x="520.5" y="18" width="11" height="26" fill="#ff79c6">
+      <animate attributeName="fill" values="#ff79c6;#1a1b26;#ff79c6" keyTimes="0;0.5;1" dur="1s" begin="8.00s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0.000000;0.012500;0.225000;0.250000;1.000000" dur="16.00s" begin="12.00s" repeatCount="indefinite" />
+    <text x="340" y="46" text-anchor="middle"
+          font-family="'Fira Code', 'Consolas', 'Courier New', monospace"
+          font-size="24" fill="#ff79c6">Tech Explorer</text>
+    <rect x="445.5" y="18" width="11" height="26" fill="#ff79c6">
+      <animate attributeName="fill" values="#ff79c6;#1a1b26;#ff79c6" keyTimes="0;0.5;1" dur="1s" begin="12.00s" repeatCount="indefinite" />
+    </rect>
+  </g>
+</svg>

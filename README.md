@@ -1,19 +1,17 @@
 <!-- FUTURISTIC CYBERPUNK HEADER BANNER -->
 <p align="center">
-  <img src="./banner.jpg" width="100%" style="border-radius: 12px; border: 2px solid #5a189a; max-height: 280px; object-fit: cover;" alt="IndoctrinatedRecluse Cyberpunk Banner" />
+  <img src="./banner.svg" width="100%" alt="IndoctrinatedRecluse Cyberpunk Banner" />
 </p>
 
 <!-- DYNAMIC TYPING SVG & GREETING -->
 <h1 align="center">Hi there! I'm indoctrinatedrecluse 👋</h1>
 
 <p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&duration=3500&pause=1000&color=ff79c6&center=true&vCenter=true&width=600&lines=Software+Engineer;Full-Stack+Developer;Creative+Problem+Solver;Tech+Explorer" alt="Typing SVG" />
-  </a>
+  <img src="./profile-3d-contrib/typing.svg" width="680" alt="" />
 </p>
 
 <p align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=indoctrinatedrecluse.profile&left_text=PROFILE%20VIEWS&left_color=%231a1b26&right_color=%23bf5af2&logo=github&radius=0" alt="Profile Views" />
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=indoctrinatedrecluse.profile&left_text=PROFILE%20VIEWS&left_color=%231a1b26&right_color=%23bf5af2&logo=github&radius=0" alt="" />
 </p>
 
 <!-- SECTION DIVIDER -->
@@ -39,8 +37,15 @@
 <h2 align="center">📊 GitHub Stats Dashboard</h2>
 
 <p align="center">
+  <img src="./profile-3d-contrib/stats.svg" alt="Profile telemetry dashboard" width="100%" />
+</p>
+
+<p align="center">
   <a href="https://github.com/indoctrinatedrecluse">
-    <img src="https://streak-stats.demolab.com/?user=indoctrinatedrecluse&theme=tokyonight" alt="GitHub Streak" height="195" />
+    <img src="https://streak-stats.demolab.com/?user=indoctrinatedrecluse&theme=tokyonight" alt="" height="195" />
+  </a>
+  <a href="https://github.com/indoctrinatedrecluse/indoctrinatedrecluse/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/indoctrinatedrecluse/indoctrinatedrecluse/profile-3d.yml?style=flat-square&label=DASHBOARD%20SYNC&labelColor=1a1b26&color=bb9af3&logo=githubactions&logoColor=ffffff" alt="Dashboard sync status" />
   </a>
 </p>
 
@@ -66,7 +71,7 @@
 <!-- 3D CONTRIBUTION CALENDAR -->
 <h2 align="center">🌌 3D Contribution Calendar</h2>
 <p align="center">
-  <img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Calendar" width="100%" style="border-radius: 8px;" />
+  <img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Calendar" width="100%" />
 </p>
 <p align="center">
   <sub>Generated automatically daily using GitHub Actions.</sub>
@@ -80,13 +85,47 @@
 <!-- CUSTOM LANGUAGE MATRIX -->
 <h2 align="center">💻 System Core: Language Matrix</h2>
 <p align="center">
-  <img src="./profile-3d-contrib/languages.svg" alt="Language Matrix" width="100%" style="max-width: 600px; border-radius: 12px;" />
+  <img src="./profile-3d-contrib/languages.svg" alt="Language Matrix" width="600" />
 </p>
 
 <!-- SECTION DIVIDER -->
 <p align="center">
   <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
 </p>
+
+<!-- FEATURED PROJECTS -->
+<h2 align="center">📦 Featured Projects</h2>
+<p align="center">
+  <a href="https://github.com/indoctrinatedrecluse/term-sys-monitor">
+    <img src="https://img.shields.io/badge/Rust-1a1b26?style=flat-square&logo=rust&logoColor=ff79c6&labelColor=1a1b26" alt="" />&nbsp;<b>term-sys-monitor</b></a>
+  &nbsp;—&nbsp;<i>terminal system monitor (CPU/GPU/RAM/Disk) with Lua scripting</i>
+</p>
+<p align="center">
+  <a href="https://github.com/indoctrinatedrecluse/MusicLink">
+    <img src="https://img.shields.io/badge/TypeScript-1a1b26?style=flat-square&logo=typescript&logoColor=60a5fa&labelColor=1a1b26" alt="" />&nbsp;<b>MusicLink</b></a>
+  &nbsp;—&nbsp;<i>drag-and-drop music creator</i>
+</p>
+<p align="center">
+  <a href="https://github.com/indoctrinatedrecluse/portfolio-react-nextjs">
+    <img src="https://img.shields.io/badge/JavaScript-1a1b26?style=flat-square&logo=javascript&logoColor=f7df1e&labelColor=1a1b26" alt="" />&nbsp;<b>portfolio-react-nextjs</b></a>
+  &nbsp;—&nbsp;<i>modern portfolio build</i>
+</p>
+<p align="center">
+  <a href="https://github.com/indoctrinatedrecluse/futuristic-clock-rainmeter">
+    <img src="https://img.shields.io/badge/Rainmeter-1a1b26?style=flat-square&labelColor=1a1b26" alt="" />&nbsp;<b>futuristic-clock-rainmeter</b></a>
+  &nbsp;—&nbsp;<i>futuristic desktop clock skin (light &amp; dark)</i>
+</p>
+<p align="center">
+  <a href="https://github.com/indoctrinatedrecluse/OwlCatPortraitTool">
+    <img src="https://img.shields.io/badge/Python-1a1b26?style=flat-square&logo=python&logoColor=38bdf8&labelColor=1a1b26" alt="" />&nbsp;<b>OwlCatPortraitTool</b></a>
+  &nbsp;—&nbsp;<i>portrait tool for Owlcat RPGs</i>
+</p>
+
+<!-- SECTION DIVIDER -->
+<p align="center">
+  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+</p>
+
 
 <!-- SKILLS & TECHNOLOGIES -->
 <h2 align="center">🛠️ Tech Stack & Toolkit</h2>

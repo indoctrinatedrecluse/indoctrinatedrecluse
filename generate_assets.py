@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import hashlib
 import urllib.request
 import urllib.error
 
@@ -66,8 +67,11 @@ def get_neon_colors(lang):
     if lang in color_map:
         return color_map[lang]
         
-    # Generate HSL hash-based neon color for others
-    hue = abs(hash(lang)) % 360
+    # Generate HSL hash-based neon color for others.
+    # NOTE: uses hashlib (NOT builtin hash()) so hues are stable across
+    # runs/processes; Python's hash() is randomized per-process for strings.
+    digest = hashlib.md5(lang.encode("utf-8")).hexdigest()
+    hue = int(digest[:6], 16) % 360
     return (f"hsl({hue}, 95%, 65%)", f"hsl({hue}, 95%, 45%)")
 
 def generate_languages_svg(lang_bytes, filepath):

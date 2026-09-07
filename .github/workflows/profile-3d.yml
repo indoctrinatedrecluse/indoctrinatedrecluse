@@ -8,29 +8,50 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: profile-dashboard-assets
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     name: generate-dashboard-assets
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v3
-      
+      - uses: actions/checkout@v4
+
       # 1. Generate 3D contribution graph
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          
-      # 2. Set up Python and run our custom asset generator
+
+      # 1b. Keep only the variants the README actually uses (less churn/clutter)
+      - name: Trim unused 3D contribution variants
+        run: |
+          rm -f profile-3d-contrib/profile-gitblock.svg
+          rm -f profile-3d-contrib/profile-green.svg
+          rm -f profile-3d-contrib/profile-green-animate.svg
+          rm -f profile-3d-contrib/profile-night-green.svg
+          rm -f profile-3d-contrib/profile-night-view.svg
+          rm -f profile-3d-contrib/profile-season.svg
+          rm -f profile-3d-contrib/profile-season-animate.svg
+          rm -f profile-3d-contrib/profile-south-season.svg
+          rm -f profile-3d-contrib/profile-south-season-animate.svg
+
+      # 2. Set up Python and run our custom asset generators
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      - name: Generate Languages Matrix & Custom Dividers
+      - name: Generate custom dashboard SVGs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python generate_assets.py
-        
+        run: |
+          python generate_assets.py
+          python generate_stats.py
+          python generate_typing.py
+
       # 3. Generate Snake Contribution game SVG with custom colors
       - name: Generate github-contribution-grid-snake.svg
         uses: Platane/snk/svg-only@v3
@@ -39,7 +60,7 @@ jobs:
           outputs: |
             profile-3d-contrib/github-contribution-grid-snake.svg?color_snake=#ff79c6&color_dots=#16161e,#3d59a1,#7aa2f7,#bb9af3,#ff79c6
             profile-3d-contrib/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#ff79c6&color_dots=#16161e,#3d59a1,#7aa2f7,#bb9af3,#ff79c6
-            
+
       # 4. Commit and Push all generated assets
       - name: Commit & Push
         run: |
