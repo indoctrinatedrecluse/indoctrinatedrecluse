@@ -2,6 +2,7 @@ import os
 import json
 import urllib.request
 import urllib.error
+from cyber_palette import apply_theme
 
 # Config
 DEFAULT_USERNAME = "indoctrinatedrecluse"
@@ -116,6 +117,7 @@ def generate_achievements_svg(username, token, filepath):
   {body}
 </svg>
 """
+    svg_content = apply_theme(svg_content)
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(svg_content)

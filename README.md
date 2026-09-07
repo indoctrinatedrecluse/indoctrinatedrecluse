@@ -91,7 +91,7 @@
   <img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Calendar" width="100%" />
 </p>
 <p align="center">
-  <sub>Generated automatically daily using GitHub Actions.</sub>
+  <sub>Contribution render — refreshed twice daily (day/night).</sub>
 </p>
 
 <!-- SECTION DIVIDER -->
@@ -105,7 +105,7 @@
   <img src="./profile-3d-contrib/isocalendar.svg" alt="Commit grid heatmap" width="100%" />
 </p>
 <p align="center">
-  <sub>Neon contribution heatmap — synced daily via GitHub GraphQL.</sub>
+  <sub>Neon heatmap — palette flips with GMT day/night, synced twice daily.</sub>
 </p>
 
 <!-- SECTION DIVIDER -->
@@ -120,7 +120,7 @@
 </p>
 
 <!-- SECTION DIVIDER -->
-<!-- <p align="center"> -->
+<p align="center">
   <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
 </p>
 
@@ -141,29 +141,10 @@
 <!-- FEATURED PROJECTS -->
 <h2 align="center">📦 Featured Projects</h2>
 <p align="center">
-  <a href="https://github.com/indoctrinatedrecluse/term-sys-monitor">
-    <img src="https://img.shields.io/badge/Rust-1a1b26?style=flat-square&logo=rust&logoColor=ff79c6&labelColor=1a1b26" alt="" />&nbsp;<b>term-sys-monitor</b></a>
-  &nbsp;—&nbsp;<i>terminal system monitor (CPU/GPU/RAM/Disk) with Lua scripting</i>
+  <img src="./profile-3d-contrib/featured.svg" alt="Featured projects" width="100%" />
 </p>
 <p align="center">
-  <a href="https://github.com/indoctrinatedrecluse/MusicLink">
-    <img src="https://img.shields.io/badge/TypeScript-1a1b26?style=flat-square&logo=typescript&logoColor=60a5fa&labelColor=1a1b26" alt="" />&nbsp;<b>MusicLink</b></a>
-  &nbsp;—&nbsp;<i>drag-and-drop music creator</i>
-</p>
-<p align="center">
-  <a href="https://github.com/indoctrinatedrecluse/portfolio-react-nextjs">
-    <img src="https://img.shields.io/badge/JavaScript-1a1b26?style=flat-square&logo=javascript&logoColor=f7df1e&labelColor=1a1b26" alt="" />&nbsp;<b>portfolio-react-nextjs</b></a>
-  &nbsp;—&nbsp;<i>modern portfolio build</i>
-</p>
-<p align="center">
-  <a href="https://github.com/indoctrinatedrecluse/futuristic-clock-rainmeter">
-    <img src="https://img.shields.io/badge/Rainmeter-1a1b26?style=flat-square&labelColor=1a1b26" alt="" />&nbsp;<b>futuristic-clock-rainmeter</b></a>
-  &nbsp;—&nbsp;<i>futuristic desktop clock skin (light &amp; dark)</i>
-</p>
-<p align="center">
-  <a href="https://github.com/indoctrinatedrecluse/OwlCatPortraitTool">
-    <img src="https://img.shields.io/badge/Python-1a1b26?style=flat-square&logo=python&logoColor=38bdf8&labelColor=1a1b26" alt="" />&nbsp;<b>OwlCatPortraitTool</b></a>
-  &nbsp;—&nbsp;<i>portrait tool for Owlcat RPGs</i>
+  <sub>Auto-selected from live repo telemetry — refreshed twice daily.</sub>
 </p>
 
 <!-- SECTION DIVIDER -->
@@ -178,7 +159,7 @@
   <img src="./profile-3d-contrib/activity.svg" alt="Recent activity feed" width="100%" />
 </p>
 <p align="center">
-  <sub>Live from the GitHub events stream — refreshed daily.</sub>
+  <sub>Live from the GitHub events stream — refreshed twice daily.</sub>
 </p>
 
 <!-- SECTION DIVIDER -->

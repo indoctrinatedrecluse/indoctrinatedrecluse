@@ -1,4 +1,5 @@
 import os
+from cyber_palette import apply_theme
 
 # Config
 OUTPUT_DIR = "profile-3d-contrib"
@@ -118,6 +119,7 @@ def generate_system_status_svg(filepath):
   </g>
 </svg>
 """
+    svg_content = apply_theme(svg_content)
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(svg_content)
