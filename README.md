@@ -33,6 +33,17 @@
   <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
 </p>
 
+<!-- SYSTEM STATUS -->
+<h2 align="center">🖥️ System Status</h2>
+<p align="center">
+  <img src="./profile-3d-contrib/system-status.svg" alt="System status terminal" width="100%" />
+</p>
+
+<!-- SECTION DIVIDER -->
+<p align="center">
+  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+</p>
+
 <!-- GITHUB STATS DASHBOARD GRID -->
 <h2 align="center">📊 GitHub Stats Dashboard</h2>
 
@@ -47,6 +58,12 @@
   <a href="https://github.com/indoctrinatedrecluse/indoctrinatedrecluse/actions">
     <img src="https://img.shields.io/github/actions/workflow/status/indoctrinatedrecluse/indoctrinatedrecluse/profile-3d.yml?style=flat-square&label=DASHBOARD%20SYNC&labelColor=1a1b26&color=bb9af3&logo=githubactions&logoColor=ffffff" alt="Dashboard sync status" />
   </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/followers/indoctrinatedrecluse?style=flat-square&label=FOLLOWERS&labelColor=1a1b26&color=38bdf8&logo=github&logoColor=ffffff" alt="" />
+  <img src="https://img.shields.io/github/stars/indoctrinatedrecluse/indoctrinatedrecluse?style=flat-square&label=THIS%20REPO%20STARS&labelColor=1a1b26&color=7aa2f7&logo=github&logoColor=ffffff" alt="" />
+  <img src="https://img.shields.io/github/last-commit/indoctrinatedrecluse/indoctrinatedrecluse?style=flat-square&label=LAST%20COMMIT&labelColor=1a1b26&color=bb9af3&logo=git&logoColor=ffffff" alt="" />
 </p>
 
 <!-- SECTION DIVIDER -->
@@ -82,10 +99,38 @@
   <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
 </p>
 
+<!-- COMMIT GRID HEATMAP -->
+<h2 align="center">🔥 Commit Grid: 365-Day Heatmap</h2>
+<p align="center">
+  <img src="./profile-3d-contrib/isocalendar.svg" alt="Commit grid heatmap" width="100%" />
+</p>
+<p align="center">
+  <sub>Neon contribution heatmap — synced daily via GitHub GraphQL.</sub>
+</p>
+
+<!-- SECTION DIVIDER -->
+<p align="center">
+  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+</p>
+
 <!-- CUSTOM LANGUAGE MATRIX -->
 <h2 align="center">💻 System Core: Language Matrix</h2>
 <p align="center">
   <img src="./profile-3d-contrib/languages.svg" alt="Language Matrix" width="600" />
+</p>
+
+<!-- SECTION DIVIDER -->
+<!-- <p align="center"> -->
+  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+</p>
+
+<!-- SYSTEM ACHIEVEMENTS -->
+<h2 align="center">🏆 System Achievements</h2>
+<p align="center">
+  <img src="./profile-3d-contrib/achievements.svg" alt="System achievements" width="100%" />
+</p>
+<p align="center">
+  <sub>Tiles unlock automatically as profile signals grow.</sub>
 </p>
 
 <!-- SECTION DIVIDER -->
@@ -126,6 +171,20 @@
   <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
 </p>
 
+
+<!-- RECENT ACTIVITY -->
+<h2 align="center">📡 Recent Activity Feed</h2>
+<p align="center">
+  <img src="./profile-3d-contrib/activity.svg" alt="Recent activity feed" width="100%" />
+</p>
+<p align="center">
+  <sub>Live from the GitHub events stream — refreshed daily.</sub>
+</p>
+
+<!-- SECTION DIVIDER -->
+<p align="center">
+  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+</p>
 
 <!-- SKILLS & TECHNOLOGIES -->
 <h2 align="center">🛠️ Tech Stack & Toolkit</h2>
