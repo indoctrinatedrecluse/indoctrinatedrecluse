@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/normal-badge.png?username=indoctrinatedrecluse&color=bf5af2&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=indoctrinatedrecluse.profile&left_text=PROFILE%20VIEWS&left_color=%231a1b26&right_color=%23bf5af2&logo=github&radius=0" alt="Profile Views" />
 </p>
 
 <!-- SECTION DIVIDER -->
@@ -40,17 +40,7 @@
 
 <p align="center">
   <a href="https://github.com/indoctrinatedrecluse">
-    <img src="https://github-readme-stats.vercel.app/api?username=indoctrinatedrecluse&show_icons=true&theme=tokyonight&count_private=true" alt="GitHub Stats" height="195" />
-  </a>
-  <a href="https://github.com/indoctrinatedrecluse">
     <img src="https://streak-stats.demolab.com/?user=indoctrinatedrecluse&theme=tokyonight" alt="GitHub Streak" height="195" />
-  </a>
-</p>
-
-<h3 align="center">📈 Commit Frequencies & Activity Graph</h3>
-<p align="center">
-  <a href="https://github.com/indoctrinatedrecluse">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=indoctrinatedrecluse&theme=tokyo-night&bg_color=1a1b26&color=70a5fd&line=ff79c6&point=38bdf8" alt="Activity Graph" width="100%" />
   </a>
 </p>
 
@@ -153,5 +143,5 @@
 
 <!-- FOOTER -->
 <p align="center">
-  <sub>Designed with 💜 by Antigravity</sub>
+  <sub>Designed with 💜 by indoctrinatedrecluse</sub>
 </p>
