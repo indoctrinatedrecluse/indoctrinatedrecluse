@@ -1,5 +1,5 @@
 <svg width="720" height="236" viewBox="0 0 720 236" fill="none" xmlns="http://www.w3.org/2000/svg">
-<!-- standby reason: no GITHUB_TOKEN available -->
+<!-- standby reason: [{"path": ["query", "user", "contributionsCollection", "totalContributions"], "extensions": {"code": "undefinedField", "typeName": "ContributionsCollection", "fieldName": "totalContributions"}, "locat -->
   <style>
     .title {
       font-family: 'Fira Code', 'Courier New', monospace;
