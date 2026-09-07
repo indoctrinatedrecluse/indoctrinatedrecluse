@@ -1,4 +1,5 @@
 <svg width="720" height="236" viewBox="0 0 720 236" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- standby reason: no GITHUB_TOKEN available -->
   <style>
     .title {
       font-family: 'Fira Code', 'Courier New', monospace;
@@ -37,7 +38,7 @@
 
   <g transform="translate(24, 24)">
     <rect x="0" y="0" width="6" height="22" fill="#38bdf8" rx="2" />
-    <text x="18" y="16" class="title">COMMIT GRID // LAST 365 DAYS</text>
+    <text x="18" y="16" class="title">COMMIT GRID</text>
     <text x="18" y="29" class="subtitle">CONTRIBUTION TELEMETRY // GITHUB GRAPHQL</text>
   </g>
   <text x="696" y="42" class="total">SYNC PENDING</text>
@@ -45,4 +46,5 @@
   <rect x="24" y="92" width="672" height="112" rx="10" fill="none" stroke="#3d59a1" stroke-width="1.5" stroke-dasharray="6 5" />
   
   <text x="696" y="222" class="foot" text-anchor="end">RUN DASHBOARD WORKFLOW TO INITIALIZE GRID</text>
+  <rect x="24" y="222" width="10" height="10" rx="2" fill="#16161e" /><rect x="42" y="222" width="10" height="10" rx="2" fill="#3d59a1" /><rect x="60" y="222" width="10" height="10" rx="2" fill="#7aa2f7" /><rect x="78" y="222" width="10" height="10" rx="2" fill="#bb9af3" /><rect x="96" y="222" width="10" height="10" rx="2" fill="#ff79c6" />
 </svg>

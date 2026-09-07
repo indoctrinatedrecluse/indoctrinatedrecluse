@@ -46,7 +46,9 @@ jobs:
           python-version: '3.x'
       - name: Generate custom dashboard SVGs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Uses a user PAT if provided (more permissive for GraphQL user
+          # contribution data), otherwise falls back to the automatic token.
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
         run: |
           python generate_assets.py
           python generate_stats.py
