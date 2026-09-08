@@ -4,17 +4,17 @@
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 16px;
       font-weight: bold;
-      fill: #ff79c6;
+      fill: #c0267f;
     }
     .subtitle {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 9px;
-      fill: #6272a4;
+      fill: #5e6380;
       letter-spacing: 2px;
     }
     .bg {
-      fill: #1a1b26;
-      stroke: #3d59a1;
+      fill: #f6f3fd;
+      stroke: #6d79b5;
       stroke-width: 2;
       rx: 12px;
     }
@@ -23,52 +23,52 @@
   <rect width="700" height="278" class="bg" />
 
   <g transform="translate(24, 24)">
-    <rect x="0" y="0" width="6" height="22" fill="#bb9af3" rx="2" />
+    <rect x="0" y="0" width="6" height="22" fill="#7c3aed" rx="2" />
     <text x="18" y="16" class="title">SYSTEM ACHIEVEMENTS</text>
     <text x="18" y="29" class="subtitle">UNLOCK PROGRESS // GITHUB TELEMETRY</text>
   </g>
-  <line x1="24" y1="60" x2="676" y2="60" stroke="#3d59a1" stroke-opacity="0.6" stroke-width="1" />
+  <line x1="24" y1="60" x2="676" y2="60" stroke="#6d79b5" stroke-opacity="0.6" stroke-width="1" />
   
   <g>
-    <rect x="24" y="78" width="204" height="84" rx="10" fill="#16161e" stroke="#ff79c6" stroke-opacity="0.9" stroke-width="1.5" />
-    <text x="38" y="102" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" fill="#38bdf8">SYS.INIT</text>
-    <text x="216" y="102" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">[UNLOCKED]</text>
-    <text x="38" y="126" font-family="'Fira Code', monospace" font-size="13" font-weight="bold" fill="#c0caf5">ONLINE SINCE 2021</text>
-    <text x="38" y="146" font-family="'Fira Code', monospace" font-size="8" letter-spacing="1px" fill="#7aa2f7">ACCOUNT BOOTED</text>
+    <rect x="24" y="78" width="204" height="84" rx="10" fill="#e8e4f6" stroke="#c0267f" stroke-opacity="0.9" stroke-width="1.5" />
+    <text x="38" y="102" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" fill="#0277bd">SYS.INIT</text>
+    <text x="216" y="102" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#c0267f">[UNLOCKED]</text>
+    <text x="38" y="126" font-family="'Fira Code', monospace" font-size="13" font-weight="bold" fill="#1e2335">ONLINE SINCE 2021</text>
+    <text x="38" y="146" font-family="'Fira Code', monospace" font-size="8" letter-spacing="1px" fill="#5865b0">ACCOUNT BOOTED</text>
   </g>
   <g>
-    <rect x="248" y="78" width="204" height="84" rx="10" fill="#16161e" stroke="#ff79c6" stroke-opacity="0.9" stroke-width="1.5" />
-    <text x="262" y="102" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" fill="#38bdf8">POLYGLOT</text>
-    <text x="440" y="102" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">[UNLOCKED]</text>
-    <text x="262" y="126" font-family="'Fira Code', monospace" font-size="13" font-weight="bold" fill="#c0caf5">17 LANGUAGES</text>
-    <text x="262" y="146" font-family="'Fira Code', monospace" font-size="8" letter-spacing="1px" fill="#7aa2f7">5+ LANGUAGE ARSENAL</text>
+    <rect x="248" y="78" width="204" height="84" rx="10" fill="#e8e4f6" stroke="#c0267f" stroke-opacity="0.9" stroke-width="1.5" />
+    <text x="262" y="102" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" fill="#0277bd">POLYGLOT</text>
+    <text x="440" y="102" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#c0267f">[UNLOCKED]</text>
+    <text x="262" y="126" font-family="'Fira Code', monospace" font-size="13" font-weight="bold" fill="#1e2335">17 LANGUAGES</text>
+    <text x="262" y="146" font-family="'Fira Code', monospace" font-size="8" letter-spacing="1px" fill="#5865b0">5+ LANGUAGE ARSENAL</text>
   </g>
   <g>
-    <rect x="472" y="78" width="204" height="84" rx="10" fill="#16161e" stroke="#ff79c6" stroke-opacity="0.9" stroke-width="1.5" />
-    <text x="486" y="102" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" fill="#38bdf8">ARCHITECT</text>
-    <text x="664" y="102" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">[UNLOCKED]</text>
-    <text x="486" y="126" font-family="'Fira Code', monospace" font-size="13" font-weight="bold" fill="#c0caf5">40 PROJECTS</text>
-    <text x="486" y="146" font-family="'Fira Code', monospace" font-size="8" letter-spacing="1px" fill="#7aa2f7">10+ PUBLIC PROJECTS</text>
+    <rect x="472" y="78" width="204" height="84" rx="10" fill="#e8e4f6" stroke="#c0267f" stroke-opacity="0.9" stroke-width="1.5" />
+    <text x="486" y="102" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" fill="#0277bd">ARCHITECT</text>
+    <text x="664" y="102" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#c0267f">[UNLOCKED]</text>
+    <text x="486" y="126" font-family="'Fira Code', monospace" font-size="13" font-weight="bold" fill="#1e2335">40 PROJECTS</text>
+    <text x="486" y="146" font-family="'Fira Code', monospace" font-size="8" letter-spacing="1px" fill="#5865b0">10+ PUBLIC PROJECTS</text>
   </g>
   <g>
-    <rect x="24" y="176" width="204" height="84" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <text x="38" y="200" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" fill="#3d59a1">SIGNAL</text>
-    <text x="216" y="200" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#3d59a1">[LOCKED]</text>
-    <text x="38" y="224" font-family="'Fira Code', monospace" font-size="13" font-weight="bold" fill="#6272a4">6 FOLLOWERS</text>
-    <text x="38" y="244" font-family="'Fira Code', monospace" font-size="8" letter-spacing="1px" fill="#3d59a1">10+ FOLLOWERS REQUIRED</text>
+    <rect x="24" y="176" width="204" height="84" rx="10" fill="#e8e4f6" stroke="#6d79b5" stroke-opacity="0.9" stroke-width="1.5" />
+    <text x="38" y="200" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" fill="#6d79b5">SIGNAL</text>
+    <text x="216" y="200" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#6d79b5">[LOCKED]</text>
+    <text x="38" y="224" font-family="'Fira Code', monospace" font-size="13" font-weight="bold" fill="#5e6380">6 FOLLOWERS</text>
+    <text x="38" y="244" font-family="'Fira Code', monospace" font-size="8" letter-spacing="1px" fill="#6d79b5">10+ FOLLOWERS REQUIRED</text>
   </g>
   <g>
-    <rect x="248" y="176" width="204" height="84" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <text x="262" y="200" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" fill="#3d59a1">STARGAZER</text>
-    <text x="440" y="200" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#3d59a1">[LOCKED]</text>
-    <text x="262" y="224" font-family="'Fira Code', monospace" font-size="13" font-weight="bold" fill="#6272a4">5 STARS</text>
-    <text x="262" y="244" font-family="'Fira Code', monospace" font-size="8" letter-spacing="1px" fill="#3d59a1">25+ STARS REQUIRED</text>
+    <rect x="248" y="176" width="204" height="84" rx="10" fill="#e8e4f6" stroke="#6d79b5" stroke-opacity="0.9" stroke-width="1.5" />
+    <text x="262" y="200" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" fill="#6d79b5">STARGAZER</text>
+    <text x="440" y="200" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#6d79b5">[LOCKED]</text>
+    <text x="262" y="224" font-family="'Fira Code', monospace" font-size="13" font-weight="bold" fill="#5e6380">5 STARS</text>
+    <text x="262" y="244" font-family="'Fira Code', monospace" font-size="8" letter-spacing="1px" fill="#6d79b5">25+ STARS REQUIRED</text>
   </g>
   <g>
-    <rect x="472" y="176" width="204" height="84" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <text x="486" y="200" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" fill="#3d59a1">FORKSMITH</text>
-    <text x="664" y="200" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#3d59a1">[LOCKED]</text>
-    <text x="486" y="224" font-family="'Fira Code', monospace" font-size="13" font-weight="bold" fill="#6272a4">5 FORKS</text>
-    <text x="486" y="244" font-family="'Fira Code', monospace" font-size="8" letter-spacing="1px" fill="#3d59a1">10+ FORKS REQUIRED</text>
+    <rect x="472" y="176" width="204" height="84" rx="10" fill="#e8e4f6" stroke="#6d79b5" stroke-opacity="0.9" stroke-width="1.5" />
+    <text x="486" y="200" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" fill="#6d79b5">FORKSMITH</text>
+    <text x="664" y="200" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#6d79b5">[LOCKED]</text>
+    <text x="486" y="224" font-family="'Fira Code', monospace" font-size="13" font-weight="bold" fill="#5e6380">5 FORKS</text>
+    <text x="486" y="244" font-family="'Fira Code', monospace" font-size="8" letter-spacing="1px" fill="#6d79b5">10+ FORKS REQUIRED</text>
   </g>
 </svg>
