@@ -4,17 +4,17 @@
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 18px;
       font-weight: bold;
-      fill: #c0267f;
+      fill: #ff79c6;
     }
     .subtitle {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 10px;
-      fill: #5e6380;
+      fill: #6272a4;
       letter-spacing: 2px;
     }
     .bg {
-      fill: #f6f3fd;
-      stroke: #6d79b5;
+      fill: #1a1b26;
+      stroke: #3d59a1;
       stroke-width: 2;
       rx: 12px;
     }
@@ -30,11 +30,11 @@
     </filter>
     
     <linearGradient id="grad_Rust" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#c2410c" />
+      <stop offset="0%" stop-color="#fb923c" />
       <stop offset="100%" stop-color="#ea580c" />
     </linearGradient>
     <linearGradient id="grad_HTML" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#dc2626" />
+      <stop offset="0%" stop-color="#f87171" />
       <stop offset="100%" stop-color="#dc2626" />
     </linearGradient>
     <linearGradient id="grad_Csharp" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -46,7 +46,7 @@
       <stop offset="100%" stop-color="hsl(263, 95%, 45%)" />
     </linearGradient>
     <linearGradient id="grad_Python" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0277bd" />
+      <stop offset="0%" stop-color="#38bdf8" />
       <stop offset="100%" stop-color="#0284c7" />
     </linearGradient>
     <linearGradient id="grad_TypeScript" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -58,7 +58,7 @@
       <stop offset="100%" stop-color="hsl(25, 95%, 45%)" />
     </linearGradient>
     <linearGradient id="grad_JavaScript" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="0%" stop-color="#fbbf24" />
       <stop offset="100%" stop-color="#d97706" />
     </linearGradient>
     <linearGradient id="grad_PowerShell" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -74,7 +74,7 @@
       <stop offset="100%" stop-color="hsl(49, 95%, 45%)" />
     </linearGradient>
     <linearGradient id="grad_Shell" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#15803d" />
+      <stop offset="0%" stop-color="#4ade80" />
       <stop offset="100%" stop-color="#16a34a" />
     </linearGradient>
     <linearGradient id="grad_CSS" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -152,7 +152,7 @@
 
   <!-- Header Section -->
   <g transform="translate(30, 35)">
-    <rect x="0" y="0" width="6" height="24" fill="#0277bd" rx="2" filter="url(#glow)" />
+    <rect x="0" y="0" width="6" height="24" fill="#38bdf8" rx="2" filter="url(#glow)" />
     <text x="18" y="18" class="title">SYSTEM CORE: LANGUAGE MATRIX</text>
     <text x="18" y="32" class="subtitle">ALL REGISTERED COGNITIVE LANGUAGES IN NON-FORK REPOS</text>
   </g>
@@ -161,203 +161,203 @@
   
     <!-- Row 0: Rust -->
     <g transform="translate(30, 80)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Rust</text>
-      <text x="540" y="12" fill="#c2410c" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">20.6%</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Rust</text>
+      <text x="540" y="12" fill="#fb923c" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">20.5%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="92" height="8" fill="url(#grad_Rust)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 1: HTML -->
     <g transform="translate(30, 125)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">HTML</text>
-      <text x="540" y="12" fill="#dc2626" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">12.4%</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">HTML</text>
+      <text x="540" y="12" fill="#f87171" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">12.4%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="55" height="8" fill="url(#grad_HTML)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 2: C# -->
     <g transform="translate(30, 170)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">C#</text>
-      <text x="540" y="12" fill="hsl(345, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">11.5%</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">C#</text>
+      <text x="540" y="12" fill="hsl(345, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">11.9%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
-      <rect x="0" y="22" width="51" height="8" fill="url(#grad_Csharp)" rx="4" filter="url(#glow)" />
+      <rect x="0" y="22" width="53" height="8" fill="url(#grad_Csharp)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 3: Java -->
     <g transform="translate(30, 215)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Java</text>
-      <text x="540" y="12" fill="hsl(263, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">10.1%</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Java</text>
+      <text x="540" y="12" fill="hsl(263, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">10.0%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="45" height="8" fill="url(#grad_Java)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 4: Python -->
     <g transform="translate(30, 260)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Python</text>
-      <text x="540" y="12" fill="#0277bd" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">9.5%</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Python</text>
+      <text x="540" y="12" fill="#38bdf8" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">9.4%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="42" height="8" fill="url(#grad_Python)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 5: TypeScript -->
     <g transform="translate(30, 305)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">TypeScript</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">TypeScript</text>
       <text x="540" y="12" fill="#60a5fa" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">5.6%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="25" height="8" fill="url(#grad_TypeScript)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 6: PHP -->
     <g transform="translate(30, 350)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">PHP</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">PHP</text>
       <text x="540" y="12" fill="hsl(25, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">5.5%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="24" height="8" fill="url(#grad_PHP)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 7: JavaScript -->
     <g transform="translate(30, 395)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">JavaScript</text>
-      <text x="540" y="12" fill="#b45309" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.4%</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">JavaScript</text>
+      <text x="540" y="12" fill="#fbbf24" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.3%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="19" height="8" fill="url(#grad_JavaScript)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 8: PowerShell -->
     <g transform="translate(30, 440)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">PowerShell</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">PowerShell</text>
       <text x="540" y="12" fill="hsl(355, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.2%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="18" height="8" fill="url(#grad_PowerShell)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 9: C++ -->
     <g transform="translate(30, 485)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">C++</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">C++</text>
       <text x="540" y="12" fill="#ec4899" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">3.7%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="16" height="8" fill="url(#grad_Cplusplus)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 10: Odin -->
     <g transform="translate(30, 530)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Odin</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Odin</text>
       <text x="540" y="12" fill="hsl(49, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">2.8%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="12" height="8" fill="url(#grad_Odin)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 11: Shell -->
     <g transform="translate(30, 575)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Shell</text>
-      <text x="540" y="12" fill="#15803d" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">2.8%</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Shell</text>
+      <text x="540" y="12" fill="#4ade80" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">2.8%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="12" height="8" fill="url(#grad_Shell)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 12: CSS -->
     <g transform="translate(30, 620)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">CSS</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">CSS</text>
       <text x="540" y="12" fill="#c084fc" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">1.4%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="6" height="8" fill="url(#grad_CSS)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 13: Elixir -->
     <g transform="translate(30, 665)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Elixir</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Elixir</text>
       <text x="540" y="12" fill="hsl(128, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">1.2%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="5" height="8" fill="url(#grad_Elixir)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 14: Ruby -->
     <g transform="translate(30, 710)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Ruby</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Ruby</text>
       <text x="540" y="12" fill="hsl(9, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">1.0%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="4" height="8" fill="url(#grad_Ruby)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 15: Prolog -->
     <g transform="translate(30, 755)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Prolog</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Prolog</text>
       <text x="540" y="12" fill="hsl(157, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">0.9%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="4" height="8" fill="url(#grad_Prolog)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 16: Svelte -->
     <g transform="translate(30, 800)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Svelte</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Svelte</text>
       <text x="540" y="12" fill="hsl(174, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">0.7%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="3" height="8" fill="url(#grad_Svelte)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 17: Nim -->
     <g transform="translate(30, 845)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Nim</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Nim</text>
       <text x="540" y="12" fill="hsl(46, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">0.6%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="2" height="8" fill="url(#grad_Nim)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 18: Go -->
     <g transform="translate(30, 890)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Go</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Go</text>
       <text x="540" y="12" fill="#22d3ee" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">0.6%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="2" height="8" fill="url(#grad_Go)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 19: Hack -->
     <g transform="translate(30, 935)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Hack</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Hack</text>
       <text x="540" y="12" fill="hsl(71, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">0.2%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="0" height="8" fill="url(#grad_Hack)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 20: Lua -->
     <g transform="translate(30, 980)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Lua</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Lua</text>
       <text x="540" y="12" fill="hsl(119, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">0.2%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="0" height="8" fill="url(#grad_Lua)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 21: Janet -->
     <g transform="translate(30, 1025)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Janet</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Janet</text>
       <text x="540" y="12" fill="hsl(1, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">0.1%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="0" height="8" fill="url(#grad_Janet)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 22: CMake -->
     <g transform="translate(30, 1070)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">CMake</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">CMake</text>
       <text x="540" y="12" fill="hsl(109, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">0.1%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="0" height="8" fill="url(#grad_CMake)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 23: R -->
     <g transform="translate(30, 1115)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">R</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">R</text>
       <text x="540" y="12" fill="hsl(211, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">0.0%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="0" height="8" fill="url(#grad_R)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 24: Batchfile -->
     <g transform="translate(30, 1160)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Batchfile</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Batchfile</text>
       <text x="540" y="12" fill="hsl(66, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">0.0%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="0" height="8" fill="url(#grad_Batchfile)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 25: C -->
     <g transform="translate(30, 1205)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">C</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">C</text>
       <text x="540" y="12" fill="hsl(88, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">0.0%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="0" height="8" fill="url(#grad_C)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 26: PLSQL -->
     <g transform="translate(30, 1250)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">PLSQL</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">PLSQL</text>
       <text x="540" y="12" fill="hsl(331, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">0.0%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="0" height="8" fill="url(#grad_PLSQL)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 27: Nix -->
     <g transform="translate(30, 1295)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Nix</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Nix</text>
       <text x="540" y="12" fill="hsl(327, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">0.0%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="0" height="8" fill="url(#grad_Nix)" rx="4" filter="url(#glow)" />
     </g>
     <!-- Row 28: Dockerfile -->
     <g transform="translate(30, 1340)">
-      <text x="0" y="12" fill="#262c46" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Dockerfile</text>
+      <text x="0" y="12" fill="#e2e8f0" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Dockerfile</text>
       <text x="540" y="12" fill="hsl(87, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">0.0%</text>
       <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
       <rect x="0" y="22" width="0" height="8" fill="url(#grad_Dockerfile)" rx="4" filter="url(#glow)" />
