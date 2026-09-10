@@ -58,15 +58,15 @@
   
     <g>
       <text x="24" y="84" class="tag" fill="#0277bd">[PUSH]</text>
-      <text x="106" y="84" class="repo">indoctrinatedrecluse</text>
+      <text x="106" y="84" class="repo">RecluseEdit</text>
       <text x="236" y="84" class="msg">1 commits</text>
-      <text x="636" y="84" class="time" text-anchor="end">7m</text>
+      <text x="636" y="84" class="time" text-anchor="end">1d</text>
     </g>
     <g>
       <text x="24" y="114" class="tag" fill="#0277bd">[PUSH]</text>
-      <text x="106" y="114" class="repo">RecluseEdit</text>
+      <text x="106" y="114" class="repo">indoctrinatedrecluse</text>
       <text x="236" y="114" class="msg">1 commits</text>
-      <text x="636" y="114" class="time" text-anchor="end">1d</text>
+      <text x="636" y="114" class="time" text-anchor="end">3h</text>
     </g>
     <g>
       <text x="24" y="144" class="tag" fill="#15803d">[CREATE]</text>
@@ -78,13 +78,13 @@
       <text x="24" y="174" class="tag" fill="#dc2626">[DELETE]</text>
       <text x="106" y="174" class="repo">RecluseEdit</text>
       <text x="236" y="174" class="msg">tag</text>
-      <text x="636" y="174" class="time" text-anchor="end">14h</text>
+      <text x="636" y="174" class="time" text-anchor="end">17h</text>
     </g>
     <g>
       <text x="24" y="204" class="tag" fill="#b45309">[STAR]</text>
       <text x="106" y="204" class="repo">bug-bundler</text>
       <text x="236" y="204" class="msg">starred repository</text>
-      <text x="636" y="204" class="time" text-anchor="end">23h</text>
+      <text x="636" y="204" class="time" text-anchor="end">1d</text>
     </g>
     <g>
       <text x="24" y="234" class="tag" fill="#b45309">[STAR]</text>
