@@ -71,6 +71,7 @@ jobs:
           python generate_featured.py
           python generate_isocalendar.py
           python generate_system_status.py
+          python generate_pinned.py
 
       # 3. Generate Snake Contribution game SVG with custom colors
       - name: Generate github-contribution-grid-snake.svg

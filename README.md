@@ -138,6 +138,20 @@
   <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
 </p>
 
+<!-- PINNED REPOSITORIES -->
+<h2 align="center">📌 Pinned Repositories</h2>
+<p align="center">
+  <img src="./profile-3d-contrib/pinned.svg" alt="Pinned repositories" width="100%" />
+</p>
+<p align="center">
+  <sub>Curated system protocols — synced with GitHub pinned profile telemetry.</sub>
+</p>
+
+<!-- SECTION DIVIDER -->
+<p align="center">
+  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+</p>
+
 <!-- FEATURED PROJECTS -->
 <h2 align="center">📦 Featured Projects</h2>
 <p align="center">

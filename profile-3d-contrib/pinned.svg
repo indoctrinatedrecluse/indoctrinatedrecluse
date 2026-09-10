@@ -1,0 +1,153 @@
+<svg width="700" height="396" viewBox="0 0 700 396" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="34%" r="85%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.20" />
+      <stop offset="55%" stop-color="#0277bd" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#f6f3fd" stop-opacity="0" />
+    </radialGradient>
+    <filter id="tileGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+      </feMerge>
+    </filter>
+    <filter id="cornerGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    .title {
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 16px;
+      font-weight: bold;
+      fill: #c0267f;
+    }
+    .subtitle {
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 9px;
+      fill: #5e6380;
+      letter-spacing: 2px;
+    }
+    .bg {
+      fill: #f6f3fd;
+      stroke: #6d79b5;
+      stroke-width: 2;
+      rx: 14px;
+    }
+  </style>
+
+  <rect width="700" height="396" class="bg" />
+  <rect x="2" y="2" width="696" height="392" rx="12" fill="url(#vignette)" />
+
+  <line x1="14" y1="46" x2="686" y2="46" stroke="#6d79b5" stroke-opacity="0.16" stroke-width="1" />
+<line x1="14" y1="78" x2="686" y2="78" stroke="#6d79b5" stroke-opacity="0.16" stroke-width="1" />
+<line x1="14" y1="110" x2="686" y2="110" stroke="#6d79b5" stroke-opacity="0.16" stroke-width="1" />
+<line x1="14" y1="142" x2="686" y2="142" stroke="#6d79b5" stroke-opacity="0.16" stroke-width="1" />
+<line x1="14" y1="174" x2="686" y2="174" stroke="#6d79b5" stroke-opacity="0.16" stroke-width="1" />
+<line x1="14" y1="206" x2="686" y2="206" stroke="#6d79b5" stroke-opacity="0.16" stroke-width="1" />
+<line x1="14" y1="238" x2="686" y2="238" stroke="#6d79b5" stroke-opacity="0.16" stroke-width="1" />
+<line x1="14" y1="270" x2="686" y2="270" stroke="#6d79b5" stroke-opacity="0.16" stroke-width="1" />
+<line x1="14" y1="302" x2="686" y2="302" stroke="#6d79b5" stroke-opacity="0.16" stroke-width="1" />
+<line x1="14" y1="334" x2="686" y2="334" stroke="#6d79b5" stroke-opacity="0.16" stroke-width="1" />
+<line x1="14" y1="366" x2="686" y2="366" stroke="#6d79b5" stroke-opacity="0.16" stroke-width="1" />
+<line x1="72" y1="14" x2="72" y2="382" stroke="#6d79b5" stroke-opacity="0.10" stroke-width="1" />
+<line x1="148" y1="14" x2="148" y2="382" stroke="#6d79b5" stroke-opacity="0.10" stroke-width="1" />
+<line x1="224" y1="14" x2="224" y2="382" stroke="#6d79b5" stroke-opacity="0.10" stroke-width="1" />
+<line x1="300" y1="14" x2="300" y2="382" stroke="#6d79b5" stroke-opacity="0.10" stroke-width="1" />
+<line x1="376" y1="14" x2="376" y2="382" stroke="#6d79b5" stroke-opacity="0.10" stroke-width="1" />
+<line x1="452" y1="14" x2="452" y2="382" stroke="#6d79b5" stroke-opacity="0.10" stroke-width="1" />
+<line x1="528" y1="14" x2="528" y2="382" stroke="#6d79b5" stroke-opacity="0.10" stroke-width="1" />
+<line x1="604" y1="14" x2="604" y2="382" stroke="#6d79b5" stroke-opacity="0.10" stroke-width="1" />
+<line x1="680" y1="14" x2="680" y2="382" stroke="#6d79b5" stroke-opacity="0.10" stroke-width="1" />
+
+  <g transform="translate(28, 26)">
+    <rect x="0" y="0" width="6" height="22" fill="#c0267f" rx="2" />
+    <text x="18" y="16" class="title">PINNED REPOSITORIES</text>
+    <text x="18" y="29" class="subtitle">PRIMARY CORES // DIRECT PROTOCOL ACCESS</text>
+  </g>
+  <line x1="28" y1="64" x2="672" y2="64" stroke="#6d79b5" stroke-opacity="0.6" stroke-width="1" />
+
+  
+    <path d="M14 40 L14 22 Q14 14 22 14 L40 14" fill="none" stroke="#0277bd" stroke-width="2.5" stroke-linecap="round" filter="url(#cornerGlow)" />
+    <path d="M686 40 L686 22 Q686 14 678 14 L660 14" fill="none" stroke="#c0267f" stroke-width="2.5" stroke-linecap="round" filter="url(#cornerGlow)" />
+    <path d="M14 356 L14 374 Q14 382 22 382 L40 382" fill="none" stroke="#c0267f" stroke-width="2.5" stroke-linecap="round" filter="url(#cornerGlow)" />
+    <path d="M686 356 L686 374 Q686 382 678 382 L660 382" fill="none" stroke="#0277bd" stroke-width="2.5" stroke-linecap="round" filter="url(#cornerGlow)" />
+
+  
+  <g>
+    <rect x="21" y="79" width="322" height="94" rx="12" fill="#c0267f" opacity="0.14" filter="url(#tileGlow)" />
+    <rect x="24" y="82" width="316" height="88" rx="10" fill="#e8e4f6" stroke="#6d79b5" stroke-opacity="0.9" stroke-width="1.5" />
+    <circle cx="42" cy="104" r="3.5" fill="#c0267f" />
+    <text x="52" y="108" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#1e2335">ir-cli-utility</text>
+    <rect x="282" y="96" width="46" height="15" rx="3" fill="#f6f3fd" stroke="#6d79b5" stroke-width="1" />
+    <text x="305" y="107" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#c0267f">PINNED</text>
+    <text x="42" y="130" font-family="'Fira Code', monospace" font-size="9" fill="#5865b0">curated system repository // no telemetry lo…</text>
+    <rect x="42" y="149" width="6" height="6" rx="1.5" fill="#c0267f" />
+    <text x="53" y="155" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#c0267f">RUST</text>
+    <text x="326" y="155" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#b45309">★ 1  ⑂ 0</text>
+  </g>
+  <g>
+    <rect x="357" y="79" width="322" height="94" rx="12" fill="#15803d" opacity="0.14" filter="url(#tileGlow)" />
+    <rect x="360" y="82" width="316" height="88" rx="10" fill="#e8e4f6" stroke="#6d79b5" stroke-opacity="0.9" stroke-width="1.5" />
+    <circle cx="378" cy="104" r="3.5" fill="#15803d" />
+    <text x="388" y="108" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#1e2335">Suzerain-save-editor</text>
+    <rect x="618" y="96" width="46" height="15" rx="3" fill="#f6f3fd" stroke="#6d79b5" stroke-width="1" />
+    <text x="641" y="107" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#c0267f">PINNED</text>
+    <text x="378" y="130" font-family="'Fira Code', monospace" font-size="9" fill="#5865b0">curated system repository // no telemetry lo…</text>
+    <rect x="378" y="149" width="6" height="6" rx="1.5" fill="#15803d" />
+    <text x="389" y="155" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#15803d">C#</text>
+    <text x="662" y="155" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#b45309">★ 0  ⑂ 0</text>
+  </g>
+  <g>
+    <rect x="21" y="181" width="322" height="94" rx="12" fill="#5865b0" opacity="0.14" filter="url(#tileGlow)" />
+    <rect x="24" y="184" width="316" height="88" rx="10" fill="#e8e4f6" stroke="#6d79b5" stroke-opacity="0.9" stroke-width="1.5" />
+    <circle cx="42" cy="206" r="3.5" fill="#5865b0" />
+    <text x="52" y="210" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#1e2335">MusicLink</text>
+    <rect x="282" y="198" width="46" height="15" rx="3" fill="#f6f3fd" stroke="#6d79b5" stroke-width="1" />
+    <text x="305" y="209" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#c0267f">PINNED</text>
+    <text x="42" y="232" font-family="'Fira Code', monospace" font-size="9" fill="#5865b0">A drag and drop music creator.</text>
+    <rect x="42" y="251" width="6" height="6" rx="1.5" fill="#5865b0" />
+    <text x="53" y="257" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#5865b0">TYPESCRIPT</text>
+    <text x="326" y="257" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#b45309">★ 0  ⑂ 0</text>
+  </g>
+  <g>
+    <rect x="357" y="181" width="322" height="94" rx="12" fill="#0277bd" opacity="0.14" filter="url(#tileGlow)" />
+    <rect x="360" y="184" width="316" height="88" rx="10" fill="#e8e4f6" stroke="#6d79b5" stroke-opacity="0.9" stroke-width="1.5" />
+    <circle cx="378" cy="206" r="3.5" fill="#0277bd" />
+    <text x="388" y="210" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#1e2335">OwlCatPortraitTool</text>
+    <rect x="618" y="198" width="46" height="15" rx="3" fill="#f6f3fd" stroke="#6d79b5" stroke-width="1" />
+    <text x="641" y="209" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#c0267f">PINNED</text>
+    <text x="378" y="232" font-family="'Fira Code', monospace" font-size="9" fill="#5865b0">A portrait tool for Owlcat Games (Pathfinder…</text>
+    <rect x="378" y="251" width="6" height="6" rx="1.5" fill="#0277bd" />
+    <text x="389" y="257" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#0277bd">PYTHON</text>
+    <text x="662" y="257" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#b45309">★ 0  ⑂ 0</text>
+  </g>
+  <g>
+    <rect x="21" y="283" width="322" height="94" rx="12" fill="#15803d" opacity="0.14" filter="url(#tileGlow)" />
+    <rect x="24" y="286" width="316" height="88" rx="10" fill="#e8e4f6" stroke="#6d79b5" stroke-opacity="0.9" stroke-width="1.5" />
+    <circle cx="42" cy="308" r="3.5" fill="#15803d" />
+    <text x="52" y="312" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#1e2335">RecluseEdit</text>
+    <rect x="282" y="300" width="46" height="15" rx="3" fill="#f6f3fd" stroke="#6d79b5" stroke-width="1" />
+    <text x="305" y="311" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#c0267f">PINNED</text>
+    <text x="42" y="334" font-family="'Fira Code', monospace" font-size="9" fill="#5865b0">A fast, modern web application text editor b…</text>
+    <rect x="42" y="353" width="6" height="6" rx="1.5" fill="#15803d" />
+    <text x="53" y="359" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#15803d">C#</text>
+    <text x="326" y="359" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#b45309">★ 1  ⑂ 0</text>
+  </g>
+  <g>
+    <rect x="357" y="283" width="322" height="94" rx="12" fill="#0277bd" opacity="0.14" filter="url(#tileGlow)" />
+    <rect x="360" y="286" width="316" height="88" rx="10" fill="#e8e4f6" stroke="#6d79b5" stroke-opacity="0.9" stroke-width="1.5" />
+    <circle cx="378" cy="308" r="3.5" fill="#0277bd" />
+    <text x="388" y="312" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#1e2335">algo-visualizer</text>
+    <rect x="618" y="300" width="46" height="15" rx="3" fill="#f6f3fd" stroke="#6d79b5" stroke-width="1" />
+    <text x="641" y="311" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#c0267f">PINNED</text>
+    <text x="378" y="334" font-family="'Fira Code', monospace" font-size="9" fill="#5865b0">curated system repository // no telemetry lo…</text>
+    <rect x="378" y="353" width="6" height="6" rx="1.5" fill="#0277bd" />
+    <text x="389" y="359" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#0277bd">PYTHON</text>
+    <text x="662" y="359" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#b45309">★ 0  ⑂ 0</text>
+  </g>
+</svg>

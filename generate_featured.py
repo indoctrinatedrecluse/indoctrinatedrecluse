@@ -16,7 +16,7 @@ LANG_ACCENTS = {
     "JavaScript": "#facc15",
     "TypeScript": "#60a5fa",
     "HTML": "#f87171",
-    "CSS": "#c084fc",
+    # "CSS": "#c084fc",
     "C++": "#ec4899",
     "C#": "#3ddc97",
     "Java": "#fbbf24",
@@ -27,7 +27,7 @@ LANG_ACCENTS = {
     "Odin": "#bb9af3",
     "Nim": "#fbbf24",
     "Elixir": "#7aa2f7",
-    "Svelte": "#fb923c",
+    # # "Svelte": "#fb923c",
     "Prolog": "#4ade80",
     "Shell": "#4ade80",
 }
