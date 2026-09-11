@@ -4,12 +4,12 @@
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 16px;
       font-weight: bold;
-      fill: #c0267f;
+      fill: #ff79c6;
     }
     .subtitle {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 9px;
-      fill: #5e6380;
+      fill: #6272a4;
       letter-spacing: 2px;
     }
     .tag {
@@ -21,27 +21,27 @@
     .repo {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 12px;
-      fill: #1e2335;
+      fill: #c0caf5;
       font-weight: bold;
     }
     .msg {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 10px;
-      fill: #5865b0;
+      fill: #7aa2f7;
     }
     .time {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 10px;
-      fill: #5e6380;
+      fill: #6272a4;
     }
     .empty {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 12px;
-      fill: #5e6380;
+      fill: #6272a4;
     }
     .bg {
-      fill: #f6f3fd;
-      stroke: #6d79b5;
+      fill: #1a1b26;
+      stroke: #3d59a1;
       stroke-width: 2;
       rx: 12px;
     }
@@ -50,46 +50,46 @@
   <rect width="660" height="250" class="bg" />
 
   <g transform="translate(24, 24)">
-    <rect x="0" y="0" width="6" height="22" fill="#0277bd" rx="2" />
+    <rect x="0" y="0" width="6" height="22" fill="#38bdf8" rx="2" />
     <text x="18" y="16" class="title">LIVE FEED: RECENT ACTIVITY</text>
     <text x="18" y="29" class="subtitle">LAST PUBLIC SIGNALS // GITHUB EVENTS API</text>
   </g>
-  <line x1="24" y1="64" x2="636" y2="64" stroke="#6d79b5" stroke-opacity="0.6" stroke-width="1" />
+  <line x1="24" y1="64" x2="636" y2="64" stroke="#3d59a1" stroke-opacity="0.6" stroke-width="1" />
   
     <g>
-      <text x="24" y="84" class="tag" fill="#0277bd">[PUSH]</text>
+      <text x="24" y="84" class="tag" fill="#38bdf8">[PUSH]</text>
       <text x="106" y="84" class="repo">RecluseEdit</text>
       <text x="236" y="84" class="msg">1 commits</text>
       <text x="636" y="84" class="time" text-anchor="end">2d</text>
     </g>
     <g>
-      <text x="24" y="114" class="tag" fill="#0277bd">[PUSH]</text>
+      <text x="24" y="114" class="tag" fill="#38bdf8">[PUSH]</text>
       <text x="106" y="114" class="repo">bug-bundler</text>
       <text x="236" y="114" class="msg">1 commits</text>
-      <text x="636" y="114" class="time" text-anchor="end">16h</text>
+      <text x="636" y="114" class="time" text-anchor="end">1d</text>
     </g>
     <g>
-      <text x="24" y="144" class="tag" fill="#7c3aed">[PR·OPENED]</text>
+      <text x="24" y="144" class="tag" fill="#bb9af3">[PR·OPENED]</text>
       <text x="106" y="144" class="repo">bug-bundler</text>
       <text x="236" y="144" class="msg"></text>
-      <text x="636" y="144" class="time" text-anchor="end">16h</text>
+      <text x="636" y="144" class="time" text-anchor="end">1d</text>
     </g>
     <g>
-      <text x="24" y="174" class="tag" fill="#c0267f">[FORK]</text>
+      <text x="24" y="174" class="tag" fill="#ff79c6">[FORK]</text>
       <text x="106" y="174" class="repo">bug-bundler</text>
       <text x="236" y="174" class="msg">forked repository</text>
-      <text x="636" y="174" class="time" text-anchor="end">16h</text>
+      <text x="636" y="174" class="time" text-anchor="end">1d</text>
     </g>
     <g>
-      <text x="24" y="204" class="tag" fill="#0277bd">[PUSH]</text>
+      <text x="24" y="204" class="tag" fill="#38bdf8">[PUSH]</text>
       <text x="106" y="204" class="repo">indoctrinatedrecluse</text>
       <text x="236" y="204" class="msg">1 commits</text>
       <text x="636" y="204" class="time" text-anchor="end">1d</text>
     </g>
     <g>
-      <text x="24" y="234" class="tag" fill="#15803d">[CREATE]</text>
+      <text x="24" y="234" class="tag" fill="#4ade80">[CREATE]</text>
       <text x="106" y="234" class="repo">RecluseEdit</text>
       <text x="236" y="234" class="msg">master</text>
-      <text x="636" y="234" class="time" text-anchor="end">2d</text>
+      <text x="636" y="234" class="time" text-anchor="end">3d</text>
     </g>
 </svg>
