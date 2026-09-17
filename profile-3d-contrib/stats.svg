@@ -4,29 +4,29 @@
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 17px;
       font-weight: bold;
-      fill: #ff79c6;
+      fill: #c0267f;
     }
     .subtitle {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 10px;
-      fill: #6272a4;
+      fill: #5e6380;
       letter-spacing: 2px;
     }
     .cell-label {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 10px;
-      fill: #7aa2f7;
+      fill: #5865b0;
       letter-spacing: 1.5px;
     }
     .cell-value {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 26px;
       font-weight: bold;
-      fill: #38bdf8;
+      fill: #0277bd;
     }
     .bg {
-      fill: #1a1b26;
-      stroke: #3d59a1;
+      fill: #f6f3fd;
+      stroke: #6d79b5;
       stroke-width: 2;
       rx: 14px;
     }
@@ -47,11 +47,11 @@
 
   <!-- Header Section -->
   <g transform="translate(28, 26)">
-    <rect x="0" y="0" width="6" height="22" fill="#38bdf8" rx="2" filter="url(#glow)" />
+    <rect x="0" y="0" width="6" height="22" fill="#0277bd" rx="2" filter="url(#glow)" />
     <text x="18" y="17" class="title">SYSTEM CORE: PROFILE TELEMETRY</text>
     <text x="18" y="31" class="subtitle">LIVE ACCOUNT SIGNALS // AUTOMATED DAILY SYNC</text>
   </g>
-  <line x1="28" y1="68" x2="952" y2="68" stroke="#3d59a1" stroke-opacity="0.6" stroke-width="1" />
+  <line x1="28" y1="68" x2="952" y2="68" stroke="#6d79b5" stroke-opacity="0.6" stroke-width="1" />
 
   <!-- Metric Cells -->
   
