@@ -100,7 +100,7 @@
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">TypeScript</text>
         <text x="540" y="12" fill="#60a5fa" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">27.6%</text>
         <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
-        <rect x="0" y="22" width="149" height="8" fill="url(#grad_TypeScript)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="148" height="8" fill="url(#grad_TypeScript)" rx="4" filter="url(#glow)" />
       </g>
     </a>
     <!-- Row 1: C# -->
@@ -143,7 +143,7 @@
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=Python" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 305)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Python</text>
-        <text x="540" y="12" fill="#38bdf8" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.3%</text>
+        <text x="540" y="12" fill="#38bdf8" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.4%</text>
         <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
         <rect x="0" y="22" width="23" height="8" fill="url(#grad_Python)" rx="4" filter="url(#glow)" />
       </g>
@@ -154,7 +154,7 @@
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Java</text>
         <text x="540" y="12" fill="#fbbf24" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">3.7%</text>
         <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
-        <rect x="0" y="22" width="20" height="8" fill="url(#grad_Java)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="19" height="8" fill="url(#grad_Java)" rx="4" filter="url(#glow)" />
       </g>
     </a>
     <!-- Row 7: PowerShell -->
