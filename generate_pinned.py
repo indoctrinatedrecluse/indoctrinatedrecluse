@@ -194,6 +194,75 @@ def grid_lines(width, height):
     return "\n".join(parts)
 
 
+def generate_single_pinned_tile_svg(r, username, index, output_dir=OUTPUT_DIR):
+    tile_w, tile_h = 330, 92
+    name = html.escape(clip(r.get("name") or "", 22))
+    lang = r.get("language") or "Unknown"
+    accent = lang_accent(lang)
+    desc_raw = r.get("description") or "curated system repository // no telemetry logged"
+    desc = html.escape(clip(desc_raw, 42))
+    stars = r.get("stargazers_count", 0)
+    forks = r.get("forks_count", 0)
+    lang_txt = html.escape(lang)
+
+    svg = f"""<svg width="{tile_w}" height="{tile_h}" viewBox="0 0 {tile_w} {tile_h}" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="tileGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    .tile-rect {{
+      fill: #16161e;
+      stroke: #3d59a1;
+      stroke-width: 1.5;
+      rx: 10px;
+    }}
+    .tile-title {{
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 13px;
+      font-weight: bold;
+      fill: #c0caf5;
+    }}
+    .tile-desc {{
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 9px;
+      fill: #7aa2f7;
+    }}
+    .tag-text {{
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 8px;
+      font-weight: bold;
+    }}
+  </style>
+
+  <rect x="2" y="2" width="{tile_w - 4}" height="{tile_h - 4}" rx="10" fill="{accent}" opacity="0.12" filter="url(#tileGlow)" />
+  <rect x="2" y="2" width="{tile_w - 4}" height="{tile_h - 4}" class="tile-rect" />
+  
+  <rect x="2" y="16" width="3" height="60" rx="1.5" fill="{accent}" />
+  <circle cx="20" cy="24" r="3.5" fill="{accent}" />
+  
+  <text x="32" y="28" class="tile-title">{name}</text>
+  
+  <rect x="{tile_w - 62}" y="16" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
+  <text x="{tile_w - 39}" y="27" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
+  
+  <text x="20" y="50" class="tile-desc">{desc}</text>
+  
+  <rect x="20" y="68" width="6" height="6" rx="1.5" fill="{accent}" />
+  <text x="31" y="74" class="tag-text" fill="{accent}">{lang_txt.upper()}</text>
+  <text x="{tile_w - 18}" y="74" text-anchor="end" class="tag-text" fill="#fbbf24">★ {stars}  ⑂ {forks}</text>
+</svg>
+"""
+    tile_path = os.path.join(output_dir, f"pinned-tile-{index}.svg")
+    save_dual_theme_svg(svg, tile_path)
+    return tile_path
+
+
 def generate_pinned_svg(username, token, filepath):
     repos = gather_pinned_repos(username, token)
 
@@ -225,6 +294,9 @@ def generate_pinned_svg(username, token, filepath):
             lang_txt = html.escape(lang)
 
             url = html.escape(r.get("url") or f"https://github.com/{username}/{r.get('name', '')}")
+
+            # Generate individual standalone tile SVG for clickable GitHub table
+            generate_single_pinned_tile_svg(r, username, i, os.path.dirname(filepath) or OUTPUT_DIR)
 
             tiles += f"""
   <a href="{url}" target="_blank" rel="noopener noreferrer">

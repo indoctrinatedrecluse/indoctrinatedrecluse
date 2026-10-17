@@ -1,10 +1,27 @@
 <!-- FUTURISTIC CYBERPUNK HEADER BANNER -->
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./banner-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./banner-light.svg" />
-    <img src="./banner-dark.svg" width="100%" alt="IndoctrinatedRecluse Cyberpunk Banner" />
-  </picture>
+  <a href="https://portfolio-flutter-78bcf.web.app/" target="_blank" rel="noopener noreferrer">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./banner-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="./banner-light.svg" />
+      <img src="./banner-dark.svg" width="100%" alt="IndoctrinatedRecluse Cyberpunk Banner" />
+    </picture>
+  </a>
+</p>
+
+<!-- BANNER QUICK-ACTION PROTOCOL LINKS -->
+<p align="center">
+  <a href="https://portfolio-flutter-78bcf.web.app/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/PORTFOLIO-LIVE%20WEBSITE%20%E2%86%97-38bdf8?style=for-the-badge&logo=googlechrome&logoColor=black&labelColor=1a1b26" alt="Live Portfolio Website" />
+  </a>
+  &nbsp;
+  <a href="https://media.licdn.com/dms/image/v2/D4D2DAQFsywd5sLJt7w/profile-treasury-document-cover-images_800/B4DaFJCWhgJ8A8-/0/1792226717161?e=1792832400&v=beta&t=_-g4akjeL9-jbv3YNtT42UijJLaUaHW9xrQpacOz3-Q" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/USC-DEGREE%20CREDENTIAL%20%E2%86%97-facc15?style=for-the-badge&logo=academia&logoColor=black&labelColor=1a1b26" alt="USC Degree Credential" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/indoctrinatedrecluse" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/GITHUB-PROFILE%20%E2%86%97-ff79c6?style=for-the-badge&logo=github&logoColor=white&labelColor=1a1b26" alt="GitHub Profile" />
+  </a>
 </p>
 
 <!-- DYNAMIC TYPING SVG & GREETING -->
@@ -233,13 +250,68 @@
 
 <!-- PINNED REPOSITORIES -->
 <h2 align="center">📌 Pinned Repositories</h2>
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/pinned-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/pinned-light.svg" />
-    <img src="./profile-3d-contrib/pinned-dark.svg" alt="Pinned repositories" width="100%" />
-  </picture>
-</p>
+<table border="0" width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/indoctrinatedrecluse/ir-cli-utility" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/pinned-tile-0-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/pinned-tile-0-light.svg" />
+          <img src="./profile-3d-contrib/pinned-tile-0-dark.svg" width="100%" alt="ir-cli-utility" />
+        </picture>
+      </a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/indoctrinatedrecluse/MusicLink" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/pinned-tile-1-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/pinned-tile-1-light.svg" />
+          <img src="./profile-3d-contrib/pinned-tile-1-dark.svg" width="100%" alt="MusicLink" />
+        </picture>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/indoctrinatedrecluse/OwlCatPortraitTool" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/pinned-tile-2-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/pinned-tile-2-light.svg" />
+          <img src="./profile-3d-contrib/pinned-tile-2-dark.svg" width="100%" alt="OwlCatPortraitTool" />
+        </picture>
+      </a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/indoctrinatedrecluse/RecluseEdit" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/pinned-tile-3-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/pinned-tile-3-light.svg" />
+          <img src="./profile-3d-contrib/pinned-tile-3-dark.svg" width="100%" alt="RecluseEdit" />
+        </picture>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/indoctrinatedrecluse/algo-visualizer" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/pinned-tile-4-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/pinned-tile-4-light.svg" />
+          <img src="./profile-3d-contrib/pinned-tile-4-dark.svg" width="100%" alt="algo-visualizer" />
+        </picture>
+      </a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/indoctrinatedrecluse/IndoctrinatedEdit" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/pinned-tile-5-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/pinned-tile-5-light.svg" />
+          <img src="./profile-3d-contrib/pinned-tile-5-dark.svg" width="100%" alt="IndoctrinatedEdit" />
+        </picture>
+      </a>
+    </td>
+  </tr>
+</table>
 <p align="center">
   <sub>Interactive protocol access — click any repository card to open on GitHub.</sub>
 </p>
@@ -255,13 +327,68 @@
 
 <!-- FEATURED PROJECTS -->
 <h2 align="center">📦 Featured Projects</h2>
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/featured-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/featured-light.svg" />
-    <img src="./profile-3d-contrib/featured-dark.svg" alt="Featured projects" width="100%" />
-  </picture>
-</p>
+<table border="0" width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/indoctrinatedrecluse/portfolio-angular" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/featured-tile-0-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/featured-tile-0-light.svg" />
+          <img src="./profile-3d-contrib/featured-tile-0-dark.svg" width="100%" alt="portfolio-angular" />
+        </picture>
+      </a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/indoctrinatedrecluse/IndoctrinatedEdit" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/featured-tile-1-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/featured-tile-1-light.svg" />
+          <img src="./profile-3d-contrib/featured-tile-1-dark.svg" width="100%" alt="IndoctrinatedEdit" />
+        </picture>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/indoctrinatedrecluse/forum_and_chat" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/featured-tile-2-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/featured-tile-2-light.svg" />
+          <img src="./profile-3d-contrib/featured-tile-2-dark.svg" width="100%" alt="forum_and_chat" />
+        </picture>
+      </a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/indoctrinatedrecluse/portfolio-react-nextjs" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/featured-tile-3-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/featured-tile-3-light.svg" />
+          <img src="./profile-3d-contrib/featured-tile-3-dark.svg" width="100%" alt="portfolio-react-nextjs" />
+        </picture>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/indoctrinatedrecluse/ir-cli-utility" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/featured-tile-4-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/featured-tile-4-light.svg" />
+          <img src="./profile-3d-contrib/featured-tile-4-dark.svg" width="100%" alt="ir-cli-utility" />
+        </picture>
+      </a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/indoctrinatedrecluse/RecluseEdit" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/featured-tile-5-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/featured-tile-5-light.svg" />
+          <img src="./profile-3d-contrib/featured-tile-5-dark.svg" width="100%" alt="RecluseEdit" />
+        </picture>
+      </a>
+    </td>
+  </tr>
+</table>
 <p align="center">
   <sub>Interactive repository telemetry — click any card to visit the repository.</sub>
 </p>
