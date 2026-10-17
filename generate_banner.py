@@ -1,158 +1,86 @@
-"""Cyberpunk Dual-Theme Vector Header Banner Generator.
+"""Cyberpunk Dual-Theme Anime Avatar + Interactive Terminal Banner Generator.
 
-Creates bespoke vector SVGs with:
-- Left: Character / ASCII art portrait from user photos (moody dark portrait for dark mode,
-  sunny sunglasses boat photo for light mode).
-- Right: Interactive terminal card matching the exact cyberpunk / synthwave theme.
-- Dynamic scanline animation and glowing neon cyber-frame.
+Creates custom banners featuring:
+- Left: AI-stylized anime/digital art portrait matching the user's likeness
+  (Moody cyberpunk hoodie for dark mode, sunny day on the water with sunglasses for light mode).
+- Right: Interactive terminal card with clickable links to GitHub, degree credential at USC,
+  and live portfolio website.
+- Dynamic scanline sweep and glowing neon cyberpunk borders.
 """
 
 import os
-import re
+import base64
 
 OUTPUT_BASE = "banner.svg"
+AVATAR_DARK = os.path.join("refs", "avatar_dark_opt.jpg")
+AVATAR_LIGHT = os.path.join("refs", "avatar_light_opt.jpg")
 
-# ASCII Portraits (30 lines x 53 characters each)
-DARK_ASCII = [
-    '------------------=%@@@@@@@@#------------------------',
-    '-------------+@@@@@####****%@@@=:-------------------',
-    '------------+@@@#*+++++++#@@#-----------------------',
-    '-----------=#%*++=========#@@#=:--------------------',
-    '-----------@%*+++==========*@@%:::::::::::::::::::::',
-    '----------%@#+++============*@@#::::::::::::::::::::',
-    '---------#*++*%@@====*#%#*=+@#::::::::::::::::::::::',
-    '--------+#**%@@@*==#%#***+#*+:::::::::::::::::::::::',
-    '-------#=**+#%##===#%***+*+:::::::::::::::::::::::::',
-    '-------=***%###=-=*#*==+*:::::::::::::::::::::::::::',
-    '-------=**%%**=-=##*==++----------------------------',
-    '-------+*##%#*==+##*==++----------------------------',
-    '-------*+++==---=+*++==-----------------------------',
-    '------++=======++-----------------------------------',
-    '------==========+----------------+-:----------------',
-    '------==========+----------------+=-:---------------',
-    '------=======++------------------=-+:---------------',
-    '-------=======*#%#+:-------------+-+:---------------',
-    '-------=====*%%@%#+-------------+-+:----------------',
-    '-------===-*%%%%*+--------------=-+:----------------',
-    '-------++=*%%%%%##=-==:-----------------------------',
-    '--------++*+*#%#====++=-----------------------------',
-    '---------*++++*##*=====-----------------------------',
-    '----------*++++%#=====------------------------------',
-    '-----------++++*#+==--------------------------------',
-    '------------%#*+**+++=-+----------------------------',
-    '------------+@%*++##%%###++=------------------------',
-    '-----------+@#++##%%%###++=-------------------------',
-    '----------+@@#+##%%%%%###*==------------------------',
-    '---------+@@@%*##%%%%%####*==-----------------------',
-]
-
-LIGHT_ASCII = [
-    '-----------------------------------------------------',
-    '-----------------------------------------------------',
-    '-----------------------------------------------------',
-    '-----------------------------------------------------',
-    '-------------=-::::--=--=---=------------------------',
-    '-----------:..:--:=*+:..:-:.-..:---------------------',
-    '--------...=-+*+::**=:::-:...----.-------------------',
-    '-------.-==+*##**#%##*++*+=--::.---------------------',
-    '-------====#%%@@%%#%##***##*=::::-.------------------',
-    '------=-:=#%####*+------*+=-:...::-------------------',
-    '------:.=*###****-::..-**=--:.:::--------------------',
-    '..:--*==*#%%###*+==--*###*=-...::=-------------------',
-    '-.-=*#####%%%%%%####%@%%@%+=-------------------------',
-    '=*++#@#####%%%%##*+=*##%#*++===+===------------------',
-    ':=-:+%%*#####***=-=*#*:.:-..--==+=*------------------',
-    ':....=****######*-+**+--::.....:==#%################%',
-    '.:..:..-.*######****####**+--::--+####%###**********#',
-    '--.....-.##******#####*=-::-=====:=******==--:-:.-===',
-    '....----.#%#*****######**-:-====**++++++++=--=-:--+=+',
-    '-.-------#%##**+++*###**+-:..--:-====-==+*****+*#***+',
-    '==------=#%####**+=---:..........::::::::--=+********',
-    '%%%%%%%%#######**##*-::....-...:::::::::::-==+*******',
-    '%%%%%%########******+--===....:::::::::::--=+***+****',
-    '%%%%%%%%###*+++++***+=---..:::::::----------+**+++***',
-    '%%###%%%#*+=++++++++*++=-:#*-:::------------=**=+=++*',
-    '#%##*#%%#+==++=+++++++++***++=------------==-**++=+=+',
-    '##**=#%#+===+++++++++++++++++=-----------===-=**++==+',
-    '**++==**+===+++++++++++++++++==-::-------=====***+=+*',
-    '+=+++=:-++++++++++++++++++++++==-::------====-+******',
-    '+**+++-:-+********++++++++++++++=-:---======+==-=**+*',
-]
+PORTFOLIO_URL = "https://portfolio-flutter-78bcf.web.app/"
+DEGREE_CREDENTIAL_URL = (
+    "https://media.licdn.com/dms/image/v2/D4D2DAQFsywd5sLJt7w/"
+    "profile-treasury-document-cover-images_800/B4DaFJCWhgJ8A8-/0/"
+    "1792226717161?e=1792832400&amp;v=beta&amp;t=_-g4akjeL9-jbv3YNtT42UijJLaUaHW9xrQpacOz3-Q"
+)
+GITHUB_URL = "https://github.com/indoctrinatedrecluse"
 
 
-def render_ascii_spans(lines, bg_color, face_fill):
-    """Render ASCII lines into SVG <text> elements with distinct background vs subject coloring."""
-    output = []
-    y_start = 42
-    y_step = 9.8
-
-    for i, line in enumerate(lines):
-        y = y_start + (i * y_step)
-        # Split line into background characters (- : .) vs subject characters
-        parts = re.split(r'([-:.]+)', line)
-        line_spans = []
-        for p in parts:
-            if not p:
-                continue
-            if all(c in '-:.' for c in p):
-                line_spans.append(f'<tspan fill="{bg_color}">{p}</tspan>')
-            else:
-                line_spans.append(f'<tspan fill="{face_fill}">{p}</tspan>')
-        spans_str = "".join(line_spans)
-        output.append(f'    <text x="26" y="{y:.1f}">{spans_str}</text>')
-
-    return "\n".join(output)
+def encode_image_base64(path):
+    if not os.path.exists(path):
+        # Fallback to non-optimized path if needed
+        alt_path = path.replace("_opt.jpg", ".jpg")
+        if os.path.exists(alt_path):
+            path = alt_path
+        else:
+            raise FileNotFoundError(f"Avatar image not found at {path}")
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode("utf-8")
 
 
-def build_vector_banner(theme="dark"):
+def build_banner_svg(theme="dark"):
     is_light = theme == "light"
 
-    # Theme parameters
+    # Load appropriate avatar image
+    avatar_path = AVATAR_LIGHT if is_light else AVATAR_DARK
+    avatar_b64 = encode_image_base64(avatar_path)
+
+    # Theme palette parameters
     canvas_bg = "#f8fafc" if is_light else "#0b0e14"
     frame_stop0 = "#0284c7" if is_light else "#38bdf8"
     frame_stop45 = "#c0267f" if is_light else "#ff79c6"
     frame_stop100 = "#7c3aed" if is_light else "#bb9af3"
-    scan_opacity = "0.55" if is_light else "0.85"
+    scan_opacity = "0.45" if is_light else "0.75"
     inner_stroke = "#0284c7" if is_light else "#ffffff"
     inner_stroke_op = "0.20" if is_light else "0.18"
 
-    # Terminal window parameters
+    # Terminal card styling
     term_bg = "#ffffff" if is_light else "#0d111a"
     term_stroke = "#0284c7" if is_light else "#38bdf8"
     header_bg = "#0284c7" if is_light else "#38bdf8"
     header_text_color = "#ffffff" if is_light else "#0b0e14"
     term_glow = "termGlowLight" if is_light else "termGlowDark"
 
-    # Window control dots
+    # Control dots
     dot_red = "#ef4444" if is_light else "#ff5f56"
     dot_yellow = "#f59e0b" if is_light else "#ffbd2e"
     dot_green = "#10b981" if is_light else "#27c93f"
 
-    # Terminal details typography
+    # Typography colors
     label_color = "#1e293b" if is_light else "#c0caf5"
     name_color = "#be185d" if is_light else "#ff79c6"
     alias_color = "#6d28d9" if is_light else "#bb9af3"
     degree_color = "#0369a1" if is_light else "#38bdf8"
     dev_color = "#15803d" if is_light else "#4ade80"
-    univ_color = "#b45309" if is_light else "#facc15"
+    college_color = "#b45309" if is_light else "#facc15"
+    portfolio_color = "#0284c7" if is_light else "#38bdf8"
     cursor_color = "#0284c7" if is_light else "#38bdf8"
-
-    # ASCII parameters
-    if is_light:
-        ascii_lines = LIGHT_ASCII
-        ascii_bg_dash = "#cbd5e1"
-        face_fill = "url(#faceGradLight)"
-    else:
-        ascii_lines = DARK_ASCII
-        ascii_bg_dash = "#1e2438"
-        face_fill = "url(#faceGradDark)"
-
-    ascii_rendered = render_ascii_spans(ascii_lines, ascii_bg_dash, face_fill)
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360">
   <defs>
-    <!-- Frame Clip -->
+    <!-- Outer Frame Clip -->
     <clipPath id="frameClip"><rect x="10" y="10" width="980" height="340" rx="20" /></clipPath>
+
+    <!-- Avatar Left Frame Clip -->
+    <clipPath id="avatarClip"><rect x="18" y="18" width="290" height="324" rx="16" /></clipPath>
 
     <!-- Glowing Frame Gradient -->
     <linearGradient id="neonFrame" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -170,18 +98,11 @@ def build_vector_banner(theme="dark"):
       <stop offset="100%" stop-color="{frame_stop100}" stop-opacity="0" />
     </linearGradient>
 
-    <!-- ASCII Face Gradients -->
-    <linearGradient id="faceGradDark" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="40%" stop-color="#c0caf5" />
-      <stop offset="75%" stop-color="#ff79c6" />
-      <stop offset="100%" stop-color="#bb9af3" />
-    </linearGradient>
-    <linearGradient id="faceGradLight" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0284c7" />
-      <stop offset="40%" stop-color="#1e293b" />
-      <stop offset="75%" stop-color="#c0267f" />
-      <stop offset="100%" stop-color="#7c3aed" />
+    <!-- Avatar Inner Rim Gradient -->
+    <linearGradient id="avatarBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="{frame_stop0}" />
+      <stop offset="50%" stop-color="{frame_stop45}" />
+      <stop offset="100%" stop-color="{frame_stop100}" />
     </linearGradient>
 
     <!-- Glow Filters -->
@@ -201,26 +122,18 @@ def build_vector_banner(theme="dark"):
   </defs>
 
   <style>
-    .ascii-text {{
-      font-family: 'Fira Code', 'Courier New', monospace;
-      font-size: 9.3px;
-      font-weight: 600;
-      letter-spacing: 0px;
-      white-space: pre;
-    }}
     .term-text {{
       font-family: 'Fira Code', 'Courier New', monospace;
-      font-size: 15px;
+      font-size: 13.5px;
       font-weight: bold;
     }}
     .term-link {{
       text-decoration: none;
       cursor: pointer;
-      transition: opacity 0.2s ease;
     }}
-    .term-link:hover {{
-      opacity: 0.8;
+    .term-link:hover text {{
       text-decoration: underline;
+      filter: brightness(1.2);
     }}
   </style>
 
@@ -229,67 +142,78 @@ def build_vector_banner(theme="dark"):
 
   <!-- Inner Clipped Content -->
   <g clip-path="url(#frameClip)">
-    <!-- LEFT SIDE: ASCII Character Art Portrait -->
-    <g class="ascii-text">
-{ascii_rendered}
+    <!-- LEFT SIDE: Anime Avatar Portrait -->
+    <g clip-path="url(#avatarClip)">
+      <image href="data:image/jpeg;base64,{avatar_b64}" x="18" y="18" width="290" height="324" preserveAspectRatio="xMidYMid slice" />
     </g>
+    <!-- Avatar Glowing Inner Border -->
+    <rect x="18" y="18" width="290" height="324" rx="16" fill="none" stroke="url(#avatarBorder)" stroke-width="2.5" filter="url(#frameGlow)" />
+    <rect x="18" y="18" width="290" height="324" rx="16" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1" />
 
-    <!-- RIGHT SIDE: Terminal Window -->
-    <g transform="translate(380, 26)">
+    <!-- RIGHT SIDE: Interactive Terminal Window -->
+    <g transform="translate(324, 18)">
       <!-- Terminal Outer Frame -->
-      <rect x="0" y="0" width="588" height="308" rx="14" fill="{term_bg}" stroke="{term_stroke}" stroke-width="2.5" filter="url(#{term_glow})" />
+      <rect x="0" y="0" width="658" height="324" rx="16" fill="{term_bg}" stroke="{term_stroke}" stroke-width="2.5" filter="url(#{term_glow})" />
       
       <!-- Window Title Bar -->
-      <path d="M 0,14 A 14,14 0 0,1 14,0 L 574,0 A 14,14 0 0,1 588,14 L 588,38 L 0,38 Z" fill="{header_bg}" />
+      <path d="M 0,16 A 16,16 0 0,1 16,0 L 642,0 A 16,16 0 0,1 658,16 L 658,38 L 0,38 Z" fill="{header_bg}" />
       
-      <!-- Title Bar Prompt -->
+      <!-- Title Bar Text -->
       <text x="18" y="25" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" fill="{header_text_color}" letter-spacing="0.5">root@indoctrinatedrecluse:~</text>
       
       <!-- Window Control Buttons (Top Right) -->
-      <circle cx="520" cy="19" r="6" fill="{dot_red}" />
-      <circle cx="542" cy="19" r="6" fill="{dot_yellow}" />
-      <circle cx="564" cy="19" r="6" fill="{dot_green}" />
+      <circle cx="590" cy="19" r="6" fill="{dot_red}" />
+      <circle cx="612" cy="19" r="6" fill="{dot_yellow}" />
+      <circle cx="634" cy="19" r="6" fill="{dot_green}" />
 
       <!-- Terminal Body Content -->
       <g class="term-text">
         <!-- Line 1: Name -->
-        <g transform="translate(26, 76)">
+        <g transform="translate(24, 76)">
           <text x="0" y="0" fill="{label_color}">&gt; Name:</text>
-          <text x="100" y="0" fill="{name_color}">Abhishek Mitra</text>
+          <text x="96" y="0" fill="{name_color}">Abhishek Mitra</text>
         </g>
         
         <!-- Line 2: Alias -->
-        <g transform="translate(26, 120)">
+        <g transform="translate(24, 112)">
           <text x="0" y="0" fill="{label_color}">&gt; Alias:</text>
-          <a href="https://github.com/indoctrinatedrecluse" target="_blank" rel="noopener noreferrer" class="term-link">
-            <text x="100" y="0" fill="{alias_color}">indoctrinatedrecluse</text>
+          <a href="{GITHUB_URL}" target="_blank" rel="noopener noreferrer" class="term-link">
+            <text x="96" y="0" fill="{alias_color}">indoctrinatedrecluse</text>
           </a>
         </g>
         
         <!-- Line 3: Degree -->
-        <g transform="translate(26, 164)">
+        <g transform="translate(24, 148)">
           <text x="0" y="0" fill="{label_color}">&gt; Degree:</text>
-          <text x="105" y="0" fill="{degree_color}">MSCS</text>
+          <text x="100" y="0" fill="{degree_color}">MSCS</text>
         </g>
         
         <!-- Line 4: Development -->
-        <g transform="translate(26, 208)">
+        <g transform="translate(24, 184)">
           <text x="0" y="0" fill="{label_color}">&gt; Development:</text>
-          <text x="165" y="0" fill="{dev_color}">Full Stack</text>
+          <text x="156" y="0" fill="{dev_color}">Full Stack</text>
         </g>
         
-        <!-- Line 5: University -->
-        <g transform="translate(26, 252)">
-          <text x="0" y="0" fill="{label_color}">&gt; University:</text>
-          <a href="https://www.usc.edu" target="_blank" rel="noopener noreferrer" class="term-link">
-            <text x="155" y="0" fill="{univ_color}">USC</text>
+        <!-- Line 5: College / University with degree credential link -->
+        <g transform="translate(24, 220)">
+          <text x="0" y="0" fill="{label_color}">&gt; College:</text>
+          <a href="{DEGREE_CREDENTIAL_URL}" target="_blank" rel="noopener noreferrer" class="term-link">
+            <text x="110" y="0" fill="{college_color}">University of Southern California &#x2197;</text>
           </a>
         </g>
 
-        <!-- Line 6: Blinking Terminal Cursor -->
-        <g transform="translate(26, 282)">
+        <!-- Line 6: Portfolio Website Link -->
+        <g transform="translate(24, 256)">
+          <text x="0" y="0" fill="{label_color}">&gt; Portfolio:</text>
+          <a href="{PORTFOLIO_URL}" target="_blank" rel="noopener noreferrer" class="term-link">
+            <text x="126" y="0" fill="{portfolio_color}">Click here for portfolio &#x2197;</text>
+          </a>
+        </g>
+
+        <!-- Line 7: Blinking Terminal Cursor -->
+        <g transform="translate(24, 290)">
           <text x="0" y="0" fill="{label_color}">&gt;</text>
-          <rect x="20" y="-14" width="10" height="18" fill="{cursor_color}" rx="2">
+          <rect x="18" y="-13" width="10" height="17" fill="{cursor_color}" rx="2">
             <animate attributeName="opacity" values="1;0.1;1" dur="1s" repeatCount="indefinite" />
           </rect>
         </g>
@@ -319,8 +243,8 @@ def generate_banner(output=OUTPUT_BASE):
     light_path = os.path.join(dirname, f"{name}-light{ext}") if dirname else f"{name}-light{ext}"
     base_path = output
 
-    dark_svg = build_vector_banner(theme="dark")
-    light_svg = build_vector_banner(theme="light")
+    dark_svg = build_banner_svg(theme="dark")
+    light_svg = build_banner_svg(theme="light")
 
     with open(dark_path, "w", encoding="utf-8") as f:
         f.write(dark_svg)
@@ -329,7 +253,7 @@ def generate_banner(output=OUTPUT_BASE):
     with open(base_path, "w", encoding="utf-8") as f:
         f.write(dark_svg)
 
-    print(f"Generated dual-theme vector banner SVGs for {output}:")
+    print(f"Generated dual-theme anime avatar banner SVGs for {output}:")
     print(f"  Dark:  {dark_path}")
     print(f"  Light: {light_path}")
     print(f"  Base:  {base_path}")
