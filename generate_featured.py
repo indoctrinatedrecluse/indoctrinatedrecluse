@@ -3,7 +3,7 @@ import json
 import html
 import urllib.request
 import urllib.error
-from cyber_palette import save_dual_theme_svg
+from cyber_palette import save_dual_theme_svg, update_readme_section
 
 # Config
 DEFAULT_USERNAME = "indoctrinatedrecluse"
@@ -280,7 +280,48 @@ def generate_featured_svg(username, token, filepath=os.path.join(OUTPUT_DIR, "fe
 </svg>
 """
     paths = save_dual_theme_svg(svg_content, filepath)
+    if repos:
+        update_readme_featured(repos, username)
     return paths
+
+
+def build_featured_readme_table(repos, username, output_dir=OUTPUT_DIR):
+    if not repos:
+        return ""
+    rows = []
+    cols = 2
+    for i in range(0, len(repos), cols):
+        row_repos = repos[i:i + cols]
+        cells = []
+        for j, r in enumerate(row_repos):
+            idx = i + j
+            raw_name = r.get("name") or ""
+            repo_name = html.escape(raw_name)
+            repo_url = html.escape(r.get("html_url") or f"https://github.com/{username}/{raw_name}")
+            dark_tile = f"./{output_dir}/featured-tile-{idx}-dark.svg"
+            light_tile = f"./{output_dir}/featured-tile-{idx}-light.svg"
+            cell = f"""    <td width="50%" align="center">
+      <a href="{repo_url}" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="{dark_tile}" />
+          <source media="(prefers-color-scheme: light)" srcset="{light_tile}" />
+          <img src="{dark_tile}" width="100%" alt="{repo_name}" />
+        </picture>
+      </a>
+    </td>"""
+            cells.append(cell)
+        if len(cells) == 1:
+            cells.append('    <td width="50%" align="center"></td>')
+        rows.append("  <tr>\n" + "\n".join(cells) + "\n  </tr>")
+
+    return '<table border="0" width="100%">\n' + "\n".join(rows) + "\n</table>"
+
+
+def update_readme_featured(repos, username, readme_path="README.md"):
+    table_html = build_featured_readme_table(repos, username)
+    if table_html:
+        return update_readme_section("<!-- FEATURED_TILES_START -->", "<!-- FEATURED_TILES_END -->", table_html, readme_path)
+    return False
 
 
 if __name__ == "__main__":

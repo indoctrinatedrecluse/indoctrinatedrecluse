@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 102" width="650" height="102">
+  <defs>
+    <filter id="termGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#b45309" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <style>
+    .mono {
+      font-family: 'Fira Code', 'Courier New', monospace;
+    }
+  </style>
+
+  <!-- Card Background -->
+  <rect x="2" y="2" width="646" height="98" rx="12" fill="#ffffff" stroke="#b45309" stroke-width="2" filter="url(#termGlow)" />
+
+  <!-- Left Accent Bar -->
+  <rect x="2" y="14" width="4" height="74" rx="2" fill="#b45309" />
+
+  <!-- Top-Right Action Badge -->
+  <g transform="translate(474, 14)">
+    <rect x="0" y="0" width="162" height="20" rx="4" fill="#f1f5f9" stroke="#b45309" stroke-width="1" />
+    <text x="81" y="14" text-anchor="middle" class="mono" font-size="8.5" font-weight="bold" fill="#b45309">&#x2605; USC CREDENTIAL &#x2197;</text>
+  </g>
+
+  <!-- Body Content -->
+  <g class="mono">
+    <g transform="translate(18, 35)">
+      <text x="0" y="0" font-size="12" font-weight="bold" fill="#334155">&gt; Degree :</text>
+      <text x="96" y="0" font-size="12" font-weight="bold" fill="#0369a1">MS in Computer Science (MSCS)</text>
+    </g>
+    <g transform="translate(18, 62)">
+      <text x="0" y="0" font-size="12" font-weight="bold" fill="#334155">&gt; College:</text>
+      <text x="96" y="0" font-size="13.5" font-weight="bold" fill="#b45309">University of Southern California &#x2197;</text>
+    </g>
+    <g transform="translate(18, 88)">
+      <text x="0" y="0" font-size="11" font-weight="bold" fill="#334155">&gt; Status :</text>
+      <text x="96" y="0" font-size="11" font-weight="bold" fill="#15803d">Official Degree Credential Conferred // Verified &#x2197;</text>
+    </g>
+  </g>
+</svg>

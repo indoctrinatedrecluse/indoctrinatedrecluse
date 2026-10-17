@@ -1,13 +1,50 @@
 <!-- FUTURISTIC CYBERPUNK HEADER BANNER -->
-<p align="center">
-  <a href="https://portfolio-flutter-78bcf.web.app/" target="_blank" rel="noopener noreferrer">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./banner-dark.svg" />
-      <source media="(prefers-color-scheme: light)" srcset="./banner-light.svg" />
-      <img src="./banner-dark.svg" width="100%" alt="IndoctrinatedRecluse Cyberpunk Banner" />
-    </picture>
-  </a>
-</p>
+<!-- BANNER_TILES_START -->
+<table border="0" width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="33%" rowspan="3" align="center" valign="middle">
+      <a href="https://portfolio-flutter-78bcf.web.app/" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./banner-avatar-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./banner-avatar-light.svg" />
+          <img src="./banner-avatar-dark.svg" width="100%" alt="Abhishek Mitra Avatar" />
+        </picture>
+      </a>
+    </td>
+    <td width="67%" align="center">
+      <a href="https://github.com/indoctrinatedrecluse" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./banner-tile-identity-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./banner-tile-identity-light.svg" />
+          <img src="./banner-tile-identity-dark.svg" width="100%" alt="GitHub Profile: @indoctrinatedrecluse" />
+        </picture>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="67%" align="center">
+      <a href="https://media.licdn.com/dms/image/v2/D4D2DAQFsywd5sLJt7w/profile-treasury-document-cover-images_800/B4DaFJCWhgJ8A8-/0/1792226717161?e=1792832400&amp;v=beta&amp;t=_-g4akjeL9-jbv3YNtT42UijJLaUaHW9xrQpacOz3-Q" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./banner-tile-college-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./banner-tile-college-light.svg" />
+          <img src="./banner-tile-college-dark.svg" width="100%" alt="USC Degree Credential: University of Southern California" />
+        </picture>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="67%" align="center">
+      <a href="https://portfolio-flutter-78bcf.web.app/" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./banner-tile-portfolio-dark.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="./banner-tile-portfolio-light.svg" />
+          <img src="./banner-tile-portfolio-dark.svg" width="100%" alt="Live Portfolio Website: Click here for portfolio" />
+        </picture>
+      </a>
+    </td>
+  </tr>
+</table>
+<!-- BANNER_TILES_END -->
 
 <!-- BANNER QUICK-ACTION PROTOCOL LINKS -->
 <p align="center">
@@ -250,6 +287,7 @@
 
 <!-- PINNED REPOSITORIES -->
 <h2 align="center">📌 Pinned Repositories</h2>
+<!-- PINNED_TILES_START -->
 <table border="0" width="100%">
   <tr>
     <td width="50%" align="center">
@@ -312,6 +350,7 @@
     </td>
   </tr>
 </table>
+<!-- PINNED_TILES_END -->
 <p align="center">
   <sub>Interactive protocol access — click any repository card to open on GitHub.</sub>
 </p>
@@ -327,6 +366,7 @@
 
 <!-- FEATURED PROJECTS -->
 <h2 align="center">📦 Featured Projects</h2>
+<!-- FEATURED_TILES_START -->
 <table border="0" width="100%">
   <tr>
     <td width="50%" align="center">
@@ -389,6 +429,7 @@
     </td>
   </tr>
 </table>
+<!-- FEATURED_TILES_END -->
 <p align="center">
   <sub>Interactive repository telemetry — click any card to visit the repository.</sub>
 </p>

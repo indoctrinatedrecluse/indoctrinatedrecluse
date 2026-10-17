@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 102" width="650" height="102">
+  <defs>
+    <filter id="termGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#38bdf8" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <style>
+    .mono {
+      font-family: 'Fira Code', 'Courier New', monospace;
+    }
+  </style>
+
+  <!-- Card Background -->
+  <rect x="2" y="2" width="646" height="98" rx="12" fill="#0d111a" stroke="#38bdf8" stroke-width="2" filter="url(#termGlow)" />
+
+  <!-- Left Accent Bar -->
+  <rect x="2" y="14" width="4" height="74" rx="2" fill="#38bdf8" />
+
+  <!-- Top-Right Action Badge -->
+  <g transform="translate(494, 14)">
+    <rect x="0" y="0" width="142" height="20" rx="4" fill="#16161e" stroke="#38bdf8" stroke-width="1" />
+    <text x="71" y="14" text-anchor="middle" class="mono" font-size="8.5" font-weight="bold" fill="#38bdf8">&#x26A1; LIVE PORTFOLIO &#x2197;</text>
+  </g>
+
+  <!-- Body Content -->
+  <g class="mono">
+    <g transform="translate(18, 35)">
+      <text x="0" y="0" font-size="12" font-weight="bold" fill="#c0caf5">&gt; Portfolio:</text>
+      <text x="110" y="0" font-size="12" font-weight="bold" fill="#38bdf8">https://portfolio-flutter-78bcf.web.app/ &#x2197;</text>
+    </g>
+    <g transform="translate(18, 62)">
+      <text x="0" y="0" font-size="11.5" font-weight="bold" fill="#c0caf5">&gt; UI Stack :</text>
+      <text x="110" y="0" font-size="11.5" font-weight="bold" fill="#bb9af3">Flutter Web UI // Interactive Cyber Deck</text>
+    </g>
+    <g transform="translate(18, 88)">
+      <text x="0" y="0" font-size="11.5" font-weight="bold" fill="#c0caf5">&gt; Protocol :</text>
+      <text x="110" y="0" font-size="11.5" font-weight="bold" fill="#4ade80">[CLICK HERE TO LAUNCH PORTFOLIO] &#x2197;</text>
+      <rect x="424" y="-10" width="8" height="13" rx="1.5" fill="#38bdf8">
+        <animate attributeName="opacity" values="1;0.1;1" dur="1s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+</svg>

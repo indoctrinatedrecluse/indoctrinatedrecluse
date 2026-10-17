@@ -8,6 +8,7 @@ single ordered hex remap keeps every widget consistent on both palettes.
 """
 
 import os
+import re
 import datetime
 
 # Ordered (night_source_hex, day_hex) replacements. Order matters: targets are
@@ -111,4 +112,27 @@ def recolor_file_to_light(dark_filepath, light_filepath=None):
         f.write(svg_light)
     print(f"Recolored {dark_filepath} -> {light_filepath}")
     return light_filepath
+
+
+def update_readme_section(start_marker, end_marker, new_content, readme_path="README.md"):
+    """Replace content between start_marker and end_marker in readme_path."""
+    if not os.path.exists(readme_path):
+        print(f"[WARN] README file {readme_path} not found.")
+        return False
+    with open(readme_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    pattern = re.compile(
+        rf"({re.escape(start_marker)})[\s\S]*?({re.escape(end_marker)})",
+        re.MULTILINE
+    )
+    if not pattern.search(content):
+        print(f"[WARN] Markers {start_marker} ... {end_marker} not found in {readme_path}")
+        return False
+
+    updated = pattern.sub(rf"\1\n{new_content}\n\2", content)
+    with open(readme_path, "w", encoding="utf-8") as f:
+        f.write(updated)
+    print(f"    [OK] Synced section {start_marker} in {readme_path}")
+    return True
 
