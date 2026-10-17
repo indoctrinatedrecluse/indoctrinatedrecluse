@@ -143,9 +143,9 @@
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=Python" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 305)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Python</text>
-        <text x="540" y="12" fill="#0277bd" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.4%</text>
+        <text x="540" y="12" fill="#0277bd" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.5%</text>
         <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
-        <rect x="0" y="22" width="23" height="8" fill="url(#grad_Python)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="24" height="8" fill="url(#grad_Python)" rx="4" filter="url(#glow)" />
       </g>
     </a>
     <!-- Row 6: Java -->
@@ -179,7 +179,7 @@
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=JavaScript" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 485)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">JavaScript</text>
-        <text x="540" y="12" fill="#b45309" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">1.7%</text>
+        <text x="540" y="12" fill="#b45309" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">1.6%</text>
         <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
         <rect x="0" y="22" width="8" height="8" fill="url(#grad_JavaScript)" rx="4" filter="url(#glow)" />
       </g>
