@@ -1,0 +1,187 @@
+<svg width="600" height="550" viewBox="0 0 600 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .lang-row text.lang-name {
+      fill: #262c46;
+      transition: fill 0.2s;
+    }
+    a:hover .lang-row text.lang-name {
+      fill: #c0267f;
+    }
+    .title {
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 18px;
+      font-weight: bold;
+      fill: #c0267f;
+    }
+    .subtitle {
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 10px;
+      fill: #5e6380;
+      letter-spacing: 2px;
+    }
+    .bg {
+      fill: #f6f3fd;
+      stroke: #6d79b5;
+      stroke-width: 2;
+      rx: 12px;
+    }
+  </style>
+  
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <linearGradient id="grad_TypeScript" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="grad_Csharp" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#15803d" />
+      <stop offset="100%" stop-color="#16a34a" />
+    </linearGradient>
+    <linearGradient id="grad_Kotlin" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="hsl(130, 95%, 65%)" />
+      <stop offset="100%" stop-color="hsl(130, 95%, 45%)" />
+    </linearGradient>
+    <linearGradient id="grad_Rust" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c2410c" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    <linearGradient id="grad_HTML" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#dc2626" />
+      <stop offset="100%" stop-color="#dc2626" />
+    </linearGradient>
+    <linearGradient id="grad_Python" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0277bd" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="grad_Java" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="grad_PowerShell" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="hsl(355, 95%, 65%)" />
+      <stop offset="100%" stop-color="hsl(355, 95%, 45%)" />
+    </linearGradient>
+    <linearGradient id="grad_PHP" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+    <linearGradient id="grad_JavaScript" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Panel -->
+  <rect width="600" height="550" class="bg" />
+
+  <!-- Header Section -->
+  <g transform="translate(30, 35)">
+    <rect x="0" y="0" width="6" height="24" fill="#0277bd" rx="2" filter="url(#glow)" />
+    <text x="18" y="18" class="title">SYSTEM CORE: LANGUAGE MATRIX</text>
+    <text x="18" y="32" class="subtitle">ALL REGISTERED COGNITIVE LANGUAGES IN NON-FORK REPOS</text>
+  </g>
+
+  <!-- Language Rows -->
+  
+    <!-- Row 0: TypeScript -->
+    <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=TypeScript" target="_blank" rel="noopener noreferrer">
+      <g transform="translate(30, 80)" class="lang-row">
+        <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">TypeScript</text>
+        <text x="540" y="12" fill="#60a5fa" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">27.6%</text>
+        <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
+        <rect x="0" y="22" width="149" height="8" fill="url(#grad_TypeScript)" rx="4" filter="url(#glow)" />
+      </g>
+    </a>
+    <!-- Row 1: C# -->
+    <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=C%23" target="_blank" rel="noopener noreferrer">
+      <g transform="translate(30, 125)" class="lang-row">
+        <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">C#</text>
+        <text x="540" y="12" fill="#15803d" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">19.4%</text>
+        <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
+        <rect x="0" y="22" width="104" height="8" fill="url(#grad_Csharp)" rx="4" filter="url(#glow)" />
+      </g>
+    </a>
+    <!-- Row 2: Kotlin -->
+    <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=Kotlin" target="_blank" rel="noopener noreferrer">
+      <g transform="translate(30, 170)" class="lang-row">
+        <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Kotlin</text>
+        <text x="540" y="12" fill="hsl(130, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">17.5%</text>
+        <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
+        <rect x="0" y="22" width="94" height="8" fill="url(#grad_Kotlin)" rx="4" filter="url(#glow)" />
+      </g>
+    </a>
+    <!-- Row 3: Rust -->
+    <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=Rust" target="_blank" rel="noopener noreferrer">
+      <g transform="translate(30, 215)" class="lang-row">
+        <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Rust</text>
+        <text x="540" y="12" fill="#c2410c" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">10.3%</text>
+        <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
+        <rect x="0" y="22" width="55" height="8" fill="url(#grad_Rust)" rx="4" filter="url(#glow)" />
+      </g>
+    </a>
+    <!-- Row 4: HTML -->
+    <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=HTML" target="_blank" rel="noopener noreferrer">
+      <g transform="translate(30, 260)" class="lang-row">
+        <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">HTML</text>
+        <text x="540" y="12" fill="#dc2626" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.7%</text>
+        <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
+        <rect x="0" y="22" width="25" height="8" fill="url(#grad_HTML)" rx="4" filter="url(#glow)" />
+      </g>
+    </a>
+    <!-- Row 5: Python -->
+    <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=Python" target="_blank" rel="noopener noreferrer">
+      <g transform="translate(30, 305)" class="lang-row">
+        <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Python</text>
+        <text x="540" y="12" fill="#0277bd" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.3%</text>
+        <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
+        <rect x="0" y="22" width="23" height="8" fill="url(#grad_Python)" rx="4" filter="url(#glow)" />
+      </g>
+    </a>
+    <!-- Row 6: Java -->
+    <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=Java" target="_blank" rel="noopener noreferrer">
+      <g transform="translate(30, 350)" class="lang-row">
+        <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Java</text>
+        <text x="540" y="12" fill="#b45309" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">3.7%</text>
+        <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
+        <rect x="0" y="22" width="20" height="8" fill="url(#grad_Java)" rx="4" filter="url(#glow)" />
+      </g>
+    </a>
+    <!-- Row 7: PowerShell -->
+    <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=PowerShell" target="_blank" rel="noopener noreferrer">
+      <g transform="translate(30, 395)" class="lang-row">
+        <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">PowerShell</text>
+        <text x="540" y="12" fill="hsl(355, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">2.3%</text>
+        <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
+        <rect x="0" y="22" width="12" height="8" fill="url(#grad_PowerShell)" rx="4" filter="url(#glow)" />
+      </g>
+    </a>
+    <!-- Row 8: PHP -->
+    <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=PHP" target="_blank" rel="noopener noreferrer">
+      <g transform="translate(30, 440)" class="lang-row">
+        <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">PHP</text>
+        <text x="540" y="12" fill="#7c3aed" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">2.0%</text>
+        <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
+        <rect x="0" y="22" width="10" height="8" fill="url(#grad_PHP)" rx="4" filter="url(#glow)" />
+      </g>
+    </a>
+    <!-- Row 9: JavaScript -->
+    <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=JavaScript" target="_blank" rel="noopener noreferrer">
+      <g transform="translate(30, 485)" class="lang-row">
+        <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">JavaScript</text>
+        <text x="540" y="12" fill="#b45309" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">1.7%</text>
+        <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
+        <rect x="0" y="22" width="8" height="8" fill="url(#grad_JavaScript)" rx="4" filter="url(#glow)" />
+      </g>
+    </a>
+</svg>

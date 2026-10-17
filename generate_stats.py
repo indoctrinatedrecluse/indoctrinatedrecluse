@@ -2,7 +2,7 @@ import os
 import json
 import urllib.request
 import urllib.error
-from cyber_palette import apply_theme
+from cyber_palette import save_dual_theme_svg
 
 # Config
 DEFAULT_USERNAME = "indoctrinatedrecluse"
@@ -36,34 +36,51 @@ def gather_metrics(username, token):
     total_forks = sum(r.get("forks_count") or 0 for r in owned)
     joined = (user.get("created_at") or "2021")[:4]
     return [
-        ("FOLLOWERS", str(user.get("followers", 0))),
-        ("FOLLOWING", str(user.get("following", 0))),
-        ("PROJECTS", str(len(owned))),
-        ("TOTAL STARS", str(total_stars)),
-        ("TOTAL FORKS", str(total_forks)),
-        ("MEMBER SINCE", joined),
+        ("FOLLOWERS", str(user.get("followers", 0)), f"https://github.com/{username}?tab=followers"),
+        ("FOLLOWING", str(user.get("following", 0)), f"https://github.com/{username}?tab=following"),
+        ("PROJECTS", str(len(owned)), f"https://github.com/{username}?tab=repositories"),
+        ("TOTAL STARS", str(total_stars), f"https://github.com/{username}?tab=repositories&amp;q=&amp;type=&amp;language=&amp;sort=stargazers"),
+        ("TOTAL FORKS", str(total_forks), f"https://github.com/{username}?tab=repositories"),
+        ("MEMBER SINCE", joined, f"https://github.com/{username}"),
     ]
 
 
-def generate_stats_svg(metrics, filepath):
+def generate_stats_svg(metrics, filepath=os.path.join(OUTPUT_DIR, "stats.svg")):
     if metrics is None:
-        return
+        return None
     width, height = 980, 150
     margin = 28
     count = len(metrics)
     cell_w = (width - 2 * margin) / count
 
     cells = []
-    for idx, (label, value) in enumerate(metrics):
+    for idx, (label, value, url) in enumerate(metrics):
         center_x = margin + cell_w * idx + cell_w / 2
         cells.append(f"""
-    <g>
-      <text x="{center_x:.1f}" y="108" text-anchor="middle" class="cell-label">{label}</text>
-      <text x="{center_x:.1f}" y="136" text-anchor="middle" class="cell-value" filter="url(#glow)">{value}</text>
-    </g>""")
+    <a href="{url}" target="_blank" rel="noopener noreferrer">
+      <rect x="{margin + cell_w * idx + 4}" y="78" width="{cell_w - 8}" height="62" rx="8" fill="#16161e" fill-opacity="0.3" class="cell-hover" />
+      <text x="{center_x:.1f}" y="104" text-anchor="middle" class="cell-label">{label}</text>
+      <text x="{center_x:.1f}" y="132" text-anchor="middle" class="cell-value" filter="url(#glow)">{value}</text>
+    </a>""")
 
     svg_content = f"""<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
+    a {{
+      cursor: pointer;
+      text-decoration: none;
+    }}
+    .cell-hover {{
+      transition: fill-opacity 0.2s, stroke 0.2s;
+      stroke: transparent;
+      stroke-width: 1;
+    }}
+    a:hover .cell-hover {{
+      fill-opacity: 0.8;
+      stroke: #38bdf8;
+    }}
+    a:hover .cell-value {{
+      fill: #ff79c6;
+    }}
     .title {{
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 17px;
@@ -121,11 +138,8 @@ def generate_stats_svg(metrics, filepath):
   {''.join(cells)}
 </svg>
 """
-    svg_content = apply_theme(svg_content)
-    os.makedirs(os.path.dirname(filepath), exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    print(f"Generated profile telemetry SVG at {filepath}")
+    paths = save_dual_theme_svg(svg_content, filepath)
+    return paths
 
 
 if __name__ == "__main__":
@@ -133,5 +147,6 @@ if __name__ == "__main__":
     username = os.environ.get("GITHUB_REPOSITORY_OWNER") or DEFAULT_USERNAME
     print(f"Running stats generation for user: {username}")
     metrics = gather_metrics(username, token)
-    generate_stats_svg(metrics, os.path.join(OUTPUT_DIR, "stats.svg"))
+    generate_stats_svg(metrics)
     print("Stats generation finished successfully!")
+

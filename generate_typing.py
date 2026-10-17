@@ -1,5 +1,5 @@
 import os
-from cyber_palette import apply_theme
+from cyber_palette import save_dual_theme_svg
 
 # Config
 OUTPUT_DIR = "profile-3d-contrib"
@@ -20,7 +20,7 @@ FADE_IN = 0.2       # seconds of fade-in
 FADE_OUT = 0.4      # seconds of fade-out at the end of a role's slot
 
 
-def generate_typing_svg(filepath):
+def generate_typing_svg(filepath=os.path.join(OUTPUT_DIR, "typing.svg")):
     width = 680
     center_x = width // 2
     baseline_y = 46
@@ -50,13 +50,11 @@ def generate_typing_svg(filepath):
 {''.join(groups)}
 </svg>
 """
-    svg_content = apply_theme(svg_content)
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    print(f"Generated typing SVG at {filepath}")
+    paths = save_dual_theme_svg(svg_content, filepath)
+    return paths
 
 
 if __name__ == "__main__":
-    generate_typing_svg(os.path.join(OUTPUT_DIR, "typing.svg"))
+    generate_typing_svg()
     print("Typing generation finished successfully!")
+

@@ -1,5 +1,15 @@
 <svg width="660" height="250" viewBox="0 0 660 250" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .activity-row text.repo {
+      transition: fill 0.2s;
+    }
+    a:hover .activity-row text.repo {
+      fill: #ff79c6;
+    }
     .title {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 16px;
@@ -56,40 +66,52 @@
   </g>
   <line x1="24" y1="64" x2="636" y2="64" stroke="#3d59a1" stroke-opacity="0.6" stroke-width="1" />
   
-    <g>
-      <text x="24" y="84" class="tag" fill="#38bdf8">[PUSH]</text>
-      <text x="106" y="84" class="repo">AgduBugdu</text>
-      <text x="236" y="84" class="msg">1 commits</text>
-      <text x="636" y="84" class="time" text-anchor="end">1d</text>
-    </g>
-    <g>
-      <text x="24" y="114" class="tag" fill="#f87171">[DELETE]</text>
-      <text x="106" y="114" class="repo">AgduBugdu</text>
-      <text x="236" y="114" class="msg">tag</text>
-      <text x="636" y="114" class="time" text-anchor="end">2d</text>
-    </g>
-    <g>
-      <text x="24" y="144" class="tag" fill="#38bdf8">[PUSH]</text>
-      <text x="106" y="144" class="repo">MusicLink</text>
-      <text x="236" y="144" class="msg">1 commits</text>
-      <text x="636" y="144" class="time" text-anchor="end">3d</text>
-    </g>
-    <g>
-      <text x="24" y="174" class="tag" fill="#38bdf8">[PUSH]</text>
-      <text x="106" y="174" class="repo">Jormungandr</text>
-      <text x="236" y="174" class="msg">1 commits</text>
-      <text x="636" y="174" class="time" text-anchor="end">3d</text>
-    </g>
-    <g>
-      <text x="24" y="204" class="tag" fill="#f87171">[DELETE]</text>
-      <text x="106" y="204" class="repo">Jormungandr</text>
-      <text x="236" y="204" class="msg">tag</text>
-      <text x="636" y="204" class="time" text-anchor="end">4d</text>
-    </g>
-    <g>
-      <text x="24" y="234" class="tag" fill="#fb923c">[RELEASE]</text>
-      <text x="106" y="234" class="repo">Jormungandr</text>
-      <text x="236" y="234" class="msg">v1.5.0</text>
-      <text x="636" y="234" class="time" text-anchor="end">3d</text>
-    </g>
+    <a href="https://github.com/indoctrinatedrecluse/snipsnipsnip" target="_blank" rel="noopener noreferrer">
+      <g class="activity-row">
+        <text x="24" y="86" class="tag" fill="#38bdf8">[PUSH]</text>
+        <text x="106" y="86" class="repo">snipsnipsnip</text>
+        <text x="236" y="86" class="msg">1 commits</text>
+        <text x="636" y="86" class="time" text-anchor="end">18h</text>
+      </g>
+    </a>
+    <a href="https://github.com/indoctrinatedrecluse/ArcadeEdit" target="_blank" rel="noopener noreferrer">
+      <g class="activity-row">
+        <text x="24" y="114" class="tag" fill="#38bdf8">[PUSH]</text>
+        <text x="106" y="114" class="repo">ArcadeEdit</text>
+        <text x="236" y="114" class="msg">1 commits</text>
+        <text x="636" y="114" class="time" text-anchor="end">19h</text>
+      </g>
+    </a>
+    <a href="https://github.com/indoctrinatedrecluse/AgduBugdu" target="_blank" rel="noopener noreferrer">
+      <g class="activity-row">
+        <text x="24" y="142" class="tag" fill="#38bdf8">[PUSH]</text>
+        <text x="106" y="142" class="repo">AgduBugdu</text>
+        <text x="236" y="142" class="msg">1 commits</text>
+        <text x="636" y="142" class="time" text-anchor="end">2d</text>
+      </g>
+    </a>
+    <a href="https://github.com/indoctrinatedrecluse/AgduBugdu" target="_blank" rel="noopener noreferrer">
+      <g class="activity-row">
+        <text x="24" y="170" class="tag" fill="#f87171">[DELETE]</text>
+        <text x="106" y="170" class="repo">AgduBugdu</text>
+        <text x="236" y="170" class="msg">tag</text>
+        <text x="636" y="170" class="time" text-anchor="end">2d</text>
+      </g>
+    </a>
+    <a href="https://github.com/indoctrinatedrecluse/MusicLink" target="_blank" rel="noopener noreferrer">
+      <g class="activity-row">
+        <text x="24" y="198" class="tag" fill="#38bdf8">[PUSH]</text>
+        <text x="106" y="198" class="repo">MusicLink</text>
+        <text x="236" y="198" class="msg">1 commits</text>
+        <text x="636" y="198" class="time" text-anchor="end">3d</text>
+      </g>
+    </a>
+    <a href="https://github.com/indoctrinatedrecluse/Jormungandr" target="_blank" rel="noopener noreferrer">
+      <g class="activity-row">
+        <text x="24" y="226" class="tag" fill="#38bdf8">[PUSH]</text>
+        <text x="106" y="226" class="repo">Jormungandr</text>
+        <text x="236" y="226" class="msg">1 commits</text>
+        <text x="636" y="226" class="time" text-anchor="end">4d</text>
+      </g>
+    </a>
 </svg>

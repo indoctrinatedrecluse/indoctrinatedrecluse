@@ -20,6 +20,20 @@
     </filter>
   </defs>
   <style>
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .tile-rect {
+      transition: stroke-width 0.2s, stroke 0.2s;
+    }
+    a:hover .tile-rect {
+      stroke-width: 2.2;
+      stroke: #38bdf8;
+    }
+    a:hover .tile-title {
+      fill: #ff79c6;
+    }
     .title {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 16px;
@@ -76,58 +90,70 @@
     <path d="M686 260 L686 278 Q686 286 678 286 L660 286" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" filter="url(#cornerGlow)" />
 
   
-  <g>
-    <rect x="20" y="80" width="212" height="100" rx="14" fill="#60a5fa" opacity="0.16" filter="url(#tileGlow)" />
-    <rect x="24" y="84" width="204" height="92" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <rect x="38" y="104" width="8" height="8" rx="2" fill="#60a5fa" />
-    <text x="52" y="112" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5">portfolio-angular</text>
-    <text x="38" y="134" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">This is my portfolio website. Wr…</text>
-    <text x="38" y="156" font-family="'Fira Code', monospace" font-size="8" fill="#60a5fa">TYPESCRIPT</text>
-    <text x="216" y="156" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 2 | FORKS 0</text>
-  </g>
-  <g>
-    <rect x="244" y="80" width="212" height="100" rx="14" fill="#60a5fa" opacity="0.16" filter="url(#tileGlow)" />
-    <rect x="248" y="84" width="204" height="92" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <rect x="262" y="104" width="8" height="8" rx="2" fill="#60a5fa" />
-    <text x="276" y="112" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5">IndoctrinatedEdit</text>
-    <text x="262" y="134" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">Next-generation general-purpose …</text>
-    <text x="262" y="156" font-family="'Fira Code', monospace" font-size="8" fill="#60a5fa">TYPESCRIPT</text>
-    <text x="440" y="156" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 2 | FORKS 0</text>
-  </g>
-  <g>
-    <rect x="468" y="80" width="212" height="100" rx="14" fill="#818cf8" opacity="0.16" filter="url(#tileGlow)" />
-    <rect x="472" y="84" width="204" height="92" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <rect x="486" y="104" width="8" height="8" rx="2" fill="#818cf8" />
-    <text x="500" y="112" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5">forum_and_chat</text>
-    <text x="486" y="134" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">This is a forum with posts (whic…</text>
-    <text x="486" y="156" font-family="'Fira Code', monospace" font-size="8" fill="#818cf8">PHP</text>
-    <text x="664" y="156" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 1 | FORKS 2</text>
-  </g>
-  <g>
-    <rect x="20" y="190" width="212" height="100" rx="14" fill="#facc15" opacity="0.16" filter="url(#tileGlow)" />
-    <rect x="24" y="194" width="204" height="92" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <rect x="38" y="214" width="8" height="8" rx="2" fill="#facc15" />
-    <text x="52" y="222" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5">portfolio-react-nextjs</text>
-    <text x="38" y="244" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">no description logged</text>
-    <text x="38" y="266" font-family="'Fira Code', monospace" font-size="8" fill="#facc15">JAVASCRIPT</text>
-    <text x="216" y="266" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 1 | FORKS 0</text>
-  </g>
-  <g>
-    <rect x="244" y="190" width="212" height="100" rx="14" fill="#ff79c6" opacity="0.16" filter="url(#tileGlow)" />
-    <rect x="248" y="194" width="204" height="92" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <rect x="262" y="214" width="8" height="8" rx="2" fill="#ff79c6" />
-    <text x="276" y="222" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5">ir-cli-utility</text>
-    <text x="262" y="244" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">no description logged</text>
-    <text x="262" y="266" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">RUST</text>
-    <text x="440" y="266" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 1 | FORKS 0</text>
-  </g>
-  <g>
-    <rect x="468" y="190" width="212" height="100" rx="14" fill="#3ddc97" opacity="0.16" filter="url(#tileGlow)" />
-    <rect x="472" y="194" width="204" height="92" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <rect x="486" y="214" width="8" height="8" rx="2" fill="#3ddc97" />
-    <text x="500" y="222" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5">RecluseEdit</text>
-    <text x="486" y="244" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">A fast, modern web application t…</text>
-    <text x="486" y="266" font-family="'Fira Code', monospace" font-size="8" fill="#3ddc97">C#</text>
-    <text x="664" y="266" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 1 | FORKS 0</text>
-  </g>
+  <a href="https://github.com/indoctrinatedrecluse/portfolio-angular" target="_blank" rel="noopener noreferrer">
+    <g class="featured-tile">
+      <rect x="20" y="80" width="212" height="100" rx="14" fill="#60a5fa" opacity="0.16" filter="url(#tileGlow)" />
+      <rect x="24" y="84" width="204" height="92" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" class="tile-rect" />
+      <rect x="38" y="104" width="8" height="8" rx="2" fill="#60a5fa" />
+      <text x="52" y="112" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5" class="tile-title">portfolio-angular</text>
+      <text x="38" y="134" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">This is my portfolio website. Wr…</text>
+      <text x="38" y="156" font-family="'Fira Code', monospace" font-size="8" fill="#60a5fa">TYPESCRIPT</text>
+      <text x="216" y="156" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 2 | FORKS 0</text>
+    </g>
+  </a>
+  <a href="https://github.com/indoctrinatedrecluse/IndoctrinatedEdit" target="_blank" rel="noopener noreferrer">
+    <g class="featured-tile">
+      <rect x="244" y="80" width="212" height="100" rx="14" fill="#60a5fa" opacity="0.16" filter="url(#tileGlow)" />
+      <rect x="248" y="84" width="204" height="92" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" class="tile-rect" />
+      <rect x="262" y="104" width="8" height="8" rx="2" fill="#60a5fa" />
+      <text x="276" y="112" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5" class="tile-title">IndoctrinatedEdit</text>
+      <text x="262" y="134" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">Next-generation general-purpose …</text>
+      <text x="262" y="156" font-family="'Fira Code', monospace" font-size="8" fill="#60a5fa">TYPESCRIPT</text>
+      <text x="440" y="156" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 2 | FORKS 0</text>
+    </g>
+  </a>
+  <a href="https://github.com/indoctrinatedrecluse/forum_and_chat" target="_blank" rel="noopener noreferrer">
+    <g class="featured-tile">
+      <rect x="468" y="80" width="212" height="100" rx="14" fill="#818cf8" opacity="0.16" filter="url(#tileGlow)" />
+      <rect x="472" y="84" width="204" height="92" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" class="tile-rect" />
+      <rect x="486" y="104" width="8" height="8" rx="2" fill="#818cf8" />
+      <text x="500" y="112" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5" class="tile-title">forum_and_chat</text>
+      <text x="486" y="134" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">This is a forum with posts (whic…</text>
+      <text x="486" y="156" font-family="'Fira Code', monospace" font-size="8" fill="#818cf8">PHP</text>
+      <text x="664" y="156" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 1 | FORKS 2</text>
+    </g>
+  </a>
+  <a href="https://github.com/indoctrinatedrecluse/portfolio-react-nextjs" target="_blank" rel="noopener noreferrer">
+    <g class="featured-tile">
+      <rect x="20" y="190" width="212" height="100" rx="14" fill="#facc15" opacity="0.16" filter="url(#tileGlow)" />
+      <rect x="24" y="194" width="204" height="92" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" class="tile-rect" />
+      <rect x="38" y="214" width="8" height="8" rx="2" fill="#facc15" />
+      <text x="52" y="222" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5" class="tile-title">portfolio-react-nextjs</text>
+      <text x="38" y="244" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">no description logged</text>
+      <text x="38" y="266" font-family="'Fira Code', monospace" font-size="8" fill="#facc15">JAVASCRIPT</text>
+      <text x="216" y="266" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 1 | FORKS 0</text>
+    </g>
+  </a>
+  <a href="https://github.com/indoctrinatedrecluse/ir-cli-utility" target="_blank" rel="noopener noreferrer">
+    <g class="featured-tile">
+      <rect x="244" y="190" width="212" height="100" rx="14" fill="#ff79c6" opacity="0.16" filter="url(#tileGlow)" />
+      <rect x="248" y="194" width="204" height="92" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" class="tile-rect" />
+      <rect x="262" y="214" width="8" height="8" rx="2" fill="#ff79c6" />
+      <text x="276" y="222" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5" class="tile-title">ir-cli-utility</text>
+      <text x="262" y="244" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">no description logged</text>
+      <text x="262" y="266" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">RUST</text>
+      <text x="440" y="266" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 1 | FORKS 0</text>
+    </g>
+  </a>
+  <a href="https://github.com/indoctrinatedrecluse/RecluseEdit" target="_blank" rel="noopener noreferrer">
+    <g class="featured-tile">
+      <rect x="468" y="190" width="212" height="100" rx="14" fill="#3ddc97" opacity="0.16" filter="url(#tileGlow)" />
+      <rect x="472" y="194" width="204" height="92" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" class="tile-rect" />
+      <rect x="486" y="214" width="8" height="8" rx="2" fill="#3ddc97" />
+      <text x="500" y="222" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5" class="tile-title">RecluseEdit</text>
+      <text x="486" y="244" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">A fast, modern web application t…</text>
+      <text x="486" y="266" font-family="'Fira Code', monospace" font-size="8" fill="#3ddc97">C#</text>
+      <text x="664" y="266" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 1 | FORKS 0</text>
+    </g>
+  </a>
 </svg>

@@ -20,6 +20,20 @@
     </filter>
   </defs>
   <style>
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .tile-rect {
+      transition: stroke-width 0.2s, stroke 0.2s;
+    }
+    a:hover .tile-rect {
+      stroke-width: 2.2;
+      stroke: #38bdf8;
+    }
+    a:hover .tile-title {
+      fill: #ff79c6;
+    }
     .title {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 16px;
@@ -78,76 +92,88 @@
     <path d="M686 356 L686 374 Q686 382 678 382 L660 382" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" filter="url(#cornerGlow)" />
 
   
-  <g>
-    <rect x="21" y="79" width="322" height="94" rx="12" fill="#ff79c6" opacity="0.14" filter="url(#tileGlow)" />
-    <rect x="24" y="82" width="316" height="88" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <circle cx="42" cy="104" r="3.5" fill="#ff79c6" />
-    <text x="52" y="108" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5">ir-cli-utility</text>
-    <rect x="282" y="96" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
-    <text x="305" y="107" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
-    <text x="42" y="130" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">curated system repository // no telemetry lo…</text>
-    <rect x="42" y="149" width="6" height="6" rx="1.5" fill="#ff79c6" />
-    <text x="53" y="155" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#ff79c6">RUST</text>
-    <text x="326" y="155" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 1  ⑂ 0</text>
-  </g>
-  <g>
-    <rect x="357" y="79" width="322" height="94" rx="12" fill="#7aa2f7" opacity="0.14" filter="url(#tileGlow)" />
-    <rect x="360" y="82" width="316" height="88" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <circle cx="378" cy="104" r="3.5" fill="#7aa2f7" />
-    <text x="388" y="108" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5">MusicLink</text>
-    <rect x="618" y="96" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
-    <text x="641" y="107" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
-    <text x="378" y="130" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">A drag and drop music creator.</text>
-    <rect x="378" y="149" width="6" height="6" rx="1.5" fill="#7aa2f7" />
-    <text x="389" y="155" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#7aa2f7">TYPESCRIPT</text>
-    <text x="662" y="155" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 0  ⑂ 0</text>
-  </g>
-  <g>
-    <rect x="21" y="181" width="322" height="94" rx="12" fill="#38bdf8" opacity="0.14" filter="url(#tileGlow)" />
-    <rect x="24" y="184" width="316" height="88" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <circle cx="42" cy="206" r="3.5" fill="#38bdf8" />
-    <text x="52" y="210" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5">OwlCatPortraitTool</text>
-    <rect x="282" y="198" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
-    <text x="305" y="209" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
-    <text x="42" y="232" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">A portrait tool for Owlcat Games (Pathfinder…</text>
-    <rect x="42" y="251" width="6" height="6" rx="1.5" fill="#38bdf8" />
-    <text x="53" y="257" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#38bdf8">PYTHON</text>
-    <text x="326" y="257" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 0  ⑂ 0</text>
-  </g>
-  <g>
-    <rect x="357" y="181" width="322" height="94" rx="12" fill="#4ade80" opacity="0.14" filter="url(#tileGlow)" />
-    <rect x="360" y="184" width="316" height="88" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <circle cx="378" cy="206" r="3.5" fill="#4ade80" />
-    <text x="388" y="210" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5">RecluseEdit</text>
-    <rect x="618" y="198" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
-    <text x="641" y="209" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
-    <text x="378" y="232" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">A fast, modern web application text editor b…</text>
-    <rect x="378" y="251" width="6" height="6" rx="1.5" fill="#4ade80" />
-    <text x="389" y="257" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#4ade80">C#</text>
-    <text x="662" y="257" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 1  ⑂ 0</text>
-  </g>
-  <g>
-    <rect x="21" y="283" width="322" height="94" rx="12" fill="#38bdf8" opacity="0.14" filter="url(#tileGlow)" />
-    <rect x="24" y="286" width="316" height="88" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <circle cx="42" cy="308" r="3.5" fill="#38bdf8" />
-    <text x="52" y="312" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5">algo-visualizer</text>
-    <rect x="282" y="300" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
-    <text x="305" y="311" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
-    <text x="42" y="334" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">curated system repository // no telemetry lo…</text>
-    <rect x="42" y="353" width="6" height="6" rx="1.5" fill="#38bdf8" />
-    <text x="53" y="359" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#38bdf8">PYTHON</text>
-    <text x="326" y="359" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 0  ⑂ 0</text>
-  </g>
-  <g>
-    <rect x="357" y="283" width="322" height="94" rx="12" fill="#7aa2f7" opacity="0.14" filter="url(#tileGlow)" />
-    <rect x="360" y="286" width="316" height="88" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <circle cx="378" cy="308" r="3.5" fill="#7aa2f7" />
-    <text x="388" y="312" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5">IndoctrinatedEdit</text>
-    <rect x="618" y="300" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
-    <text x="641" y="311" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
-    <text x="378" y="334" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">Next-generation general-purpose desktop code…</text>
-    <rect x="378" y="353" width="6" height="6" rx="1.5" fill="#7aa2f7" />
-    <text x="389" y="359" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#7aa2f7">TYPESCRIPT</text>
-    <text x="662" y="359" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 2  ⑂ 0</text>
-  </g>
+  <a href="https://github.com/indoctrinatedrecluse/ir-cli-utility" target="_blank" rel="noopener noreferrer">
+    <g class="pinned-tile">
+      <rect x="21" y="79" width="322" height="94" rx="12" fill="#ff79c6" opacity="0.14" filter="url(#tileGlow)" />
+      <rect x="24" y="82" width="316" height="88" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" class="tile-rect" />
+      <circle cx="42" cy="104" r="3.5" fill="#ff79c6" />
+      <text x="52" y="108" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5" class="tile-title">ir-cli-utility</text>
+      <rect x="282" y="96" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
+      <text x="305" y="107" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
+      <text x="42" y="130" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">curated system repository // no telemetry lo…</text>
+      <rect x="42" y="149" width="6" height="6" rx="1.5" fill="#ff79c6" />
+      <text x="53" y="155" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#ff79c6">RUST</text>
+      <text x="326" y="155" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 1  ⑂ 0</text>
+    </g>
+  </a>
+  <a href="https://github.com/indoctrinatedrecluse/MusicLink" target="_blank" rel="noopener noreferrer">
+    <g class="pinned-tile">
+      <rect x="357" y="79" width="322" height="94" rx="12" fill="#7aa2f7" opacity="0.14" filter="url(#tileGlow)" />
+      <rect x="360" y="82" width="316" height="88" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" class="tile-rect" />
+      <circle cx="378" cy="104" r="3.5" fill="#7aa2f7" />
+      <text x="388" y="108" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5" class="tile-title">MusicLink</text>
+      <rect x="618" y="96" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
+      <text x="641" y="107" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
+      <text x="378" y="130" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">A drag and drop music creator.</text>
+      <rect x="378" y="149" width="6" height="6" rx="1.5" fill="#7aa2f7" />
+      <text x="389" y="155" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#7aa2f7">TYPESCRIPT</text>
+      <text x="662" y="155" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 0  ⑂ 0</text>
+    </g>
+  </a>
+  <a href="https://github.com/indoctrinatedrecluse/OwlCatPortraitTool" target="_blank" rel="noopener noreferrer">
+    <g class="pinned-tile">
+      <rect x="21" y="181" width="322" height="94" rx="12" fill="#38bdf8" opacity="0.14" filter="url(#tileGlow)" />
+      <rect x="24" y="184" width="316" height="88" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" class="tile-rect" />
+      <circle cx="42" cy="206" r="3.5" fill="#38bdf8" />
+      <text x="52" y="210" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5" class="tile-title">OwlCatPortraitTool</text>
+      <rect x="282" y="198" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
+      <text x="305" y="209" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
+      <text x="42" y="232" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">A portrait tool for Owlcat Games (Pathfinder…</text>
+      <rect x="42" y="251" width="6" height="6" rx="1.5" fill="#38bdf8" />
+      <text x="53" y="257" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#38bdf8">PYTHON</text>
+      <text x="326" y="257" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 0  ⑂ 0</text>
+    </g>
+  </a>
+  <a href="https://github.com/indoctrinatedrecluse/RecluseEdit" target="_blank" rel="noopener noreferrer">
+    <g class="pinned-tile">
+      <rect x="357" y="181" width="322" height="94" rx="12" fill="#4ade80" opacity="0.14" filter="url(#tileGlow)" />
+      <rect x="360" y="184" width="316" height="88" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" class="tile-rect" />
+      <circle cx="378" cy="206" r="3.5" fill="#4ade80" />
+      <text x="388" y="210" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5" class="tile-title">RecluseEdit</text>
+      <rect x="618" y="198" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
+      <text x="641" y="209" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
+      <text x="378" y="232" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">A fast, modern web application text editor b…</text>
+      <rect x="378" y="251" width="6" height="6" rx="1.5" fill="#4ade80" />
+      <text x="389" y="257" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#4ade80">C#</text>
+      <text x="662" y="257" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 1  ⑂ 0</text>
+    </g>
+  </a>
+  <a href="https://github.com/indoctrinatedrecluse/algo-visualizer" target="_blank" rel="noopener noreferrer">
+    <g class="pinned-tile">
+      <rect x="21" y="283" width="322" height="94" rx="12" fill="#38bdf8" opacity="0.14" filter="url(#tileGlow)" />
+      <rect x="24" y="286" width="316" height="88" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" class="tile-rect" />
+      <circle cx="42" cy="308" r="3.5" fill="#38bdf8" />
+      <text x="52" y="312" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5" class="tile-title">algo-visualizer</text>
+      <rect x="282" y="300" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
+      <text x="305" y="311" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
+      <text x="42" y="334" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">curated system repository // no telemetry lo…</text>
+      <rect x="42" y="353" width="6" height="6" rx="1.5" fill="#38bdf8" />
+      <text x="53" y="359" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#38bdf8">PYTHON</text>
+      <text x="326" y="359" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 0  ⑂ 0</text>
+    </g>
+  </a>
+  <a href="https://github.com/indoctrinatedrecluse/IndoctrinatedEdit" target="_blank" rel="noopener noreferrer">
+    <g class="pinned-tile">
+      <rect x="357" y="283" width="322" height="94" rx="12" fill="#7aa2f7" opacity="0.14" filter="url(#tileGlow)" />
+      <rect x="360" y="286" width="316" height="88" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" class="tile-rect" />
+      <circle cx="378" cy="308" r="3.5" fill="#7aa2f7" />
+      <text x="388" y="312" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5" class="tile-title">IndoctrinatedEdit</text>
+      <rect x="618" y="300" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
+      <text x="641" y="311" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
+      <text x="378" y="334" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">Next-generation general-purpose desktop code…</text>
+      <rect x="378" y="353" width="6" height="6" rx="1.5" fill="#7aa2f7" />
+      <text x="389" y="359" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="#7aa2f7">TYPESCRIPT</text>
+      <text x="662" y="359" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ 2  ⑂ 0</text>
+    </g>
+  </a>
 </svg>

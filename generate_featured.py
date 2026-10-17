@@ -3,7 +3,7 @@ import json
 import html
 import urllib.request
 import urllib.error
-from cyber_palette import apply_theme
+from cyber_palette import save_dual_theme_svg
 
 # Config
 DEFAULT_USERNAME = "indoctrinatedrecluse"
@@ -16,7 +16,6 @@ LANG_ACCENTS = {
     "JavaScript": "#facc15",
     "TypeScript": "#60a5fa",
     "HTML": "#f87171",
-    # "CSS": "#c084fc",
     "C++": "#ec4899",
     "C#": "#3ddc97",
     "Java": "#fbbf24",
@@ -27,7 +26,6 @@ LANG_ACCENTS = {
     "Odin": "#bb9af3",
     "Nim": "#fbbf24",
     "Elixir": "#7aa2f7",
-    # # "Svelte": "#fb923c",
     "Prolog": "#4ade80",
     "Shell": "#4ade80",
 }
@@ -93,7 +91,7 @@ def grid_lines(width, height):
     return "\n".join(parts)
 
 
-def generate_featured_svg(username, token, filepath):
+def generate_featured_svg(username, token, filepath=os.path.join(OUTPUT_DIR, "featured.svg")):
     repos = gather_repos(username, token)
 
     width, height = 700, 300
@@ -109,23 +107,28 @@ def generate_featured_svg(username, token, filepath):
             row = i // cols
             x = 24 + col * (tile_w + gap_x)
             y = top + row * (tile_h + gap_y)
-            name = html.escape(r.get("name") or "")
+            raw_name = r.get("name") or ""
+            name = html.escape(raw_name)
             lang = r.get("language")
             accent = lang_accent(lang)
             desc = html.escape(clip(r.get("description") or "no description logged", 32))
             stars = (r.get("stargazers_count") or 0)
             forks = (r.get("forks_count") or 0)
             lang_txt = html.escape(lang or "unknown")
+            url = html.escape(r.get("html_url") or f"https://github.com/{username}/{raw_name}")
+
             tiles += f"""
-  <g>
-    <rect x="{x - 4}" y="{y - 4}" width="{tile_w + 8}" height="{tile_h + 8}" rx="14" fill="{accent}" opacity="0.16" filter="url(#tileGlow)" />
-    <rect x="{x}" y="{y}" width="{tile_w}" height="{tile_h}" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <rect x="{x + 14}" y="{y + 20}" width="8" height="8" rx="2" fill="{accent}" />
-    <text x="{x + 28}" y="{y + 28}" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5">{name}</text>
-    <text x="{x + 14}" y="{y + 50}" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">{desc}</text>
-    <text x="{x + 14}" y="{y + 72}" font-family="'Fira Code', monospace" font-size="8" fill="{accent}">{lang_txt.upper()}</text>
-    <text x="{x + tile_w - 12}" y="{y + 72}" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ {stars} | FORKS {forks}</text>
-  </g>"""
+  <a href="{url}" target="_blank" rel="noopener noreferrer">
+    <g class="featured-tile">
+      <rect x="{x - 4}" y="{y - 4}" width="{tile_w + 8}" height="{tile_h + 8}" rx="14" fill="{accent}" opacity="0.16" filter="url(#tileGlow)" />
+      <rect x="{x}" y="{y}" width="{tile_w}" height="{tile_h}" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" class="tile-rect" />
+      <rect x="{x + 14}" y="{y + 20}" width="8" height="8" rx="2" fill="{accent}" />
+      <text x="{x + 28}" y="{y + 28}" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5" class="tile-title">{name}</text>
+      <text x="{x + 14}" y="{y + 50}" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">{desc}</text>
+      <text x="{x + 14}" y="{y + 72}" font-family="'Fira Code', monospace" font-size="8" fill="{accent}">{lang_txt.upper()}</text>
+      <text x="{x + tile_w - 12}" y="{y + 72}" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ {stars} | FORKS {forks}</text>
+    </g>
+  </a>"""
     else:
         tiles = f"""
     <text x="{width // 2}" y="{top + tile_h}" text-anchor="middle" font-family="'Fira Code', monospace" font-size="12" fill="#6272a4">// UNABLE TO LOAD PROJECT TELEMETRY //</text>"""
@@ -152,6 +155,20 @@ def generate_featured_svg(username, token, filepath):
     </filter>
   </defs>
   <style>
+    a {{
+      cursor: pointer;
+      text-decoration: none;
+    }}
+    .tile-rect {{
+      transition: stroke-width 0.2s, stroke 0.2s;
+    }}
+    a:hover .tile-rect {{
+      stroke-width: 2.2;
+      stroke: #38bdf8;
+    }}
+    a:hover .tile-title {{
+      fill: #ff79c6;
+    }}
     .title {{
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 16px;
@@ -190,17 +207,15 @@ def generate_featured_svg(username, token, filepath):
   {tiles}
 </svg>
 """
-    svg_content = apply_theme(svg_content)
-    os.makedirs(os.path.dirname(filepath), exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    print(f"Generated featured SVG at {filepath}")
+    paths = save_dual_theme_svg(svg_content, filepath)
+    return paths
 
 
 if __name__ == "__main__":
     token = os.environ.get("GITHUB_TOKEN")
     username = os.environ.get("GITHUB_REPOSITORY_OWNER") or DEFAULT_USERNAME
     print(f"Running featured generation for user: {username}")
-    generate_featured_svg(username, token, os.path.join(OUTPUT_DIR, "featured.svg"))
+    generate_featured_svg(username, token)
     print("Featured generation finished successfully!")
+
 

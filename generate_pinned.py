@@ -4,7 +4,7 @@ import html
 import re
 import urllib.request
 import urllib.error
-from cyber_palette import apply_theme
+from cyber_palette import save_dual_theme_svg
 
 # Config
 DEFAULT_USERNAME = "indoctrinatedrecluse"
@@ -224,19 +224,23 @@ def generate_pinned_svg(username, token, filepath):
             forks = r.get("forks_count", 0)
             lang_txt = html.escape(lang)
 
+            url = html.escape(r.get("url") or f"https://github.com/{username}/{r.get('name', '')}")
+
             tiles += f"""
-  <g>
-    <rect x="{x - 3}" y="{y - 3}" width="{tile_w + 6}" height="{tile_h + 6}" rx="12" fill="{accent}" opacity="0.14" filter="url(#tileGlow)" />
-    <rect x="{x}" y="{y}" width="{tile_w}" height="{tile_h}" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" />
-    <circle cx="{x + 18}" cy="{y + 22}" r="3.5" fill="{accent}" />
-    <text x="{x + 28}" y="{y + 26}" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5">{name}</text>
-    <rect x="{x + tile_w - 58}" y="{y + 14}" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
-    <text x="{x + tile_w - 35}" y="{y + 25}" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
-    <text x="{x + 18}" y="{y + 48}" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">{desc}</text>
-    <rect x="{x + 18}" y="{y + 67}" width="6" height="6" rx="1.5" fill="{accent}" />
-    <text x="{x + 29}" y="{y + 73}" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="{accent}">{lang_txt.upper()}</text>
-    <text x="{x + tile_w - 14}" y="{y + 73}" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ {stars}  ⑂ {forks}</text>
-  </g>"""
+  <a href="{url}" target="_blank" rel="noopener noreferrer">
+    <g class="pinned-tile">
+      <rect x="{x - 3}" y="{y - 3}" width="{tile_w + 6}" height="{tile_h + 6}" rx="12" fill="{accent}" opacity="0.14" filter="url(#tileGlow)" />
+      <rect x="{x}" y="{y}" width="{tile_w}" height="{tile_h}" rx="10" fill="#16161e" stroke="#3d59a1" stroke-opacity="0.9" stroke-width="1.5" class="tile-rect" />
+      <circle cx="{x + 18}" cy="{y + 22}" r="3.5" fill="{accent}" />
+      <text x="{x + 28}" y="{y + 26}" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" fill="#c0caf5" class="tile-title">{name}</text>
+      <rect x="{x + tile_w - 58}" y="{y + 14}" width="46" height="15" rx="3" fill="#1a1b26" stroke="#3d59a1" stroke-width="1" />
+      <text x="{x + tile_w - 35}" y="{y + 25}" text-anchor="middle" font-family="'Fira Code', monospace" font-size="8" fill="#ff79c6">PINNED</text>
+      <text x="{x + 18}" y="{y + 48}" font-family="'Fira Code', monospace" font-size="9" fill="#7aa2f7">{desc}</text>
+      <rect x="{x + 18}" y="{y + 67}" width="6" height="6" rx="1.5" fill="{accent}" />
+      <text x="{x + 29}" y="{y + 73}" font-family="'Fira Code', monospace" font-size="8" font-weight="bold" fill="{accent}">{lang_txt.upper()}</text>
+      <text x="{x + tile_w - 14}" y="{y + 73}" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="#fbbf24">★ {stars}  ⑂ {forks}</text>
+    </g>
+  </a>"""
     else:
         tiles = f"""
   <text x="{width // 2}" y="{top + 50}" text-anchor="middle" font-family="'Fira Code', monospace" font-size="12" fill="#6272a4">// NO PINNED TELEMETRY DETECTED //</text>"""
@@ -263,6 +267,20 @@ def generate_pinned_svg(username, token, filepath):
     </filter>
   </defs>
   <style>
+    a {{
+      cursor: pointer;
+      text-decoration: none;
+    }}
+    .tile-rect {{
+      transition: stroke-width 0.2s, stroke 0.2s;
+    }}
+    a:hover .tile-rect {{
+      stroke-width: 2.2;
+      stroke: #38bdf8;
+    }}
+    a:hover .tile-title {{
+      fill: #ff79c6;
+    }}
     .title {{
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 16px;
@@ -300,11 +318,8 @@ def generate_pinned_svg(username, token, filepath):
   {tiles}
 </svg>
 """
-    svg_content = apply_theme(svg_content)
-    os.makedirs(os.path.dirname(filepath), exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    print(f"Generated pinned repos SVG at {filepath}")
+    paths = save_dual_theme_svg(svg_content, filepath)
+    return paths
 
 
 if __name__ == "__main__":
@@ -313,4 +328,5 @@ if __name__ == "__main__":
     print(f"Running pinned repos generation for user: {username}")
     generate_pinned_svg(username, token, os.path.join(OUTPUT_DIR, "pinned.svg"))
     print("Pinned repos generation finished successfully!")
+
 

@@ -1,5 +1,5 @@
 import os
-from cyber_palette import apply_theme
+from cyber_palette import save_dual_theme_svg
 
 # Config
 OUTPUT_DIR = "profile-3d-contrib"
@@ -9,7 +9,7 @@ ROWS = [
     ("UPLINK // API", "ONLINE", "#38bdf8", False),
     ("CONTRIBUTION MATRIX", "SYNCED", "#bb9af3", False),
     ("LANGUAGE CORE", "CALIBRATED", "#bb9af3", False),
-    ("STREAK ENGINE", "STANDBY", "#6272a4", True),
+    ("STREAK ENGINE", "ACTIVE", "#4ade80", True),
     ("PROFILE TELEMETRY", "NOMINAL", "#38bdf8", False),
     ("NEURAL LINK", "ESTABLISHED", "#ff79c6", True),
 ]
@@ -17,6 +17,8 @@ ROWS = [
 TICKER = [
     "UPLINK STABLE // NO INTRUSIONS DETECTED",
     "MONITORING CONTRIBUTION STREAMS // ALL CLEAR",
+    "DECENTRALIZED COGNITION ACTIVE // 0 ERRORS",
+    "SYNAPSE LINK STABLE // RECEPTORS TUNED",
     "ALL SYSTEMS NOMINAL // AWAITING INPUT",
 ]
 
@@ -53,11 +55,11 @@ def build_ticker():
     return "".join(parts), period
 
 
-def generate_system_status_svg(filepath):
+def generate_system_status_svg(filepath=os.path.join(OUTPUT_DIR, "system-status.svg")):
     rows, rows_end = build_rows()
     ticker, _ = build_ticker()
 
-    width, height = 660, 224
+    width, height = 660, 260
     svg_content = f"""<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
     .title {{
@@ -115,17 +117,15 @@ def generate_system_status_svg(filepath):
 
   <!-- Ticker footer -->
   <line x1="24" y1="{rows_end + 10}" x2="{width - 24}" y2="{rows_end + 10}" stroke="#3d59a1" stroke-opacity="0.4" stroke-width="1" />
-  <g transform="translate(30, {rows_end + 36})" class="ticker">{ticker}
+  <g transform="translate(30, {rows_end + 32})" class="ticker">{ticker}
   </g>
 </svg>
 """
-    svg_content = apply_theme(svg_content)
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    print(f"Generated system status SVG at {filepath}")
+    paths = save_dual_theme_svg(svg_content, filepath)
+    return paths
 
 
 if __name__ == "__main__":
-    generate_system_status_svg(os.path.join(OUTPUT_DIR, "system-status.svg"))
+    generate_system_status_svg()
     print("System status generation finished successfully!")
+

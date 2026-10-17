@@ -2,7 +2,7 @@ import os
 import json
 import urllib.request
 import urllib.error
-from cyber_palette import apply_theme
+from cyber_palette import save_dual_theme_svg
 
 # Config
 DEFAULT_USERNAME = "indoctrinatedrecluse"
@@ -40,20 +40,20 @@ def gather_stats(username, token):
     }
 
 
-def build_tiles(s):
+def build_tiles(s, username):
     return [
-        ("SYS.INIT", f"ONLINE SINCE {s['year']}", "ACCOUNT BOOTED", True),
-        ("POLYGLOT", f"{s['langs']} LANGUAGES", "5+ LANGUAGE ARSENAL", s["langs"] >= 5),
-        ("ARCHITECT", f"{s['projects']} PROJECTS", "10+ PUBLIC PROJECTS", s["projects"] >= 10),
-        ("SIGNAL", f"{s['followers']} FOLLOWERS", "10+ FOLLOWERS REQUIRED", s["followers"] >= 10),
-        ("STARGAZER", f"{s['stars']} STARS", "25+ STARS REQUIRED", s["stars"] >= 25),
-        ("FORKSMITH", f"{s['forks']} FORKS", "10+ FORKS REQUIRED", s["forks"] >= 10),
+        ("SYS.INIT", f"ONLINE SINCE {s['year']}", "ACCOUNT BOOTED", True, f"https://github.com/{username}"),
+        ("POLYGLOT", f"{s['langs']} LANGUAGES", "5+ LANGUAGE ARSENAL", s["langs"] >= 5, f"https://github.com/{username}?tab=repositories"),
+        ("ARCHITECT", f"{s['projects']} PROJECTS", "10+ PUBLIC PROJECTS", s["projects"] >= 10, f"https://github.com/{username}?tab=repositories"),
+        ("SIGNAL", f"{s['followers']} FOLLOWERS", "10+ FOLLOWERS REQUIRED", s["followers"] >= 10, f"https://github.com/{username}?tab=followers"),
+        ("STARGAZER", f"{s['stars']} STARS", "25+ STARS REQUIRED", s["stars"] >= 25, f"https://github.com/{username}?tab=stars"),
+        ("FORKSMITH", f"{s['forks']} FORKS", "10+ FORKS REQUIRED", s["forks"] >= 10, f"https://github.com/{username}?tab=repositories"),
     ]
 
 
-def generate_achievements_svg(username, token, filepath):
+def generate_achievements_svg(username, token, filepath=os.path.join(OUTPUT_DIR, "achievements.svg")):
     stats = gather_stats(username, token)
-    tiles = build_tiles(stats)
+    tiles = build_tiles(stats, username)
 
     width, height = 700, 278
     tile_w, tile_h = 204, 84
@@ -62,7 +62,7 @@ def generate_achievements_svg(username, token, filepath):
     top = 78
 
     body = ""
-    for i, (tid, label, sub, unlocked) in enumerate(tiles):
+    for i, (tid, label, sub, unlocked, url) in enumerate(tiles):
         col = i % cols
         row = i // cols
         x = 24 + col * (tile_w + gap_x)
@@ -76,16 +76,29 @@ def generate_achievements_svg(username, token, filepath):
             status = "LOCKED"
             status_fill = "#3d59a1"
         body += f"""
-  <g>
-    <rect x="{x}" y="{y}" width="{tile_w}" height="{tile_h}" rx="10" fill="#16161e" stroke="{stroke}" stroke-opacity="0.9" stroke-width="1.5" />
-    <text x="{x + 14}" y="{y + 24}" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" fill="{id_fill}">{tid}</text>
-    <text x="{x + tile_w - 12}" y="{y + 24}" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="{status_fill}">[{status}]</text>
-    <text x="{x + 14}" y="{y + 48}" font-family="'Fira Code', monospace" font-size="13" font-weight="bold" fill="{lab_fill}">{label}</text>
-    <text x="{x + 14}" y="{y + 68}" font-family="'Fira Code', monospace" font-size="8" letter-spacing="1px" fill="{sub_fill}">{sub}</text>
-  </g>"""
+  <a href="{url}" target="_blank" rel="noopener noreferrer">
+    <g class="tile-group">
+      <rect x="{x}" y="{y}" width="{tile_w}" height="{tile_h}" rx="10" fill="#16161e" stroke="{stroke}" stroke-opacity="0.9" stroke-width="1.5" class="tile-box" />
+      <text x="{x + 14}" y="{y + 24}" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" fill="{id_fill}">{tid}</text>
+      <text x="{x + tile_w - 12}" y="{y + 24}" text-anchor="end" font-family="'Fira Code', monospace" font-size="8" fill="{status_fill}">[{status}]</text>
+      <text x="{x + 14}" y="{y + 48}" font-family="'Fira Code', monospace" font-size="13" font-weight="bold" fill="{lab_fill}">{label}</text>
+      <text x="{x + 14}" y="{y + 68}" font-family="'Fira Code', monospace" font-size="8" letter-spacing="1px" fill="{sub_fill}">{sub}</text>
+    </g>
+  </a>"""
 
     svg_content = f"""<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
+    a {{
+      cursor: pointer;
+      text-decoration: none;
+    }}
+    .tile-box {{
+      transition: stroke-width 0.2s, stroke 0.2s;
+    }}
+    a:hover .tile-box {{
+      stroke-width: 2.2;
+      stroke: #38bdf8;
+    }}
     .title {{
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 16px;
@@ -117,17 +130,15 @@ def generate_achievements_svg(username, token, filepath):
   {body}
 </svg>
 """
-    svg_content = apply_theme(svg_content)
-    os.makedirs(os.path.dirname(filepath), exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    print(f"Generated achievements SVG at {filepath}")
+    paths = save_dual_theme_svg(svg_content, filepath)
+    return paths
 
 
 if __name__ == "__main__":
     token = os.environ.get("GITHUB_TOKEN")
     username = os.environ.get("GITHUB_REPOSITORY_OWNER") or DEFAULT_USERNAME
     print(f"Running achievements generation for user: {username}")
-    generate_achievements_svg(username, token, os.path.join(OUTPUT_DIR, "achievements.svg"))
+    generate_achievements_svg(username, token)
     print("Achievements generation finished successfully!")
+
 

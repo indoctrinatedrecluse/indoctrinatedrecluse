@@ -1,22 +1,38 @@
 <!-- FUTURISTIC CYBERPUNK HEADER BANNER -->
 <p align="center">
-  <img src="./banner.svg" width="100%" alt="IndoctrinatedRecluse Cyberpunk Banner" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./banner-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./banner-light.svg" />
+    <img src="./banner-dark.svg" width="100%" alt="IndoctrinatedRecluse Cyberpunk Banner" />
+  </picture>
 </p>
 
 <!-- DYNAMIC TYPING SVG & GREETING -->
 <h1 align="center">Hi there! I'm indoctrinatedrecluse 👋</h1>
 
 <p align="center">
-  <img src="./profile-3d-contrib/typing.svg" width="680" alt="" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/typing-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/typing-light.svg" />
+    <img src="./profile-3d-contrib/typing-dark.svg" width="680" alt="Cyberpunk Typing Terminal" />
+  </picture>
 </p>
 
 <p align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=indoctrinatedrecluse.profile&left_text=PROFILE%20VIEWS&left_color=%231a1b26&right_color=%23bf5af2&logo=github&radius=0" alt="" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://visitor-badge.laobi.icu/badge?page_id=indoctrinatedrecluse.profile&amp;left_text=PROFILE%20VIEWS&amp;left_color=%231a1b26&amp;right_color=%23bf5af2&amp;logo=github&amp;radius=0" />
+    <source media="(prefers-color-scheme: light)" srcset="https://visitor-badge.laobi.icu/badge?page_id=indoctrinatedrecluse.profile&amp;left_text=PROFILE%20VIEWS&amp;left_color=%23ecebf7&amp;right_color=%237c3aed&amp;logo=github&amp;radius=0" />
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=indoctrinatedrecluse.profile&amp;left_text=PROFILE%20VIEWS&amp;left_color=%231a1b26&amp;right_color=%23bf5af2&amp;logo=github&amp;radius=0" alt="Profile Views" />
+  </picture>
 </p>
 
 <!-- SECTION DIVIDER -->
 <p align="center">
-  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/glowing-line-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/glowing-line-light.svg" />
+    <img src="./profile-3d-contrib/glowing-line-dark.svg" alt="Divider" width="100%" />
+  </picture>
 </p>
 
 <!-- ABOUT ME SECTION -->
@@ -30,45 +46,85 @@
 
 <!-- SECTION DIVIDER -->
 <p align="center">
-  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/glowing-line-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/glowing-line-light.svg" />
+    <img src="./profile-3d-contrib/glowing-line-dark.svg" alt="Divider" width="100%" />
+  </picture>
 </p>
 
 <!-- SYSTEM STATUS -->
 <h2 align="center">🖥️ System Status</h2>
 <p align="center">
-  <img src="./profile-3d-contrib/system-status.svg" alt="System status terminal" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/system-status-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/system-status-light.svg" />
+    <img src="./profile-3d-contrib/system-status-dark.svg" alt="System status terminal" width="100%" />
+  </picture>
 </p>
 
 <!-- SECTION DIVIDER -->
 <p align="center">
-  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/glowing-line-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/glowing-line-light.svg" />
+    <img src="./profile-3d-contrib/glowing-line-dark.svg" alt="Divider" width="100%" />
+  </picture>
 </p>
 
 <!-- GITHUB STATS DASHBOARD GRID -->
 <h2 align="center">📊 GitHub Stats Dashboard</h2>
 
 <p align="center">
-  <img src="./profile-3d-contrib/stats.svg" alt="Profile telemetry dashboard" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/stats-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/stats-light.svg" />
+    <img src="./profile-3d-contrib/stats-dark.svg" alt="Profile telemetry dashboard" width="100%" />
+  </picture>
 </p>
 
 <p align="center">
   <a href="https://github.com/indoctrinatedrecluse">
-    <img src="https://streak-stats.demolab.com/?user=indoctrinatedrecluse&theme=tokyonight" alt="" height="195" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=indoctrinatedrecluse&amp;theme=tokyonight" />
+      <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=indoctrinatedrecluse&amp;theme=clean-light" />
+      <img src="https://streak-stats.demolab.com/?user=indoctrinatedrecluse&amp;theme=tokyonight" alt="GitHub Streak Stats" height="195" />
+    </picture>
   </a>
   <a href="https://github.com/indoctrinatedrecluse/indoctrinatedrecluse/actions">
-    <img src="https://img.shields.io/github/actions/workflow/status/indoctrinatedrecluse/indoctrinatedrecluse/profile-3d.yml?style=flat-square&label=DASHBOARD%20SYNC&labelColor=1a1b26&color=bb9af3&logo=githubactions&logoColor=ffffff" alt="Dashboard sync status" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/actions/workflow/status/indoctrinatedrecluse/indoctrinatedrecluse/profile-3d.yml?style=flat-square&amp;label=DASHBOARD%20SYNC&amp;labelColor=1a1b26&amp;color=bb9af3&amp;logo=githubactions&amp;logoColor=ffffff" />
+      <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/actions/workflow/status/indoctrinatedrecluse/indoctrinatedrecluse/profile-3d.yml?style=flat-square&amp;label=DASHBOARD%20SYNC&amp;labelColor=ecebf7&amp;color=7c3aed&amp;logo=githubactions&amp;logoColor=1e2335" />
+      <img src="https://img.shields.io/github/actions/workflow/status/indoctrinatedrecluse/indoctrinatedrecluse/profile-3d.yml?style=flat-square&amp;label=DASHBOARD%20SYNC&amp;labelColor=1a1b26&amp;color=bb9af3&amp;logo=githubactions&amp;logoColor=ffffff" alt="Dashboard sync status" />
+    </picture>
   </a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/followers/indoctrinatedrecluse?style=flat-square&label=FOLLOWERS&labelColor=1a1b26&color=38bdf8&logo=github&logoColor=ffffff" alt="" />
-  <img src="https://img.shields.io/github/stars/indoctrinatedrecluse/indoctrinatedrecluse?style=flat-square&label=THIS%20REPO%20STARS&labelColor=1a1b26&color=7aa2f7&logo=github&logoColor=ffffff" alt="" />
-  <img src="https://img.shields.io/github/last-commit/indoctrinatedrecluse/indoctrinatedrecluse?style=flat-square&label=LAST%20COMMIT&labelColor=1a1b26&color=bb9af3&logo=git&logoColor=ffffff" alt="" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/followers/indoctrinatedrecluse?style=flat-square&amp;label=FOLLOWERS&amp;labelColor=1a1b26&amp;color=38bdf8&amp;logo=github&amp;logoColor=ffffff" />
+    <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/followers/indoctrinatedrecluse?style=flat-square&amp;label=FOLLOWERS&amp;labelColor=ecebf7&amp;color=0277bd&amp;logo=github&amp;logoColor=1e2335" />
+    <img src="https://img.shields.io/github/followers/indoctrinatedrecluse?style=flat-square&amp;label=FOLLOWERS&amp;labelColor=1a1b26&amp;color=38bdf8&amp;logo=github&amp;logoColor=ffffff" alt="Followers" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/stars/indoctrinatedrecluse/indoctrinatedrecluse?style=flat-square&amp;label=THIS%20REPO%20STARS&amp;labelColor=1a1b26&amp;color=7aa2f7&amp;logo=github&amp;logoColor=ffffff" />
+    <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/stars/indoctrinatedrecluse/indoctrinatedrecluse?style=flat-square&amp;label=THIS%20REPO%20STARS&amp;labelColor=ecebf7&amp;color=5865b0&amp;logo=github&amp;logoColor=1e2335" />
+    <img src="https://img.shields.io/github/stars/indoctrinatedrecluse/indoctrinatedrecluse?style=flat-square&amp;label=THIS%20REPO%20STARS&amp;labelColor=1a1b26&amp;color=7aa2f7&amp;logo=github&amp;logoColor=ffffff" alt="Repo Stars" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/last-commit/indoctrinatedrecluse/indoctrinatedrecluse?style=flat-square&amp;label=LAST%20COMMIT&amp;labelColor=1a1b26&amp;color=bb9af3&amp;logo=git&amp;logoColor=ffffff" />
+    <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/last-commit/indoctrinatedrecluse/indoctrinatedrecluse?style=flat-square&amp;label=LAST%20COMMIT&amp;labelColor=ecebf7&amp;color=7c3aed&amp;logo=git&amp;logoColor=1e2335" />
+    <img src="https://img.shields.io/github/last-commit/indoctrinatedrecluse/indoctrinatedrecluse?style=flat-square&amp;label=LAST%20COMMIT&amp;labelColor=1a1b26&amp;color=bb9af3&amp;logo=git&amp;logoColor=ffffff" alt="Last Commit" />
+  </picture>
 </p>
 
 <!-- SECTION DIVIDER -->
 <p align="center">
-  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/glowing-line-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/glowing-line-light.svg" />
+    <img src="./profile-3d-contrib/glowing-line-dark.svg" alt="Divider" width="100%" />
+  </picture>
 </p>
 
 <!-- SNAKE CONTRIBUTION GAME -->
@@ -76,109 +132,169 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/github-contribution-grid-snake-dark.svg" />
-    <img src="./profile-3d-contrib/github-contribution-grid-snake.svg" alt="Snake contribution game" width="100%" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/github-contribution-grid-snake.svg" />
+    <img src="./profile-3d-contrib/github-contribution-grid-snake-dark.svg" alt="Snake contribution game" width="100%" />
   </picture>
 </p>
 
 <!-- SECTION DIVIDER -->
 <p align="center">
-  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/glowing-line-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/glowing-line-light.svg" />
+    <img src="./profile-3d-contrib/glowing-line-dark.svg" alt="Divider" width="100%" />
+  </picture>
 </p>
 
 <!-- 3D CONTRIBUTION CALENDAR -->
 <h2 align="center">🌌 3D Contribution Calendar</h2>
 <p align="center">
-  <img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Calendar" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-night-rainbow-light.svg" />
+    <img src="./profile-3d-contrib/profile-night-rainbow-dark.svg" alt="3D Contribution Calendar" width="100%" />
+  </picture>
 </p>
 <p align="center">
-  <sub>Contribution render — refreshed twice daily (day/night).</sub>
+  <sub>Contribution render — adaptive day/night theme sync.</sub>
 </p>
 
 <!-- SECTION DIVIDER -->
 <p align="center">
-  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/glowing-line-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/glowing-line-light.svg" />
+    <img src="./profile-3d-contrib/glowing-line-dark.svg" alt="Divider" width="100%" />
+  </picture>
 </p>
 
 <!-- COMMIT GRID HEATMAP -->
-<h2 align="center">🔥 Commit Grid: 365-Day Heatmap</h2>
+<h2 align="center">🔥 Commit Grid: Rolling 365-Day Heatmap</h2>
 <p align="center">
-  <img src="./profile-3d-contrib/isocalendar.svg" alt="Commit grid heatmap" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/isocalendar-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/isocalendar-light.svg" />
+    <img src="./profile-3d-contrib/isocalendar-dark.svg" alt="Commit grid heatmap" width="100%" />
+  </picture>
 </p>
 <p align="center">
-  <sub>Neon heatmap — palette flips with GMT day/night, synced twice daily.</sub>
+  <sub>Adaptive neon heatmap — synced with live GitHub GraphQL contributions.</sub>
 </p>
 
 <!-- SECTION DIVIDER -->
 <p align="center">
-  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/glowing-line-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/glowing-line-light.svg" />
+    <img src="./profile-3d-contrib/glowing-line-dark.svg" alt="Divider" width="100%" />
+  </picture>
 </p>
 
 <!-- CUSTOM LANGUAGE MATRIX -->
 <h2 align="center">💻 System Core: Language Matrix</h2>
 <p align="center">
-  <img src="./profile-3d-contrib/languages.svg" alt="Language Matrix" width="600" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/languages-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/languages-light.svg" />
+    <img src="./profile-3d-contrib/languages-dark.svg" alt="Language Matrix" width="600" />
+  </picture>
 </p>
 
 <!-- SECTION DIVIDER -->
 <p align="center">
-  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/glowing-line-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/glowing-line-light.svg" />
+    <img src="./profile-3d-contrib/glowing-line-dark.svg" alt="Divider" width="100%" />
+  </picture>
 </p>
 
 <!-- SYSTEM ACHIEVEMENTS -->
 <h2 align="center">🏆 System Achievements</h2>
 <p align="center">
-  <img src="./profile-3d-contrib/achievements.svg" alt="System achievements" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/achievements-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/achievements-light.svg" />
+    <img src="./profile-3d-contrib/achievements-dark.svg" alt="System achievements" width="100%" />
+  </picture>
 </p>
 <p align="center">
-  <sub>Tiles unlock automatically as profile signals grow.</sub>
+  <sub>Interactive protocol badges — click any tile to view associated signals.</sub>
 </p>
 
 <!-- SECTION DIVIDER -->
 <p align="center">
-  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/glowing-line-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/glowing-line-light.svg" />
+    <img src="./profile-3d-contrib/glowing-line-dark.svg" alt="Divider" width="100%" />
+  </picture>
 </p>
 
 <!-- PINNED REPOSITORIES -->
 <h2 align="center">📌 Pinned Repositories</h2>
 <p align="center">
-  <img src="./profile-3d-contrib/pinned.svg" alt="Pinned repositories" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/pinned-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/pinned-light.svg" />
+    <img src="./profile-3d-contrib/pinned-dark.svg" alt="Pinned repositories" width="100%" />
+  </picture>
 </p>
 <p align="center">
-  <sub>Curated system protocols — synced with GitHub pinned profile telemetry.</sub>
+  <sub>Interactive protocol access — click any repository card to open on GitHub.</sub>
 </p>
 
 <!-- SECTION DIVIDER -->
 <p align="center">
-  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/glowing-line-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/glowing-line-light.svg" />
+    <img src="./profile-3d-contrib/glowing-line-dark.svg" alt="Divider" width="100%" />
+  </picture>
 </p>
 
 <!-- FEATURED PROJECTS -->
 <h2 align="center">📦 Featured Projects</h2>
 <p align="center">
-  <img src="./profile-3d-contrib/featured.svg" alt="Featured projects" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/featured-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/featured-light.svg" />
+    <img src="./profile-3d-contrib/featured-dark.svg" alt="Featured projects" width="100%" />
+  </picture>
 </p>
 <p align="center">
-  <sub>Auto-selected from live repo telemetry — refreshed twice daily.</sub>
+  <sub>Interactive repository telemetry — click any card to visit the repository.</sub>
 </p>
 
 <!-- SECTION DIVIDER -->
 <p align="center">
-  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/glowing-line-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/glowing-line-light.svg" />
+    <img src="./profile-3d-contrib/glowing-line-dark.svg" alt="Divider" width="100%" />
+  </picture>
 </p>
-
 
 <!-- RECENT ACTIVITY -->
 <h2 align="center">📡 Recent Activity Feed</h2>
 <p align="center">
-  <img src="./profile-3d-contrib/activity.svg" alt="Recent activity feed" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/activity-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/activity-light.svg" />
+    <img src="./profile-3d-contrib/activity-dark.svg" alt="Recent activity feed" width="100%" />
+  </picture>
 </p>
 <p align="center">
-  <sub>Live from the GitHub events stream — refreshed twice daily.</sub>
+  <sub>Live from the GitHub events stream — click any event to jump to the repository.</sub>
 </p>
 
 <!-- SECTION DIVIDER -->
 <p align="center">
-  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/glowing-line-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/glowing-line-light.svg" />
+    <img src="./profile-3d-contrib/glowing-line-dark.svg" alt="Divider" width="100%" />
+  </picture>
 </p>
 
 <!-- SKILLS & TECHNOLOGIES -->
@@ -212,7 +328,11 @@
 
 <!-- SECTION DIVIDER -->
 <p align="center">
-  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/glowing-line-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/glowing-line-light.svg" />
+    <img src="./profile-3d-contrib/glowing-line-dark.svg" alt="Divider" width="100%" />
+  </picture>
 </p>
 
 <!-- CONNECT WITH ME -->
@@ -231,7 +351,11 @@
 
 <!-- SECTION DIVIDER -->
 <p align="center">
-  <img src="./profile-3d-contrib/glowing-line.svg" alt="Divider" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/glowing-line-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/glowing-line-light.svg" />
+    <img src="./profile-3d-contrib/glowing-line-dark.svg" alt="Divider" width="100%" />
+  </picture>
 </p>
 
 <!-- FOOTER -->

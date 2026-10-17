@@ -1,4 +1,4 @@
-<svg width="660" height="224" viewBox="0 0 660 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="660" height="260" viewBox="0 0 660 260" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
     .title {
       font-family: 'Fira Code', 'Courier New', monospace;
@@ -36,7 +36,7 @@
     }
   </style>
 
-  <rect width="660" height="224" class="bg" />
+  <rect width="660" height="260" class="bg" />
 
   <!-- Header -->
   <g transform="translate(24, 24)">
@@ -75,8 +75,8 @@
     </g>
     <g>
       <text x="30" y="172" class="row-label">STREAK ENGINE</text>
-      <text x="608" y="172" text-anchor="end" class="row-status" fill="#6272a4">STANDBY</text>
-      <circle cx="626" cy="168" r="3" fill="#6272a4">
+      <text x="608" y="172" text-anchor="end" class="row-status" fill="#4ade80">ACTIVE</text>
+      <circle cx="626" cy="168" r="3" fill="#4ade80">
         <animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="0.9s" begin="0.90s" repeatCount="indefinite" />
       </circle>
     </g>
@@ -97,17 +97,25 @@
 
   <!-- Ticker footer -->
   <line x1="24" y1="254" x2="636" y2="254" stroke="#3d59a1" stroke-opacity="0.4" stroke-width="1" />
-  <g transform="translate(30, 280)" class="ticker">
+  <g transform="translate(30, 276)" class="ticker">
     <text x="0" y="0" opacity="0">
-      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.013889;0.305556;0.333333;1" dur="10.80s" begin="0.00s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.008333;0.183333;0.200000;1" dur="18.00s" begin="0.00s" repeatCount="indefinite" />
       UPLINK STABLE // NO INTRUSIONS DETECTED
     </text>
     <text x="0" y="0" opacity="0">
-      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.013889;0.305556;0.333333;1" dur="10.80s" begin="3.60s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.008333;0.183333;0.200000;1" dur="18.00s" begin="3.60s" repeatCount="indefinite" />
       MONITORING CONTRIBUTION STREAMS // ALL CLEAR
     </text>
     <text x="0" y="0" opacity="0">
-      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.013889;0.305556;0.333333;1" dur="10.80s" begin="7.20s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.008333;0.183333;0.200000;1" dur="18.00s" begin="7.20s" repeatCount="indefinite" />
+      DECENTRALIZED COGNITION ACTIVE // 0 ERRORS
+    </text>
+    <text x="0" y="0" opacity="0">
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.008333;0.183333;0.200000;1" dur="18.00s" begin="10.80s" repeatCount="indefinite" />
+      SYNAPSE LINK STABLE // RECEPTORS TUNED
+    </text>
+    <text x="0" y="0" opacity="0">
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.008333;0.183333;0.200000;1" dur="18.00s" begin="14.40s" repeatCount="indefinite" />
       ALL SYSTEMS NOMINAL // AWAITING INPUT
     </text>
   </g>

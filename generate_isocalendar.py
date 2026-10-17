@@ -2,7 +2,7 @@ import os
 import json
 import datetime
 import urllib.request
-from cyber_palette import apply_theme
+from cyber_palette import save_dual_theme_svg, apply_theme
 
 # Config
 DEFAULT_USERNAME = "indoctrinatedrecluse"
@@ -46,16 +46,7 @@ def normalize_level(level):
     return LEVEL_ENUM.get(level, 0)
 
 
-def fetch_contributions(username, token):
-    """Return {'ok': True, 'weeks', 'total', 'year'} or {'ok': False, 'error'}."""
-    if not token:
-        return {"ok": False, "error": "no GITHUB_TOKEN available"}
-    now = datetime.datetime.now(datetime.timezone.utc)
-    year = now.year
-    # contributionsCollection requires from/to within the SAME calendar year
-    # (a rolling 365-day window is rejected by the API).
-    fr = datetime.datetime(year, 1, 1, tzinfo=datetime.timezone.utc)
-    to = now.replace(hour=23, minute=59, second=59, microsecond=0)
+def fetch_contributions_for_range(username, token, fr, to):
     body = json.dumps({
         "query": QUERY,
         "variables": {
@@ -63,34 +54,54 @@ def fetch_contributions(username, token):
             "from": fr.isoformat(),
             "to": to.isoformat(),
         },
-    }).encode()
+    }).encode("utf-8")
     req = urllib.request.Request(API, data=body, method="POST")
     req.add_header("User-Agent", "Mozilla/5.0")
     req.add_header("Authorization", f"token {token}")
     req.add_header("Content-Type", "application/json")
-    try:
-        with urllib.request.urlopen(req, timeout=20) as resp:
-            data = json.loads(resp.read().decode())
-        if data.get("errors"):
-            error = json.dumps(data["errors"])[:200]
-            print(f"GraphQL errors: {error}")
-            return {"ok": False, "error": error}
-        user = (data.get("data") or {}).get("user") or {}
-        cal = user.get("contributionsCollection") or {}
-        calendar = cal.get("contributionCalendar") or {}
-        weeks = calendar.get("weeks", [])
-        if not weeks:
-            return {"ok": False, "error": "contributionsCollection returned no weeks"}
-        return {
-            "ok": True,
-            "weeks": weeks,
-            "total": calendar.get("totalContributions", 0),
-            "year": year,
-        }
-    except Exception as e:
-        error = str(e)[:200]
-        print(f"GraphQL request failed: {error}")
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        data = json.loads(resp.read().decode())
+    if data.get("errors"):
+        error = json.dumps(data["errors"])[:200]
         return {"ok": False, "error": error}
+    user = (data.get("data") or {}).get("user") or {}
+    cal = user.get("contributionsCollection") or {}
+    calendar = cal.get("contributionCalendar") or {}
+    weeks = calendar.get("weeks", [])
+    if not weeks:
+        return {"ok": False, "error": "contributionsCollection returned no weeks"}
+    return {
+        "ok": True,
+        "weeks": weeks,
+        "total": calendar.get("totalContributions", 0),
+        "from_date": fr.strftime("%b %Y").upper(),
+        "to_date": to.strftime("%b %Y").upper(),
+    }
+
+
+def fetch_contributions(username, token):
+    """Return {'ok': True, 'weeks', 'total', 'from_date', 'to_date'} or {'ok': False, 'error'}."""
+    if not token:
+        return {"ok": False, "error": "no GITHUB_TOKEN available"}
+    now = datetime.datetime.now(datetime.timezone.utc)
+    to = now.replace(hour=23, minute=59, second=59, microsecond=0)
+    fr = (to - datetime.timedelta(days=364)).replace(hour=0, minute=0, second=0, microsecond=0)
+
+    try:
+        # Try rolling 365-day query first
+        res = fetch_contributions_for_range(username, token, fr, to)
+        if res.get("ok"):
+            return res
+        print(f"Rolling contribution query note: {res.get('error')}. Retrying with current year range...")
+    except Exception as e:
+        print(f"Rolling contribution query exception: {e}")
+
+    # Fallback to calendar year if rolling query is rejected
+    try:
+        fr_cal = datetime.datetime(now.year, 1, 1, tzinfo=datetime.timezone.utc)
+        return fetch_contributions_for_range(username, token, fr_cal, to)
+    except Exception as e:
+        return {"ok": False, "error": str(e)[:200]}
 
 
 def build_grid(result, pad_l, pad_top, step):
@@ -99,21 +110,37 @@ def build_grid(result, pad_l, pad_top, step):
         for di, day in enumerate(week.get("contributionDays") or []):
             level = normalize_level(day.get("contributionLevel", day.get("level", 0)))
             fill = LEVEL_COLORS.get(level, "#16161e")
+            count = day.get("contributionCount", 0)
+            date_str = day.get("date", "")
+            tip = f"{count} contributions on {date_str}" if count != 1 else f"1 contribution on {date_str}"
             cells.append(
-                f'<rect x="{pad_l + wi * step}" y="{pad_top + di * step}" width="10" height="10" rx="2" fill="{fill}" />'
+                f'<rect x="{pad_l + wi * step}" y="{pad_top + di * step}" width="10" height="10" rx="2" fill="{fill}"><title>{tip}</title></rect>'
             )
     return "\n".join(cells)
 
 
-def generate_isocalendar_svg(username, token, filepath):
+def generate_isocalendar_svg(username, token, filepath=os.path.join(OUTPUT_DIR, "isocalendar.svg")):
     result = fetch_contributions(username, token)
+
+    if not result.get("ok") and os.path.exists(filepath):
+        # Preserve existing valid SVG file if local run lacks token
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                existing_content = f.read()
+            if "<rect" in existing_content and "SYNC PENDING" not in existing_content:
+                print(f"Preserving existing contribution calendar on disk (no token provided to overwrite).")
+                return save_dual_theme_svg(existing_content, filepath)
+        except Exception:
+            pass
 
     if result.get("ok"):
         n_weeks = len(result["weeks"])
         width = max(720, 24 + n_weeks * 13 + 16)
         grid = build_grid(result, 24, 92, 13)
         total_text = f"{result['total']} CONTRIBUTIONS"
-        foot_text = f"CALENDAR YEAR {result['year']} // NEON HEAT MAP"
+        from_d = result.get("from_date", "")
+        to_d = result.get("to_date", "")
+        foot_text = f"ROLLING 365-DAY // {from_d} - {to_d} // NEON HEAT MAP"
         standby = ""
         diag = ""
     else:
@@ -182,17 +209,15 @@ def generate_isocalendar_svg(username, token, filepath):
   {legend}
 </svg>
 """
-    svg_content = apply_theme(svg_content)
-    os.makedirs(os.path.dirname(filepath), exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    print(f"Generated isocalendar SVG at {filepath}")
+    paths = save_dual_theme_svg(svg_content, filepath)
+    return paths
 
 
 if __name__ == "__main__":
     token = os.environ.get("GITHUB_TOKEN")
     username = os.environ.get("GITHUB_REPOSITORY_OWNER") or DEFAULT_USERNAME
     print(f"Running isocalendar generation for user: {username}")
-    generate_isocalendar_svg(username, token, os.path.join(OUTPUT_DIR, "isocalendar.svg"))
+    generate_isocalendar_svg(username, token)
     print("Isocalendar generation finished successfully!")
+
 

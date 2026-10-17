@@ -4,7 +4,7 @@ import html
 import datetime
 import urllib.request
 import urllib.error
-from cyber_palette import apply_theme
+from cyber_palette import save_dual_theme_svg
 
 # Config
 DEFAULT_USERNAME = "indoctrinatedrecluse"
@@ -53,42 +53,45 @@ def clip(text, limit):
 
 def event_row(ev):
     typ = ev.get("type", "")
-    repo = (ev.get("repo") or {}).get("name", "").split("/")[-1]
+    full_repo = (ev.get("repo") or {}).get("name", "")
+    repo = full_repo.split("/")[-1] if "/" in full_repo else full_repo
     payload = ev.get("payload") or {}
     when = fmt_rel(ev.get("created_at", ""))
+    repo_url = f"https://github.com/{full_repo}" if full_repo else f"https://github.com/{DEFAULT_USERNAME}"
+
     if typ == "PushEvent":
         commits = payload.get("commits") or []
         msg = clip((commits[0].get("message") or "").splitlines()[0], 46) if commits else f"{payload.get('size', 1)} commits"
-        return ("PUSH", "#38bdf8", repo, msg, when)
+        return ("PUSH", "#38bdf8", repo, msg, when, repo_url)
     if typ == "CreateEvent":
         ref = payload.get("ref") or payload.get("ref_type", "repository")
-        return ("CREATE", "#4ade80", repo, clip(ref, 46), when)
+        return ("CREATE", "#4ade80", repo, clip(ref, 46), when, repo_url)
     if typ == "DeleteEvent":
-        return ("DELETE", "#f87171", repo, clip(payload.get("ref_type", ""), 46), when)
+        return ("DELETE", "#f87171", repo, clip(payload.get("ref_type", ""), 46), when, repo_url)
     if typ == "PullRequestEvent":
         pr = payload.get("pull_request") or {}
-        return (f"PR·{payload.get('action', '')}".upper(), "#bb9af3", repo, clip(pr.get("title", ""), 46), when)
+        return (f"PR·{payload.get('action', '')}".upper(), "#bb9af3", repo, clip(pr.get("title", ""), 46), when, repo_url)
     if typ == "IssuesEvent":
         iss = payload.get("issue") or {}
-        return (f"ISSUE·{payload.get('action', '')}".upper(), "#facc15", repo, clip(iss.get("title", ""), 46), when)
+        return (f"ISSUE·{payload.get('action', '')}".upper(), "#facc15", repo, clip(iss.get("title", ""), 46), when, repo_url)
     if typ == "IssueCommentEvent":
         iss = payload.get("issue") or {}
-        return ("COMMENT", "#7aa2f7", repo, clip("on " + str(iss.get("title", "")), 46), when)
+        return ("COMMENT", "#7aa2f7", repo, clip("on " + str(iss.get("title", "")), 46), when, repo_url)
     if typ == "PullRequestReviewEvent":
-        return ("REVIEW", "#bb9af3", repo, "pull request review", when)
+        return ("REVIEW", "#bb9af3", repo, "pull request review", when, repo_url)
     if typ == "ForkEvent":
-        return ("FORK", "#ff79c6", repo, "forked repository", when)
+        return ("FORK", "#ff79c6", repo, "forked repository", when, repo_url)
     if typ == "WatchEvent":
-        return ("STAR", "#fbbf24", repo, "starred repository", when)
+        return ("STAR", "#fbbf24", repo, "starred repository", when, repo_url)
     if typ == "ReleaseEvent":
         rel = payload.get("release") or {}
-        return ("RELEASE", "#fb923c", repo, clip(rel.get("tag_name", ""), 46), when)
+        return ("RELEASE", "#fb923c", repo, clip(rel.get("tag_name", ""), 46), when, repo_url)
     if typ == "PublicEvent":
-        return ("PUBLIC", "#4ade80", repo, "open sourced", when)
-    return (typ.replace("Event", "").upper(), "#7aa2f7", repo, "", when)
+        return ("PUBLIC", "#4ade80", repo, "open sourced", when, repo_url)
+    return (typ.replace("Event", "").upper(), "#7aa2f7", repo, "", when, repo_url)
 
 
-def generate_activity_svg(username, token, filepath):
+def generate_activity_svg(username, token, filepath=os.path.join(OUTPUT_DIR, "activity.svg")):
     events = fetch_json(f"https://api.github.com/users/{username}/events/public?per_page=100", token) or []
     rows = []
     seen = set()
@@ -103,26 +106,39 @@ def generate_activity_svg(username, token, filepath):
             break
 
     width, height = 660, 250
-    row_h = 30
-    y_start = 84
+    row_h = 28
+    y_start = 86
 
     body = ""
     if rows:
-        for i, (tag, tag_color, repo, msg, when) in enumerate(rows):
+        for i, (tag, tag_color, repo, msg, when, repo_url) in enumerate(rows):
             y = y_start + i * row_h
+            safe_url = html.escape(repo_url)
             body += f"""
-    <g>
-      <text x="24" y="{y}" class="tag" fill="{tag_color}">[{tag}]</text>
-      <text x="106" y="{y}" class="repo">{html.escape(repo)}</text>
-      <text x="236" y="{y}" class="msg">{html.escape(msg)}</text>
-      <text x="636" y="{y}" class="time" text-anchor="end">{when}</text>
-    </g>"""
+    <a href="{safe_url}" target="_blank" rel="noopener noreferrer">
+      <g class="activity-row">
+        <text x="24" y="{y}" class="tag" fill="{tag_color}">[{tag}]</text>
+        <text x="106" y="{y}" class="repo">{html.escape(repo)}</text>
+        <text x="236" y="{y}" class="msg">{html.escape(msg)}</text>
+        <text x="636" y="{y}" class="time" text-anchor="end">{when}</text>
+      </g>
+    </a>"""
     else:
         body = f"""
     <text x="330" y="{y_start + row_h}" text-anchor="middle" class="empty">// NO RECENT PUBLIC SIGNALS //</text>"""
 
     svg_content = f"""<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
+    a {{
+      cursor: pointer;
+      text-decoration: none;
+    }}
+    .activity-row text.repo {{
+      transition: fill 0.2s;
+    }}
+    a:hover .activity-row text.repo {{
+      fill: #ff79c6;
+    }}
     .title {{
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 16px;
@@ -181,17 +197,15 @@ def generate_activity_svg(username, token, filepath):
   {body}
 </svg>
 """
-    svg_content = apply_theme(svg_content)
-    os.makedirs(os.path.dirname(filepath), exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    print(f"Generated activity SVG at {filepath}")
+    paths = save_dual_theme_svg(svg_content, filepath)
+    return paths
 
 
 if __name__ == "__main__":
     token = os.environ.get("GITHUB_TOKEN")
     username = os.environ.get("GITHUB_REPOSITORY_OWNER") or DEFAULT_USERNAME
     print(f"Running activity generation for user: {username}")
-    generate_activity_svg(username, token, os.path.join(OUTPUT_DIR, "activity.svg"))
+    generate_activity_svg(username, token)
     print("Activity generation finished successfully!")
+
 
