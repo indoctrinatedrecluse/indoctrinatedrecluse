@@ -76,9 +76,9 @@
       <stop offset="0%" stop-color="#bb9af3" />
       <stop offset="100%" stop-color="#7c3aed" />
     </linearGradient>
-    <linearGradient id="grad_JavaScript" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#fbbf24" />
-      <stop offset="100%" stop-color="#d97706" />
+    <linearGradient id="grad_Dart" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="hsl(285, 95%, 65%)" />
+      <stop offset="100%" stop-color="hsl(285, 95%, 45%)" />
     </linearGradient>
   </defs>
 
@@ -98,27 +98,27 @@
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=TypeScript" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 80)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">TypeScript</text>
-        <text x="540" y="12" fill="#60a5fa" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">33.4%</text>
+        <text x="540" y="12" fill="#60a5fa" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">33.7%</text>
         <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
-        <rect x="0" y="22" width="180" height="8" fill="url(#grad_TypeScript)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="181" height="8" fill="url(#grad_TypeScript)" rx="4" filter="url(#glow)" />
       </g>
     </a>
     <!-- Row 1: C# -->
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=C%23" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 125)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">C#</text>
-        <text x="540" y="12" fill="#4ade80" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">17.1%</text>
+        <text x="540" y="12" fill="#4ade80" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">17.0%</text>
         <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
-        <rect x="0" y="22" width="92" height="8" fill="url(#grad_Csharp)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="91" height="8" fill="url(#grad_Csharp)" rx="4" filter="url(#glow)" />
       </g>
     </a>
     <!-- Row 2: Kotlin -->
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=Kotlin" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 170)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Kotlin</text>
-        <text x="540" y="12" fill="hsl(130, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">15.5%</text>
+        <text x="540" y="12" fill="hsl(130, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">15.3%</text>
         <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
-        <rect x="0" y="22" width="83" height="8" fill="url(#grad_Kotlin)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="82" height="8" fill="url(#grad_Kotlin)" rx="4" filter="url(#glow)" />
       </g>
     </a>
     <!-- Row 3: Rust -->
@@ -127,14 +127,14 @@
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Rust</text>
         <text x="540" y="12" fill="#fb923c" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">9.3%</text>
         <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
-        <rect x="0" y="22" width="50" height="8" fill="url(#grad_Rust)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="49" height="8" fill="url(#grad_Rust)" rx="4" filter="url(#glow)" />
       </g>
     </a>
     <!-- Row 4: HTML -->
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=HTML" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 260)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">HTML</text>
-        <text x="540" y="12" fill="#f87171" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.2%</text>
+        <text x="540" y="12" fill="#f87171" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.1%</text>
         <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
         <rect x="0" y="22" width="22" height="8" fill="url(#grad_HTML)" rx="4" filter="url(#glow)" />
       </g>
@@ -143,16 +143,16 @@
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=Python" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 305)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Python</text>
-        <text x="540" y="12" fill="#38bdf8" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.1%</text>
+        <text x="540" y="12" fill="#38bdf8" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.0%</text>
         <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
-        <rect x="0" y="22" width="22" height="8" fill="url(#grad_Python)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="21" height="8" fill="url(#grad_Python)" rx="4" filter="url(#glow)" />
       </g>
     </a>
     <!-- Row 6: Java -->
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=Java" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 350)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Java</text>
-        <text x="540" y="12" fill="#fbbf24" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">3.3%</text>
+        <text x="540" y="12" fill="#fbbf24" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">3.2%</text>
         <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
         <rect x="0" y="22" width="17" height="8" fill="url(#grad_Java)" rx="4" filter="url(#glow)" />
       </g>
@@ -175,13 +175,13 @@
         <rect x="0" y="22" width="9" height="8" fill="url(#grad_PHP)" rx="4" filter="url(#glow)" />
       </g>
     </a>
-    <!-- Row 9: JavaScript -->
-    <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=JavaScript" target="_blank" rel="noopener noreferrer">
+    <!-- Row 9: Dart -->
+    <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=Dart" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 485)" class="lang-row">
-        <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">JavaScript</text>
-        <text x="540" y="12" fill="#fbbf24" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">1.6%</text>
+        <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Dart</text>
+        <text x="540" y="12" fill="hsl(285, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">1.7%</text>
         <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
-        <rect x="0" y="22" width="8" height="8" fill="url(#grad_JavaScript)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="9" height="8" fill="url(#grad_Dart)" rx="4" filter="url(#glow)" />
       </g>
     </a>
 </svg>
