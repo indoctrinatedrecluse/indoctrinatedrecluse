@@ -68,24 +68,24 @@
   
     <a href="https://github.com/indoctrinatedrecluse/Mimir" target="_blank" rel="noopener noreferrer">
       <g class="activity-row">
-        <text x="24" y="86" class="tag" fill="#f87171">[DELETE]</text>
+        <text x="24" y="86" class="tag" fill="#38bdf8">[PUSH]</text>
         <text x="106" y="86" class="repo">Mimir</text>
-        <text x="236" y="86" class="msg">tag</text>
-        <text x="636" y="86" class="time" text-anchor="end">5h</text>
-      </g>
-    </a>
-    <a href="https://github.com/indoctrinatedrecluse/Selene" target="_blank" rel="noopener noreferrer">
-      <g class="activity-row">
-        <text x="24" y="114" class="tag" fill="#38bdf8">[PUSH]</text>
-        <text x="106" y="114" class="repo">Selene</text>
-        <text x="236" y="114" class="msg">1 commits</text>
-        <text x="636" y="114" class="time" text-anchor="end">1d</text>
+        <text x="236" y="86" class="msg">1 commits</text>
+        <text x="636" y="86" class="time" text-anchor="end">1d</text>
       </g>
     </a>
     <a href="https://github.com/indoctrinatedrecluse/Mimir" target="_blank" rel="noopener noreferrer">
       <g class="activity-row">
+        <text x="24" y="114" class="tag" fill="#f87171">[DELETE]</text>
+        <text x="106" y="114" class="repo">Mimir</text>
+        <text x="236" y="114" class="msg">tag</text>
+        <text x="636" y="114" class="time" text-anchor="end">19h</text>
+      </g>
+    </a>
+    <a href="https://github.com/indoctrinatedrecluse/Selene" target="_blank" rel="noopener noreferrer">
+      <g class="activity-row">
         <text x="24" y="142" class="tag" fill="#38bdf8">[PUSH]</text>
-        <text x="106" y="142" class="repo">Mimir</text>
+        <text x="106" y="142" class="repo">Selene</text>
         <text x="236" y="142" class="msg">1 commits</text>
         <text x="636" y="142" class="time" text-anchor="end">1d</text>
       </g>
