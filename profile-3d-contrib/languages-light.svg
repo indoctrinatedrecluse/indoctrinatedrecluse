@@ -98,34 +98,34 @@
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=TypeScript" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 80)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">TypeScript</text>
-        <text x="540" y="12" fill="#60a5fa" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">35.3%</text>
+        <text x="540" y="12" fill="#60a5fa" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">35.9%</text>
         <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
-        <rect x="0" y="22" width="190" height="8" fill="url(#grad_TypeScript)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="193" height="8" fill="url(#grad_TypeScript)" rx="4" filter="url(#glow)" />
       </g>
     </a>
     <!-- Row 1: C# -->
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=C%23" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 125)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">C#</text>
-        <text x="540" y="12" fill="#15803d" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">16.3%</text>
+        <text x="540" y="12" fill="#15803d" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">16.1%</text>
         <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
-        <rect x="0" y="22" width="88" height="8" fill="url(#grad_Csharp)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="86" height="8" fill="url(#grad_Csharp)" rx="4" filter="url(#glow)" />
       </g>
     </a>
     <!-- Row 2: Kotlin -->
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=Kotlin" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 170)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Kotlin</text>
-        <text x="540" y="12" fill="hsl(130, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">14.7%</text>
+        <text x="540" y="12" fill="hsl(130, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">14.5%</text>
         <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
-        <rect x="0" y="22" width="79" height="8" fill="url(#grad_Kotlin)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="78" height="8" fill="url(#grad_Kotlin)" rx="4" filter="url(#glow)" />
       </g>
     </a>
     <!-- Row 3: Rust -->
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=Rust" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 215)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Rust</text>
-        <text x="540" y="12" fill="#c2410c" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">9.7%</text>
+        <text x="540" y="12" fill="#c2410c" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">9.8%</text>
         <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
         <rect x="0" y="22" width="52" height="8" fill="url(#grad_Rust)" rx="4" filter="url(#glow)" />
       </g>
@@ -134,7 +134,7 @@
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=HTML" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 260)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">HTML</text>
-        <text x="540" y="12" fill="#dc2626" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.2%</text>
+        <text x="540" y="12" fill="#dc2626" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">4.1%</text>
         <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
         <rect x="0" y="22" width="22" height="8" fill="url(#grad_HTML)" rx="4" filter="url(#glow)" />
       </g>
@@ -163,7 +163,7 @@
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">PowerShell</text>
         <text x="540" y="12" fill="hsl(355, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">2.2%</text>
         <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
-        <rect x="0" y="22" width="12" height="8" fill="url(#grad_PowerShell)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="11" height="8" fill="url(#grad_PowerShell)" rx="4" filter="url(#glow)" />
       </g>
     </a>
     <!-- Row 8: PHP -->
@@ -172,14 +172,14 @@
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">PHP</text>
         <text x="540" y="12" fill="#7c3aed" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">1.7%</text>
         <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
-        <rect x="0" y="22" width="9" height="8" fill="url(#grad_PHP)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="8" height="8" fill="url(#grad_PHP)" rx="4" filter="url(#glow)" />
       </g>
     </a>
     <!-- Row 9: Dart -->
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=Dart" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 485)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Dart</text>
-        <text x="540" y="12" fill="hsl(285, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">1.7%</text>
+        <text x="540" y="12" fill="hsl(285, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">1.6%</text>
         <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
         <rect x="0" y="22" width="8" height="8" fill="url(#grad_Dart)" rx="4" filter="url(#glow)" />
       </g>
