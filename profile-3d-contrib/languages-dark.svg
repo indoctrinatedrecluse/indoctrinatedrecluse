@@ -127,7 +127,7 @@
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">Rust</text>
         <text x="540" y="12" fill="#fb923c" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">11.7%</text>
         <rect x="0" y="22" width="540" height="8" fill="#1e1e2e" rx="4" />
-        <rect x="0" y="22" width="63" height="8" fill="url(#grad_Rust)" rx="4" filter="url(#glow)" />
+        <rect x="0" y="22" width="62" height="8" fill="url(#grad_Rust)" rx="4" filter="url(#glow)" />
       </g>
     </a>
     <!-- Row 4: HTML -->
