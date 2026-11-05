@@ -161,7 +161,7 @@
     <a href="https://github.com/indoctrinatedrecluse?tab=repositories&amp;language=PowerShell" target="_blank" rel="noopener noreferrer">
       <g transform="translate(30, 395)" class="lang-row">
         <text x="0" y="12" class="lang-name" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold">PowerShell</text>
-        <text x="540" y="12" fill="hsl(355, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">2.6%</text>
+        <text x="540" y="12" fill="hsl(355, 95%, 65%)" font-family="'Fira Code', 'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="end">2.7%</text>
         <rect x="0" y="22" width="540" height="8" fill="#dcd7eb" rx="4" />
         <rect x="0" y="22" width="14" height="8" fill="url(#grad_PowerShell)" rx="4" filter="url(#glow)" />
       </g>
