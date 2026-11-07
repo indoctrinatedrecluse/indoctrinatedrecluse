@@ -71,7 +71,7 @@
         <text x="24" y="86" class="tag" fill="#0277bd">[PUSH]</text>
         <text x="106" y="86" class="repo">Mnemosyne</text>
         <text x="236" y="86" class="msg">1 commits</text>
-        <text x="636" y="86" class="time" text-anchor="end">20h</text>
+        <text x="636" y="86" class="time" text-anchor="end">1d</text>
       </g>
     </a>
     <a href="https://github.com/indoctrinatedrecluse/Sharabha" target="_blank" rel="noopener noreferrer">
@@ -79,7 +79,7 @@
         <text x="24" y="114" class="tag" fill="#0277bd">[PUSH]</text>
         <text x="106" y="114" class="repo">Sharabha</text>
         <text x="236" y="114" class="msg">1 commits</text>
-        <text x="636" y="114" class="time" text-anchor="end">1d</text>
+        <text x="636" y="114" class="time" text-anchor="end">2d</text>
       </g>
     </a>
     <a href="https://github.com/indoctrinatedrecluse/Mnemosyne" target="_blank" rel="noopener noreferrer">
@@ -103,7 +103,7 @@
         <text x="24" y="198" class="tag" fill="#c2410c">[RELEASE]</text>
         <text x="106" y="198" class="repo">Sharabha</text>
         <text x="236" y="198" class="msg">v0.5.1</text>
-        <text x="636" y="198" class="time" text-anchor="end">2d</text>
+        <text x="636" y="198" class="time" text-anchor="end">3d</text>
       </g>
     </a>
     <a href="https://github.com/indoctrinatedrecluse/Sharabha" target="_blank" rel="noopener noreferrer">
@@ -111,7 +111,7 @@
         <text x="24" y="226" class="tag" fill="#c2410c">[RELEASE]</text>
         <text x="106" y="226" class="repo">Sharabha</text>
         <text x="236" y="226" class="msg">v0.5.0</text>
-        <text x="636" y="226" class="time" text-anchor="end">2d</text>
+        <text x="636" y="226" class="time" text-anchor="end">3d</text>
       </g>
     </a>
 </svg>
