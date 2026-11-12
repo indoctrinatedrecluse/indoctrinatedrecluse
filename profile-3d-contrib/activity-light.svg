@@ -79,7 +79,7 @@
         <text x="24" y="114" class="tag" fill="#0277bd">[PUSH]</text>
         <text x="106" y="114" class="repo">Itzamna</text>
         <text x="236" y="114" class="msg">1 commits</text>
-        <text x="636" y="114" class="time" text-anchor="end">8d</text>
+        <text x="636" y="114" class="time" text-anchor="end">9d</text>
       </g>
     </a>
     <a href="https://github.com/indoctrinatedrecluse/Sharabha" target="_blank" rel="noopener noreferrer">
@@ -95,7 +95,7 @@
         <text x="24" y="170" class="tag" fill="#c2410c">[RELEASE]</text>
         <text x="106" y="170" class="repo">Sharabha</text>
         <text x="236" y="170" class="msg">v0.5.0</text>
-        <text x="636" y="170" class="time" text-anchor="end">7d</text>
+        <text x="636" y="170" class="time" text-anchor="end">8d</text>
       </g>
     </a>
     <a href="https://github.com/indoctrinatedrecluse/Sharabha" target="_blank" rel="noopener noreferrer">
@@ -111,7 +111,7 @@
         <text x="24" y="226" class="tag" fill="#c2410c">[RELEASE]</text>
         <text x="106" y="226" class="repo">Sharabha</text>
         <text x="236" y="226" class="msg">v0.4.1</text>
-        <text x="636" y="226" class="time" text-anchor="end">7d</text>
+        <text x="636" y="226" class="time" text-anchor="end">8d</text>
       </g>
     </a>
 </svg>
